@@ -1,6 +1,6 @@
 ### ss
-##s
-#s
+## s
+# s
 
 ```python
 print("number of rules: ", len(associated_rules))
