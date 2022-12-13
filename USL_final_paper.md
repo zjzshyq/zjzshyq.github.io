@@ -10,6 +10,5 @@ Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
 print("number of rules: ")
 ```
 
-![2ssss](./img/test.jpg)
-
+![不会显示中括号中的文字](./img/test.jpg)
 
