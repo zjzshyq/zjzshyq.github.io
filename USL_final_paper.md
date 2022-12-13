@@ -2,9 +2,9 @@
 
 <center>
 <strong>Yiqing Hu</strong>
-<br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland</center
+<br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
 </center>
-
+<br>
 
 **Abstract:** Startup recommendation for new users without 
 any behavior data is always a challenge for the recommendation system. 
@@ -17,7 +17,7 @@ fulfill our final course task. The clustering center from k-means
 delivers the new user recommend list which produced by Apriori. 
 PCA reduces the dimensions of user features and assists to
 determine the number of k in k-means. 
-</br>**Key Words:** K-means, PCA, Apriori, Recommendation System
+<br>**Key Words:** K-means, PCA, Apriori, Recommendation System
 
 ## 0. Paper Structure
 In the chapter Algorithms, we will discuss these three algorithms and 
@@ -186,14 +186,14 @@ task of finding relationships in large-scale datasets. These relationships
 can take two forms: (1) frequent item sets, and (2) association rules.
 ### 1.3.1 Frequent item sets
 **Frequent item set:** It is a collection of items that often appear together.
-</br>**Quantification method - Support:** Support is the proportion of records in the 
+<br>**Quantification method - Support:** Support is the proportion of records in the 
 dataset that contains the item set. For example, in the data set 
 [[1, 3, 4], [2, 3, 5], [1, 2, 3], [2, 5]], the support of the item set 
 {2} is 3/4, and the item the support of the set {2,3} is 1/2.
 
 ### 1.3.2 Association Rules
 **Association rules:** Implying that there may be a strong relationship between two items.
-</br>**Quantitative calculation - Confidence:** Confidence is defined for an association rule such as {2}-->{3}. {2}-->{3}, 
+<br>**Quantitative calculation - Confidence:** Confidence is defined for an association rule such as {2}-->{3}. {2}-->{3}, 
 the reliability of this rule is “support_degree{2, 3}/support_degree{2}”, that is, 2/3, which means 2/3 in all records containing 
 {2} in {2,3} with the rules.
 
@@ -228,16 +228,16 @@ User data uses travel reviews data set<a href='#ref_2'>[2]</a>  which is a data 
 
 ### 2.1.1 Attribute Information
 Attribute 1: Unique user ID
-</br>Attribute 2: Average user feedback on art galleries 
-</br>Attribute 3: Average user feedback on dance clubs 
-</br>Attribute 4: Average user feedback on juice bars 
-</br>Attribute 5: Average user feedback on restaurants 
-</br>Attribute 6: Average user feedback on museums 
-</br>Attribute 7: Average user feedback on resorts 
-</br>Attribute 8: Average user feedback on parks/picnic spots 
-</br>Attribute 9: Average user feedback on beaches 
-</br>Attribute 10: Average user feedback on theaters 
-</br>Attribute 11: Average user feedback on religious institutions
+<br>Attribute 2: Average user feedback on art galleries 
+<br>Attribute 3: Average user feedback on dance clubs 
+<br>Attribute 4: Average user feedback on juice bars 
+<br>Attribute 5: Average user feedback on restaurants 
+<br>Attribute 6: Average user feedback on museums 
+<br>Attribute 7: Average user feedback on resorts 
+<br>Attribute 8: Average user feedback on parks/picnic spots 
+<br>Attribute 9: Average user feedback on beaches 
+<br>Attribute 10: Average user feedback on theaters 
+<br>Attribute 11: Average user feedback on religious institutions
 
 ### 2.1.2 Data statistic
 Using python pandas to read the CSV file of the data and check the data. Printing 
