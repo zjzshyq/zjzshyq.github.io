@@ -19,7 +19,7 @@ PCA reduces the dimensions of user features and assists to
 determine the number of k in k-means. 
 <br>**Key Words:** K-means, PCA, Apriori, Recommendation System
 
-## 0. Paper Structure
+## 0. Structure
 In the chapter Algorithms, we will discuss these three algorithms and 
 implement them by code. We will explore the data we use in this paper 
 in the chapter on Data. Chapter Clustering shows the analytic process 
@@ -219,7 +219,7 @@ The sample handwriting Apriori process is below:
 
 ![不会显示中括号中的文字](./img/apriori_1.jpg)
 
-## Data 
+## 2. Data 
 Use user data and item data are downloaded from the Internet. 
 They are both CSVs. In this chapter, we will check the data quickly to 
 verify if they are qualified to run the jobs for unsupervised learning.
@@ -250,8 +250,8 @@ of people from grocery stores.
 
 ### 2.2.1 Attribute Information
 Member_number: User ID 
-</br>itemDescription: Item name
-</br>Date: The data user buys the item
+<br>itemDescription: Item name
+<br>Date: The data user buys the item
 
 ### 2.2.2 Data statistic
 Using python pandas to read the CSV file of the data checking the basic 
