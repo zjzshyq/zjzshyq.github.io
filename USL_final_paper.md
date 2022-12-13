@@ -1,7 +1,9 @@
-# A quick recall strategy based on clustering centers for a startup in a recommendation system
-Yiqing Hu
+# <center>A quick recall strategy based on clustering centers for a startup in a recommendation system</center>
 
-Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
+<center>
+Yiqing Hu
+</br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
+</center>
 
 **Abstract:** Startup recommendation for new users without 
 any behavior data is always a challenge for the recommendation system. 
@@ -14,8 +16,7 @@ fulfill our final course task. The clustering center from k-means
 delivers the new user recommend list which produced by Apriori. 
 PCA reduces the dimensions of user features and assists to
 determine the number of k in k-means. 
-
-**Key Words:** K-means, PCA, Apriori, Recommendation System
+</br>**Key Words:** K-means, PCA, Apriori, Recommendation System
 
 ## 0. Paper Structure
 In the chapter Algorithms, we will discuss these three algorithms and 
@@ -183,17 +184,15 @@ Apriori<a href="#ref_1">[1]</a> is one of the algorithms of association analysis
 task of finding relationships in large-scale datasets. These relationships 
 can take two forms: (1) frequent item sets, and (2) association rules.
 ### 1.3.1 Frequent item sets
-***Frequent item set:*** It is a collection of items that often appear together.
-
-***Quantification method - Support:*** Support is the proportion of records in the 
+**Frequent item set:** It is a collection of items that often appear together.
+</br>**Quantification method - Support:** Support is the proportion of records in the 
 dataset that contains the item set. For example, in the data set 
 [[1, 3, 4], [2, 3, 5], [1, 2, 3], [2, 5]], the support of the item set 
 {2} is 3/4, and the item the support of the set {2,3} is 1/2.
 
 ### 1.3.2 Association Rules
-***Association rules:*** Implying that there may be a strong relationship between two items.
-
-***Quantitative calculation - Confidence:*** Confidence is defined for an association rule such as {2}-->{3}. {2}-->{3}, 
+**Association rules:** Implying that there may be a strong relationship between two items.
+</br>**Quantitative calculation - Confidence:** Confidence is defined for an association rule such as {2}-->{3}. {2}-->{3}, 
 the reliability of this rule is “support_degree{2, 3}/support_degree{2}”, that is, 2/3, which means 2/3 in all records containing 
 {2} in {2,3} with the rules.
 
@@ -226,12 +225,45 @@ verify if they are qualified to run the jobs for unsupervised learning.
 ### 2.1 User Data
 User data uses travel reviews data set<a href='#ref_2'>[2]</a>  which is a data set for reviewing destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used. It is populated by crawling TripAdvisor.com. Reviews on destinations in 10 categories mentioned across East Asia are considered. Each traveler rating is mapped as Excellent (4), Very Good (3), Average (2), Poor (1), and Terrible (0) and the average rating is used against each category per user.
 
+### 2.1.1 Attribute Information
+Attribute 1: Unique user ID
+</br>Attribute 2: Average user feedback on art galleries 
+</br>Attribute 3: Average user feedback on dance clubs 
+</br>Attribute 4: Average user feedback on juice bars 
+</br>Attribute 5: Average user feedback on restaurants 
+</br>Attribute 6: Average user feedback on museums 
+</br>Attribute 7: Average user feedback on resorts 
+</br>Attribute 8: Average user feedback on parks/picnic spots 
+</br>Attribute 9: Average user feedback on beaches 
+</br>Attribute 10: Average user feedback on theaters 
+</br>Attribute 11: Average user feedback on religious institutions
+
+### 2.1.2 Data statistic
+Using python pandas to read the CSV file of the data and check the data. Printing 
+the result of function Info() shows there is no Missing value and all data are 
+float, not category or character which means feature engineering free.
+
+## 2.2 Item Data
+Item data uses the groceries dataset<a href="#ref_3">[3]</a> which has 38765 rows of the purchase orders
+of people from grocery stores.
+
+### 2.2.1 Attribute Information
+Member_number: User ID 
+</br>itemDescription: Item name
+</br>Date: The data user buys the item
+
+### 2.2.2 Data statistic
+Using python pandas to read the CSV file of the data checking the basic 
+information such as the number of instances, number of users, number of 
+items, and if there are missing values.
+
+
 ## REFERENCES 
 <a id='ref_1'>[1]</a> Rakesh Agrawal and Ramakrishnan Srikant Fast algorithms for mining association rules. Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile, September 1994.
 
 <a id='ref_2'>[2]</a> Shini Renjith, UCI Machine Learning Repository, 19 December 2018. Travel Reviews Data Set. https://archive.ics.uci.edu/ml/datasets/Travel+Reviews
 
-[3] Heeral Dedhia, Kaggle, 2020. Groceries dataset. https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset.
+<a id='ref_3'>[3]</a> Heeral Dedhia, Kaggle, 2020. Groceries dataset. https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset.
 
 [4] Shepard, Roger N. (1962). "The analysis of proximities: Multidimensional scaling with an unknown distance function. I.". Psychometrika. 27 (2): 125–140. doi:10.1007/BF02289630. S2CID 186222646.
 
