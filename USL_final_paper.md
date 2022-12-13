@@ -1,4 +1,4 @@
-# <center>A quick recall strategy based on clustering centers for a startup in a recommendation system</center>
+# <center>A fast recall strategy based on clustering centers for a startup in a recommendation system</center>
 
 <center>
 <strong>Yiqing Hu</strong>
@@ -404,6 +404,49 @@ recommends new user items they may like.
 ### 4.2 Item recommendation
 
 ## 5. Presentation
+Data Visualization platform is an important part of recommendation system for Presentation.
+The platform can very well help data analysts to carry out their work. We bulid a demo of the 
+platform to show the result of unsupervised learning. 
+This chapter we will introduce every page of the demo.
+
+### 5.1 Login Page
+Managers which are users of platform with different permissions have different scopes of use. 
+We divide users into normal managers and super managers.
+![pic_5.1](./img/page_login.jpg)
+
+### 5.2 Algorithm page
+This page lists all the subpages we can access for visualization.
+![pic_5.2](./img/page_lists.jpg)
+
+### 5.3 PCA Page 1
+Two figures could help us to look into the importance of each feature in the whole data 
+and within the component.
+![pic_5.3](./img/page_pca.jpg)
+
+### 5.4 PCA Page 2
+This page shows which is the most important or has the highest ratio feature in the 
+component. We can find the feature names from this list.
+![pic_5.4](./img/page_pca_component.jpg)
+
+### 5.5 K-means feature selecting page
+In this page, we can choose which feature we want to drop.
+![pic_5.5](./img/page_features.jpg)
+
+### 5.6 K-means result page
+Figure 1 in this page shows the silhouette score with different number of clusters. 
+Figure 2 scatters the nodes in 3D. The coordinates of the 3D is top 3 important features. 
+In this page we can select the features to check if it is the result we want.
+![pic_5.6](./img/page_kmean_result.jpg)
+
+### 5.7 Apriori parameter page
+Setting the parameters of apriori in this page.
+![pic_5.7](./img/page_apriori_param.jpg)
+
+### 5.8 Apriori result page
+After setting the parameters, we can get the association rules 
+from apriori in this page.
+![pic_5.8](./img/page_apriori_rules.jpg)
+
 
 ## 6. Conclusion
 
