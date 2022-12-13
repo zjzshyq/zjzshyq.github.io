@@ -104,7 +104,6 @@ is on the third column in which 0 represents the center of
 [ 24.5 224.5] and 1 represents [ 74.5 274.5].
 
 ```
-/usr/bin/python3 /Users/huyiqing/PycharmProjects/UW_lab/us_lab1/kmeans_demo.py 
 [ 24.5 224.5] [ 74.5 274.5]
 [[ 34.64823228 105.3589104    0.        ]
  [ 33.23401872 103.94469683   0.        ]
@@ -114,8 +113,6 @@ is on the third column in which 0 represents the center of
  .
  [103.94469683  33.23401872   1.        ]
  [105.3589104   34.64823228   1.        ]]
-
-Process finished with exit code 0
 ```
 ## 1.2 PCA
 The PCA implementation contains mainly 5 steps:
@@ -166,7 +163,6 @@ PCA in scikit-learn, we can notice that the variance ratio is the same proving
 our code works.
 
 ```
-/usr/bin/python3 /Users/huyiqing/PycharmProjects/UW_lab/us_lab1/pca_demo.py 
 Component importance of PCA in scikit-learn
 [4.25200900e-01 1.77231437e-01 1.24532921e-01 7.31860858e-02
  6.93467514e-02 5.38007297e-02 4.12972825e-02 2.58732153e-02
@@ -176,8 +172,6 @@ Component importance of My PCA
 [4.25200900e-01 1.77231437e-01 1.24532921e-01 7.31860858e-02
  6.93467514e-02 5.38007297e-02 4.12972825e-02 2.58732153e-02
  9.52265378e-03 8.02349649e-06]
-
-Process finished with exit code 0
 ```
 ## 1.3 Apriori
 
@@ -217,7 +211,7 @@ return the L list, L includes L1, L2, L3…
 
 The sample handwriting Apriori process is below:
 
-![不会显示中括号中的文字](./img/apriori_1.jpg)
+![pic_1.1](./img/apriori_1.jpg)
 
 ## 2. Data 
 Use user data and item data are downloaded from the Internet. 
@@ -258,6 +252,156 @@ Using python pandas to read the CSV file of the data checking the basic
 information such as the number of instances, number of users, number of 
 items, and if there are missing values.
 
+## 3. Clustering
+In this chapter, we will use PCA to reduce the dimension of 
+user data. With the reduced data, we run k-means multi-iterations to calculate 
+the silhouette score in each iteration shown by a figure to determine the number 
+cluster which is K. Plotting the node with the top 3 components in the 3D figure 
+to check if the de-dimensioned K-means works well.
+
+### 3.1 Feature reduction
+Using the package PCA() for user data check the components. From the result, 
+we can find top 3 components are 0.42, 0.17, and 0.12 respectively which make up 
+the vast majority ratio. And Components 8, 9, and 10 can be clipped. 
+```python
+pca = PCA()
+pca.fit(trip_df.values)
+n_pcs= pca.components_.shape[0]
+
+pca_ratio = pca.explained_variance_ratio_
+print('Component Ratio')
+for i, comp in enumerate(pca_ratio):
+    print("component_"+str(i+1), "%.5f"%comp)
+```
+```
+Component Ratio
+component_1 0.42520
+component_2 0.17723
+component_3 0.12453
+component_4 0.07319
+component_5 0.06935
+component_6 0.05380
+component_7 0.04130
+component_8 0.02587
+component_9 0.00952
+component_10 0.00001
+```
+It should be emphasized that PCA is not good at feature dropping and selecting. 
+Though each component which is an eigenvector contains weights that represent 
+the importance of each feature, it is tricky to tell how important the whole 
+matrix is. Usually, we can simply use linear regression in a supervised learning 
+task to get the features’ weights which determine the output value Y. In this 
+paper, we try to use PCA to pick features by the values with the largest 
+proportion in each eigenvector. The result of the first line means that feature 
+6 with the highest proportion in component 1 is 0.44. 
+```python
+important_ratio_bottom = []
+important_ratio_height = []
+feature_acc = [0]*n_pcs
+print('\nMost Important Feature in each Component')
+for j, i in enumerate(range(n_pcs)):
+    component_arr = np.abs(pca.components_[i])
+    idx = component_arr.argmax()
+    component_ratio = component_arr[idx]/sum(component_arr)
+    print('component_'+str(j+1), 'feature_'+str(idx+1), "%.5f"%component_ratio)
+    important_ratio_bottom.append(pca_ratio[i]*component_ratio)
+    important_ratio_height.append(pca_ratio[i]*(1-component_ratio))
+    for k,v in enumerate(component_arr):
+        feature_acc[k] += v
+```
+```
+Most Important Feature in each Component
+component_1 feature_3 0.44760
+component_2 feature_6 0.26113
+component_3 feature_2 0.46280
+component_4 feature_9 0.49582
+component_5 feature_1 0.24801
+component_6 feature_10 0.27162
+component_7 feature_5 0.22963
+component_8 feature_10 0.33426
+component_9 feature_8 0.77743
+component_10 feature_7 0.97385
+```
+The figure below combines two results above and directly shows the ratio of
+each component and the ratio of the feature value in each component.
+![pic_3.1](./img/pca_1.jpg)
+
+Then we plot the figure to show the accumulation of all feature values in the 
+whole matrix. Feature 7 and 8 are the least, and they are the most important 
+feature for components 9 and 10 having the least ratios. Though the accumulation 
+feature 4 is high, feature 4 is not the top-valued feature in each eigenvector. 
+In paragraph 2.1.2, we find feature 4 and feature 7 are not paired so well with 
+other features. So we decide to drop feature 4, 7, and 8.
+![pic_3.2](./img/pca_2.jpg)
+
+## 3.2 K-selecting
+We drop feature  4, 7, and 8 to get new data set for training k-means. The 4 
+comments in the function of my_kmeans() show how to code and run k-means 
+algorithms in the scikit-learn package. We run my_kmeans() with a k number 
+from 2 to 20 to calculate the silhouette score for selecting the number of clusters.
+```python
+pca_df = trip_df.drop(['Category_7','Category_8', 'Category_4'], axis=1)
+def my_kmeans(data_df, k):
+    # 1. initialize the model
+    my_kmeans = KMeans(n_clusters=k, random_state=1)
+
+    # 2. fit the model to the data
+    my_kmeans.fit(data_df)
+
+    # 3. obtain cluster labels
+    clusters = my_kmeans.predict(data_df)
+
+    # 4. get cluster centers
+    centroids = my_kmeans.cluster_centers_
+    return clusters, pd.DataFrame(centroids)
+
+sil_score_lst = []
+k_lst = list(range(2,20))
+for k in k_lst:
+    clusters, centroids_df = my_kmeans(pca_df,k)
+    if k == 4:
+        trip_df['cluster_label'] = clusters
+    score = silhouette_score(pca_df, clusters, metric='euclidean')
+    sil_score_lst.append(score)
+```
+When K=2, the silhouette score gets the highest, normally, selecting 2 clusters 
+is the best choice.  But our task is the recommendation, too small of the K is 
+not good for recommending which will reduce the richness and difference of 
+recommendation. When K=4, the score gets sable, so we choose 4 clusters for our 
+remaining tasks. Actually, choosing 4-7 are all accepted, only depending on the 
+task scene.
+![pic_3.3](./img/sil_1.jpg)
+
+After clustering with K=4, we plot the nodes with the top 3 components in the 
+3D nodes scatter figure.
+![pic_3.4](./img/3d_1.jpg)
+
+Dropping feature 3, 6, and 2 which are the most important features for the top 
+3 components will get the silhouette score figure and nodes scatter figure below 
+showing the instability of the silhouette score and the implicit result of nodes scatter.
+![pic_3.5](./img/sil_3d_2.jpg)
+
+Dropping feature 9,1,10 which are not so important and not so unimportant 
+features will get the silhouette score and nodes scatter figure below. The 
+results get better than the second one but are not as good as the first 
+situation.
+![pic_3.6](./img/sil_3d_3.jpg)
+
+Till now, we select 4 clusters with dropped feature 7,8,4 to do the rest job.
+
+## 4. Recommendation
+This chapter contains the user recommendation and the item recommendation. 
+We will use cluster center getting from k-means to recommend the people to the 
+new user who may like which based on the similarity of mental distance 
+approaches<a href='#ref_4'>[4]</a>. Item recommendation delivered by Apriori 
+recommends new user items they may like.
+### 4.1 User recommendation
+
+### 4.2 Item recommendation
+
+## 5. Presentation
+
+## 6. Conclusion
 
 ## REFERENCES 
 <a id='ref_1'>[1]</a> Rakesh Agrawal and Ramakrishnan Srikant Fast algorithms for mining association rules. Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile, September 1994.
@@ -266,5 +410,5 @@ items, and if there are missing values.
 
 <a id='ref_3'>[3]</a> Heeral Dedhia, Kaggle, 2020. Groceries dataset. https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset.
 
-[4] Shepard, Roger N. (1962). "The analysis of proximities: Multidimensional scaling with an unknown distance function. I.". Psychometrika. 27 (2): 125–140. doi:10.1007/BF02289630. S2CID 186222646.
+<a id='ref_3'>[4]</a> Shepard, Roger N. (1962). "The analysis of proximities: Multidimensional scaling with an unknown distance function. I.". Psychometrika. 27 (2): 125–140. doi:10.1007/BF02289630. S2CID 186222646.
 
