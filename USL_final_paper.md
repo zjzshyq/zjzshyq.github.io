@@ -1,7 +1,7 @@
 # <center>A quick recall strategy based on clustering centers for a startup in a recommendation system</center>
 
 <center>
-Yiqing Hu
+<strong>Yiqing Hu</strong>
 </br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
 </center>
 
