@@ -2,7 +2,7 @@
 
 <center>
 <strong>Yiqing Hu</strong>
-</br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland
+<br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland</center
 </center>
 
 **Abstract:** Startup recommendation for new users without 
