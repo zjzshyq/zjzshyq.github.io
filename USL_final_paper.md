@@ -324,6 +324,7 @@ component_10 feature_7 0.97385
 ```
 The figure below combines two results above and directly shows the ratio of
 each component and the ratio of the feature value in each component.
+
 ![pic_3.1](./img/pca_1.jpg)
 
 Then we plot the figure to show the accumulation of all feature values in the 
@@ -370,10 +371,12 @@ not good for recommending which will reduce the richness and difference of
 recommendation. When K=4, the score gets sable, so we choose 4 clusters for our 
 remaining tasks. Actually, choosing 4-7 are all accepted, only depending on the 
 task scene.
+
 ![pic_3.3](./img/sil_1.jpg)
 
 After clustering with K=4, we plot the nodes with the top 3 components in the 
 3D nodes scatter figure.
+
 ![pic_3.4](./img/3d_1.jpg)
 
 Dropping feature 3, 6, and 2 which are the most important features for the top 
@@ -385,6 +388,7 @@ Dropping feature 9,1,10 which are not so important and not so unimportant
 features will get the silhouette score and nodes scatter figure below. The 
 results get better than the second one but are not as good as the first 
 situation.
+
 ![pic_3.6](./img/sil_3d_3.jpg)
 
 Till now, we select 4 clusters with dropped feature 7,8,4 to do the rest job.
