@@ -1,4 +1,5 @@
+name: yiqing's site
+title: null
 include:
-  - README.md
   - index.md
   - USL_final_paper.md
