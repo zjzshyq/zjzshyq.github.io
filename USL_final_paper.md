@@ -5,6 +5,7 @@
 <br>Faculty of Economic Sciences, University of Warsaw, Warsaw, Poland</center
 </center>
 
+
 **Abstract:** Startup recommendation for new users without 
 any behavior data is always a challenge for the recommendation system. 
 We can use several advanced algorithms or strategies to deal with 
