@@ -30,6 +30,10 @@ lists together to recommend for the new. The Presentation chapter
 is a simple data analysis website I built to explore data visually. 
 And we have a Conclusion in the last chapter.
 
+For the unsupervised learning course, I will use PCA and K-means in chapter 
+Clustering and Apriori in chapter Recommendation. Because it is not convenient
+to seprate one for R coding. So I add R code to analysis in chapter Data.
+
 ## 1. Algorithms
 In this chapter, we will quickly review k-means, PCA, and Apriori algorithms.
 ### 1.1 K-mean
@@ -448,7 +452,7 @@ for tup in reflect_rec:
         rules_dict[tup[0]].append(tup[1])
 print('rules_dictionary', rules_dict)
 ```
-we store the dictionary into memory database like Redis. When users click certain item, 
+We store the dictionary into memory database like Redis. When users click certain item, 
 system will access the Redis to get the dictionary for the recommend item below.
 ```
 rules_dictionary
