@@ -418,7 +418,7 @@ After grouping the items by users from groceries data, each user gets the list o
 The whole recommendation process is in the flow chart below.
 
 ![pic_4.1](./img/clustering_rec.jpg)
-
+The process in red box with selecting N is the item recommendation we discuss in this chapter.
 
 ```python
 groceries_grouped = groceries.groupby('Member_number')['itemDescription']\
