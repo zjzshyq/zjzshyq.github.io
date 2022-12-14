@@ -238,6 +238,14 @@ Using python pandas to read the CSV file of the data and check the data. Printin
 the result of function Info() shows there is no Missing value and all data are 
 float, not category or character which means feature engineering free.
 
+Function describe() shows all features which are on a similar scale proving there’s no need to 
+transform the data. 
+
+Function parirplot() from package seaborn can print the correlation between 
+two features. The diagonal is the distribution of the feature itself. Feature 4 and feature 7 
+are not paired so well with other features. We will deal with them in the next chapter.
+
+
 ## 2.2 Item Data
 Item data uses the groceries dataset<a href="#ref_3">[3]</a> which has 38765 rows of the purchase orders
 of people from grocery stores.
