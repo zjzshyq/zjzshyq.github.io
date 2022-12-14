@@ -408,13 +408,18 @@ new user who may like which based on the similarity of mental distance
 approaches<a href='#ref_4'>[4]</a>. Item recommendation delivered by Apriori 
 recommends new user items they may like.
 
-![pic_4.1](./img/clustering_rec.jpg)
+
 
 ### 4.1 User recommendation
 
 ### 4.2 Item recommendation
 We will use groceries dataset csv as original data to implement this task to recommend.
 After grouping the items by users from groceries data, each user gets the list of items he clicked.
+The whole recommendation process is in the flow chart below.
+
+![pic_4.1](./img/clustering_rec.jpg)
+
+
 ```python
 groceries_grouped = groceries.groupby('Member_number')['itemDescription']\
     .agg(lambda x: ','.join(x))\
@@ -461,7 +466,8 @@ rules_dictionary
 ```
 <br>In each cluster, we imply the apriori for the recommend list which contains top 10 items. 
 As the flow chart at the beginning of this chapter, users from interface will check which cluster
-he is most similar with, and then get recommend list of this cluster.
+he is most similar with, and then get recommend list of this cluster. When he clicks some item having
+the association rules, the system can continually push the item recommend.
 ```python
 for k in set(trip_df['cluster_label']):
     tmp_df = trip_df[trip_df['cluster_label'] == k]
