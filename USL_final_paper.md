@@ -432,7 +432,7 @@ input_items sample:
  ('frozen_vegetables', 'whole_milk', 'other_vegetables', 'sugar', 'tropical_fruit', 'butter_milk', 'butter', 'specialty_chocolate')
  ]
 ```
-After we putting the data above into the apriori, and setting the parameters of min_support and min_confidence 
+<br>After we putting the data above into the apriori, and setting the parameters of min_support and min_confidence 
 can get the item frequency set and the association rules dictionary.
 ```python
 item_dict, rules4all = apriori(input_items, min_support=0.1, min_confidence=0.11)
@@ -459,8 +459,9 @@ rules_dictionary
  'tropical_fruit': ['whole_milk']
  }
 ```
-
-
+<br>In each cluster, we imply the apriori for the recommend list which contains top 10 items. 
+As the flow chart at the beginning of this chapter, users from interface will check which cluster
+he is most similar with, and then get recommend list of this cluster.
 ```python
 for k in set(trip_df['cluster_label']):
     tmp_df = trip_df[trip_df['cluster_label'] == k]
@@ -477,6 +478,7 @@ for k in set(trip_df['cluster_label']):
     rec_lst_top10 = list(map(lambda x: x[0], sorted_paired))[:10]
     print("cluster %d rec lst top10: " % k, rec_lst_top10)
 ```
+
 ```
 cluster 0 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pastry', 'bottled_beer']
 cluster 1 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pip_fruit', 'citrus_fruit']
