@@ -568,6 +568,9 @@ from apriori in this page.
 
 
 ## 6. Conclusion
+We combine three paper into one, and add an extra R paper content in this paper.
+Hoping it is ok to pass the course. The conclusion is just a formality to
+complete for the entire paper. Let's end up here, thank you.
 
 ## REFERENCES 
 <a id='ref_1'>[1]</a> Rakesh Agrawal and Ramakrishnan Srikant Fast algorithms for mining association rules. Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile, September 1994.
