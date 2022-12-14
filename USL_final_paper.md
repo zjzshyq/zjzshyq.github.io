@@ -407,9 +407,83 @@ We will use cluster center getting from k-means to recommend the people to the
 new user who may like which based on the similarity of mental distance 
 approaches<a href='#ref_4'>[4]</a>. Item recommendation delivered by Apriori 
 recommends new user items they may like.
+
+![pic_4.1](./img/clustering_rec.jpg)
+
 ### 4.1 User recommendation
 
 ### 4.2 Item recommendation
+We will use groceries dataset csv as original data to implement this task to recommend.
+After grouping the items by users from groceries data, each user gets the list of items he clicked.
+```python
+groceries_grouped = groceries.groupby('Member_number')['itemDescription']\
+    .agg(lambda x: ','.join(x))\
+    .reset_index(name ='Item_series')
+input_items = list(map(lambda x: tuple(set(x.split(','))),
+                       list(groceries_grouped['Item_series'])
+                       ))
+```
+The output below is the result from the code above. It is the examples which we 
+will regard as  the input data for apriori
+```
+input_items sample: 
+[('sausage', 'hygiene_articles', 'salty_snack', 'misc._beverages', 'whole_milk', 'pastry', 'canned_beer', 'soda', 'yogurt', 'semi-finished_bread', 'pickled_vegetables'), 
+ ('sausage', 'whole_milk', 'soda', 'beef', 'whipped_sour_cream', 'rolls_buns', 'frankfurter', 'white_bread', 'curd'), 
+ ('frozen_vegetables', 'whole_milk', 'other_vegetables', 'sugar', 'tropical_fruit', 'butter_milk', 'butter', 'specialty_chocolate')
+ ]
+```
+After we putting the data above into the apriori, and setting the parameters of min_support and min_confidence 
+can get the item frequency set and the association rules dictionary.
+```python
+item_dict, rules4all = apriori(input_items, min_support=0.1, min_confidence=0.11)
+reflect_rec = list((map(lambda x: (x.lhs[0],x.rhs[0]),rules4all)))
+rules_dict = {}
+for tup in reflect_rec:
+    if tup[0] not in rules_dict:
+        rules_dict[tup[0]] = [tup[1]]
+    else:
+        rules_dict[tup[0]].append(tup[1])
+print('rules_dictionary', rules_dict)
+```
+we store the dictionary into memory database like Redis. When users click certain item, 
+system will access the Redis to get the dictionary for the recommend item below.
+```
+rules_dictionary
+ {'whole_milk': ['bottled_water', 'other_vegetables', 'rolls_buns', 'root_vegetables', 'sausage', 'soda', 'tropical_fruit', 'yogurt'], 
+ 'bottled_water': ['whole_milk'], 
+ 'rolls_buns': ['other_vegetables', 'soda', 'whole_milk', 'yogurt'], 
+ 'other_vegetables': ['rolls_buns', 'soda', 'whole_milk', 'yogurt'], 
+ 'soda': ['other_vegetables', 'rolls_buns', 'whole_milk'], 
+ 'yogurt': ['other_vegetables', 'rolls_buns', 'whole_milk'], 
+ 'root_vegetables': ['whole_milk'], 'sausage': ['whole_milk'], 
+ 'tropical_fruit': ['whole_milk']
+ }
+```
+
+
+```python
+for k in set(trip_df['cluster_label']):
+    tmp_df = trip_df[trip_df['cluster_label'] == k]
+    input_items = list(map(lambda x: tuple(set(x.split(','))),
+                           list(tmp_df['Item_series'])
+                           ))
+    # run Apriori
+    item_dict, association_rules= apriori(input_items, min_support=0.1, min_confidence=0.15)
+    # clean the frequent item sets
+    kv_pairs = map(lambda x: (x[0][0], x[1]), item_dict[1].items())
+    # order the item sets
+    sorted_paired = sorted(kv_pairs, key=lambda kv: -kv[1])
+    # get the most 10 frequent items as the recommend list
+    rec_lst_top10 = list(map(lambda x: x[0], sorted_paired))[:10]
+    print("cluster %d rec lst top10: " % k, rec_lst_top10)
+```
+```
+cluster 0 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pastry', 'bottled_beer']
+cluster 1 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pip_fruit', 'citrus_fruit']
+cluster 2 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'soda', 'yogurt', 'tropical_fruit', 'root_vegetables', 'bottled_water', 'sausage', 'citrus_fruit']
+cluster 3 rec lst top10:  ['whole_milk', 'rolls_buns', 'yogurt', 'other_vegetables', 'tropical_fruit', 'soda', 'root_vegetables', 'sausage', 'bottled_water', 'shopping_bags']
+```
+
 
 ## 5. Presentation
 Data Visualization platform is an important part of recommendation system for Presentation.
