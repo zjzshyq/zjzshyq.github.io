@@ -405,22 +405,41 @@ situation.
 
 Till now, we select 4 clusters with dropped feature 7,8,4 to do the rest job.
 
+The reason why we use PCA to reduce the dimensions is to optimize the cost of 
+implement time. Because in real Internet task, it is normal that the number of 
+features would be thousands. Dedimension will also improve the situation of 
+overfitting for supervised learning. It is quite only for us to check the data by
+poltting them on the figure which rely on 2 or 3 dimensions with the PCA components.
+
 ## 4. Recommendation
 This chapter contains the user recommendation and the item recommendation. 
 We will use cluster center getting from k-means to recommend the people to the 
 new user who may like which based on the similarity of mental distance 
 approaches<a href='#ref_4'>[4]</a>. Item recommendation delivered by Apriori 
-recommends new user items they may like.
+recommends new user items they may like. The flow chart below is the whole process
+of the strategy to recommend for new user.
 
 ![pic_4.1](./img/clustering_rec.jpg)
 
-### 4.1 User recommendation
+The red dotted line box does the work as we discussed in Chapter Clustering.
+The green line is for new user to get the data for recommend. 
+The blue dotted line box is the recommendation list of the genarate module.
 
+### 4.1 User recommendation
+If the recommendation task is for new users, the user profile we use in the red dotted line box
+will only choose the features that new users would have, like the brand of mobile phone, ip
+address, gender, application installed list(som countries can't get this, because of the law), 
+and so on. we can't use the user behavior as the data for clustering as we did in the chapter
+clustering, because new user do not have this data.
+
+As the flow chart shows, getting new user data basic from interface, then assemble the data into
+a vector which have the same form as cluster centers we already made. we calculate the similarity
+with the vectors of cluster centers to get the closest one, then calculate the similarity with users
+in the cluster. We can get a list of similar users to recommend the new one.
 
 ### 4.2 Item recommendation
 We will use groceries dataset csv as original data to implement this task to recommend.
 After grouping the items by users from groceries data, each user gets the list of items he clicked.
-The whole item recommendation process is in the flow chart with the green line.
 
 ```python
 groceries_grouped = groceries.groupby('Member_number')['itemDescription']\
