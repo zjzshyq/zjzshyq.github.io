@@ -416,7 +416,7 @@ recommends new user items they may like.
 ### 4.2 Item recommendation
 We will use groceries dataset csv as original data to implement this task to recommend.
 After grouping the items by users from groceries data, each user gets the list of items he clicked.
-The whole recommendation process is in the flow chart below.
+The whole item recommendation process is in the flow chart with the green line.
 
 ```python
 groceries_grouped = groceries.groupby('Member_number')['itemDescription']\
