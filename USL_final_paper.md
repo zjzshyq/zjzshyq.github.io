@@ -236,6 +236,15 @@ Attribute 1: Unique user ID
 <br>Attribute 9: Average user feedback on beaches 
 <br>Attribute 10: Average user feedback on theaters 
 <br>Attribute 11: Average user feedback on religious institutions
+```
+  User.ID Category.1 Category.2 Category.3 Category.4 Category.5 Category.6 Category.7 Category.8 Category.9 Category.10
+1  User 1       0.93       1.80       2.29       0.62       0.80       2.42       3.19       2.79       1.82        2.42
+2  User 2       1.02       2.20       2.66       0.64       1.42       3.18       3.21       2.63       1.86        2.32
+3  User 3       1.22       0.80       0.54       0.53       0.24       1.54       3.18       2.80       1.31        2.50
+4  User 4       0.45       1.80       0.29       0.57       0.46       1.52       3.18       2.96       1.57        2.86
+5  User 5       0.51       1.20       1.18       0.57       1.54       2.02       3.18       2.78       1.18        2.54
+6  User 6       0.99       1.28       0.72       0.27       0.74       1.26       3.17       2.89       1.66        3.66
+```
 
 ### 2.1.2 Data statistic
 Using R Language to read the CSV file of the data and check the data. Printing 
@@ -255,33 +264,59 @@ except User.ID are numeric, not category or character which means feature engine
 <0 rows> (or 0-length row.names)
 ```
 
-Function summary() shows all features which are on a similar scale proving there’s no need to 
+Function summary() in R shows all features which are on a similar scale proving there’s no need to 
 transform the data. 
 
 ```R
-> summary(tripadvisor)
-   User.ID            Category.1       Category.2      Category.3      Category.4       Category.5    
- Length:980         Min.   :0.3400   Min.   :0.000   Min.   :0.130   Min.   :0.1500   Min.   :0.0600  
- Class :character   1st Qu.:0.6700   1st Qu.:1.080   1st Qu.:0.270   1st Qu.:0.4100   1st Qu.:0.6400  
- Mode  :character   Median :0.8300   Median :1.280   Median :0.820   Median :0.5000   Median :0.9000  
-                    Mean   :0.8932   Mean   :1.353   Mean   :1.013   Mean   :0.5325   Mean   :0.9397  
-                    3rd Qu.:1.0200   3rd Qu.:1.560   3rd Qu.:1.573   3rd Qu.:0.5800   3rd Qu.:1.2000  
-                    Max.   :3.2200   Max.   :3.640   Max.   :3.620   Max.   :3.4400   Max.   :3.3000  
-   Category.6      Category.7      Category.8      Category.9     Category.10   
- Min.   :0.140   Min.   :3.160   Min.   :2.420   Min.   :0.740   Min.   :2.140  
- 1st Qu.:1.460   1st Qu.:3.180   1st Qu.:2.740   1st Qu.:1.310   1st Qu.:2.540  
- Median :1.800   Median :3.180   Median :2.820   Median :1.540   Median :2.780  
- Mean   :1.843   Mean   :3.181   Mean   :2.835   Mean   :1.569   Mean   :2.799  
- 3rd Qu.:2.200   3rd Qu.:3.180   3rd Qu.:2.910   3rd Qu.:1.760   3rd Qu.:3.040  
- Max.   :3.760   Max.   :3.210   Max.   :3.390   Max.   :3.170   Max.   :3.660  
+ User.ID            Category.1       Category.2      Category.3      Category.4       Category.5       Category.6      Category.7      Category.8      Category.9     Category.10   
+ Length:980         Min.   :0.3400   Min.   :0.000   Min.   :0.130   Min.   :0.1500   Min.   :0.0600   Min.   :0.140   Min.   :3.160   Min.   :2.420   Min.   :0.740   Min.   :2.140  
+ Class :character   1st Qu.:0.6700   1st Qu.:1.080   1st Qu.:0.270   1st Qu.:0.4100   1st Qu.:0.6400   1st Qu.:1.460   1st Qu.:3.180   1st Qu.:2.740   1st Qu.:1.310   1st Qu.:2.540  
+ Mode  :character   Median :0.8300   Median :1.280   Median :0.820   Median :0.5000   Median :0.9000   Median :1.800   Median :3.180   Median :2.820   Median :1.540   Median :2.780  
+                    Mean   :0.8932   Mean   :1.353   Mean   :1.013   Mean   :0.5325   Mean   :0.9397   Mean   :1.843   Mean   :3.181   Mean   :2.835   Mean   :1.569   Mean   :2.799  
+                    3rd Qu.:1.0200   3rd Qu.:1.560   3rd Qu.:1.573   3rd Qu.:0.5800   3rd Qu.:1.2000   3rd Qu.:2.200   3rd Qu.:3.180   3rd Qu.:2.910   3rd Qu.:1.760   3rd Qu.:3.040  
+                    Max.   :3.2200   Max.   :3.640   Max.   :3.620   Max.   :3.4400   Max.   :3.3000   Max.   :3.760   Max.   :3.210   Max.   :3.390   Max.   :3.170   Max.   :3.660   
 ```
-
-Function parirplot() in the python package of seaborn from package seaborn can print the 
+Function parirplot() in the python from package seaborn can print the 
 correlation figure  between two features. The diagonal is the distribution of the feature itself. 
 Feature 4 and feature 7 are not paired so well with other features. We will deal with them in the 
 next chapter.
 
 ![pic_2.1](./img/pairplot.png)
+
+### 2.1.3 Data distribution
+Using R to detect the distribution of user data.
+```R
+trips<-tripadvisor[,2:11]
+dist1<-dist(trips,method = 'euclidean')
+mds_fitted<-mds(dist1, ndim=2,  type="ratio")
+stress<-mds_fitted$stress
+plot(mds_fitted$conf, main="MDS for all users", pch=20)
+```
+The average stress is 0.2022141 which is acceptable. The distribution based on MDS with
+euclidean distance between users are shown as below. Most of the users gather
+together, not separate too much.
+
+![pic_2.2](./img/MDS4users.png)
+
+
+Hierarchical clustering shows near height 4, data can form 5 stable clusters.
+```R
+htree<-hclust(dist1, method="complete")
+plot(htree, main="hierarchical clustering",sub='', xla='distance between users', labels=F)
+```
+
+![pic_2.2](./img/hierarchical_clustering.png)
+
+Selecting 5 as cluster number for convex clustering, we can find data in these
+clusters are not so dispersed.
+
+```R
+cc<-cclust(trips, 5, dist="euclidean")
+stripes(cc)
+```
+
+![pic_2.2](./img/cclust.png)
+
 
 
 ## 2.2 Item Data
