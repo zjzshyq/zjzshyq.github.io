@@ -249,7 +249,8 @@ Attribute 1: Unique user ID
 ### 2.1.2 Data statistic
 Using R Language to read the CSV file of the data and check the data. Printing 
 the results with the R functions shows there is no Missing value and all data 
-except User.ID are numeric, not category or character which means feature engineering is free.
+except User.ID are numeric, not category or character which means do not need
+feature engineering.
 
 ```R
 > sapply(tripadvisor, class)
