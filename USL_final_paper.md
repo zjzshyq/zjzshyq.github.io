@@ -245,9 +245,12 @@ float, not category or character which means feature engineering free.
 Function describe() shows all features which are on a similar scale proving there’s no need to 
 transform the data. 
 
-Function parirplot() from package seaborn can print the correlation between 
-two features. The diagonal is the distribution of the feature itself. Feature 4 and feature 7 
-are not paired so well with other features. We will deal with them in the next chapter.
+Function parirplot() in the python package of seaborn from package seaborn can print the 
+correlation figure  between two features. The diagonal is the distribution of the feature itself. 
+Feature 4 and feature 7 are not paired so well with other features. We will deal with them in the 
+next chapter.
+
+![pic_2.1](./img/pairplot.png)
 
 
 ## 2.2 Item Data
@@ -429,11 +432,11 @@ The blue dotted line box is the recommendation list of the genarate module.
 If the recommendation task is for new users, the user profile we use in the red dotted line box
 will only choose the features that new users would have, like the brand of mobile phone, ip
 address, gender, application installed list(som countries can't get this, because of the law), 
-and so on. we can't use the user behavior as the data for clustering as we did in the chapter
+and so on. We can't use the user behavior as the features for clustering as we did in the chapter
 clustering, because new user do not have this data.
 
-As the flow chart shows, getting new user data basic from interface, then assemble the data into
-a vector which have the same form as cluster centers we already made. we calculate the similarity
+As the flow chart shows, the interface gets new user basic data, then we assemble the data into
+a vector which have the same form as cluster centers we already made. We calculate the similarity
 with the vectors of cluster centers to get the closest one, then calculate the similarity with users
 in the cluster. We can get a list of similar users to recommend the new one.
 
