@@ -238,12 +238,43 @@ Attribute 1: Unique user ID
 <br>Attribute 11: Average user feedback on religious institutions
 
 ### 2.1.2 Data statistic
-Using python pandas to read the CSV file of the data and check the data. Printing 
-the result of function Info() shows there is no Missing value and all data are 
-float, not category or character which means feature engineering free.
+Using R Language to read the CSV file of the data and check the data. Printing 
+the results with the R functions shows there is no Missing value and all data 
+except User.ID are numeric, not category or character which means feature engineering is free.
 
-Function describe() shows all features which are on a similar scale proving there’s no need to 
+```R
+> sapply(tripadvisor, class)
+    User.ID  Category.1  Category.2  Category.3  Category.4  Category.5  Category.6  Category.7 
+"character"   "numeric"   "numeric"   "numeric"   "numeric"   "numeric"   "numeric"   "numeric" 
+ Category.8  Category.9 Category.10 
+  "numeric"   "numeric"   "numeric" 
+  
+> tripadvisor[!complete.cases(tripadvisor),]
+ [1] User.ID     Category.1  Category.2  Category.3  Category.4  Category.5  Category.6  Category.7 
+ [9] Category.8  Category.9  Category.10
+<0 rows> (or 0-length row.names)
+```
+
+Function summary() shows all features which are on a similar scale proving there’s no need to 
 transform the data. 
+
+```R
+> summary(tripadvisor)
+   User.ID            Category.1       Category.2      Category.3      Category.4       Category.5    
+ Length:980         Min.   :0.3400   Min.   :0.000   Min.   :0.130   Min.   :0.1500   Min.   :0.0600  
+ Class :character   1st Qu.:0.6700   1st Qu.:1.080   1st Qu.:0.270   1st Qu.:0.4100   1st Qu.:0.6400  
+ Mode  :character   Median :0.8300   Median :1.280   Median :0.820   Median :0.5000   Median :0.9000  
+                    Mean   :0.8932   Mean   :1.353   Mean   :1.013   Mean   :0.5325   Mean   :0.9397  
+                    3rd Qu.:1.0200   3rd Qu.:1.560   3rd Qu.:1.573   3rd Qu.:0.5800   3rd Qu.:1.2000  
+                    Max.   :3.2200   Max.   :3.640   Max.   :3.620   Max.   :3.4400   Max.   :3.3000  
+   Category.6      Category.7      Category.8      Category.9     Category.10   
+ Min.   :0.140   Min.   :3.160   Min.   :2.420   Min.   :0.740   Min.   :2.140  
+ 1st Qu.:1.460   1st Qu.:3.180   1st Qu.:2.740   1st Qu.:1.310   1st Qu.:2.540  
+ Median :1.800   Median :3.180   Median :2.820   Median :1.540   Median :2.780  
+ Mean   :1.843   Mean   :3.181   Mean   :2.835   Mean   :1.569   Mean   :2.799  
+ 3rd Qu.:2.200   3rd Qu.:3.180   3rd Qu.:2.910   3rd Qu.:1.760   3rd Qu.:3.040  
+ Max.   :3.760   Max.   :3.210   Max.   :3.390   Max.   :3.170   Max.   :3.660  
+```
 
 Function parirplot() in the python package of seaborn from package seaborn can print the 
 correlation figure  between two features. The diagonal is the distribution of the feature itself. 
@@ -261,11 +292,33 @@ of people from grocery stores.
 Member_number: User ID 
 <br>itemDescription: Item name
 <br>Date: The data user buys the item
+```
+  Member_number       Date  itemDescription
+1          1808 21-07-2015   tropical fruit
+2          2552 05-01-2015       whole milk
+3          2300 19-09-2015        pip fruit
+4          1187 12-12-2015 other vegetables
+5          3037 01-02-2015       whole milk
+6          4941 14-02-2015       rolls/buns
+```
 
 ### 2.2.2 Data statistic
-Using python pandas to read the CSV file of the data checking the basic 
+Using R language to read the CSV file of the data checking the basic 
 information such as the number of instances, number of users, number of 
 items, and if there are missing values.
+```R
+num_instances <- nrow(groceries)
+num_user <- length(unique(groceries$Member_number))
+num_item <- length(unique(groceries$itemDescription))
+na_check <- groceries[!complete.cases(groceries), ]
+```
+```
+[1] 38765
+[1] 3898
+[1] 167
+[1] Member_number   Date            itemDescription
+<0 rows> (or 0-length row.names)
+```
 
 ## 3. Clustering
 In this chapter, we will use PCA to reduce the dimension of 
