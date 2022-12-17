@@ -19,7 +19,6 @@ PCA reduces the dimensions of user features and assists to
 determine the number of k in k-means. 
 <br>**Key Words:** K-means, PCA, Apriori, Recommendation System
 
-[TOC]
 
 ## 0. Structure
 In the chapter Algorithms, we will discuss these three algorithms and 
