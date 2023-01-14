@@ -237,17 +237,17 @@ East Asia are considered. Each traveler rating and the average rating
 is used against each category per user.
 
 ### 2.1.1 Attribute Information
-Attribute 1: Unique user ID
-<br>Attribute 2: Average user feedback on art galleries 
-<br>Attribute 3: Average user feedback on dance clubs 
-<br>Attribute 4: Average user feedback on juice bars 
-<br>Attribute 5: Average user feedback on restaurants 
-<br>Attribute 6: Average user feedback on museums 
-<br>Attribute 7: Average user feedback on resorts 
-<br>Attribute 8: Average user feedback on parks/picnic spots 
-<br>Attribute 9: Average user feedback on beaches 
-<br>Attribute 10: Average user feedback on theaters 
-<br>Attribute 11: Average user feedback on religious institutions
+Attribute 0: Unique user ID
+<br>Attribute 1: Average user feedback on art galleries 
+<br>Attribute 2: Average user feedback on dance clubs 
+<br>Attribute 3: Average user feedback on juice bars 
+<br>Attribute 4: Average user feedback on restaurants 
+<br>Attribute 5: Average user feedback on museums 
+<br>Attribute 6: Average user feedback on resorts 
+<br>Attribute 7: Average user feedback on parks/picnic spots 
+<br>Attribute 8: Average user feedback on beaches 
+<br>Attribute 9: Average user feedback on theaters 
+<br>Attribute 10: Average user feedback on religious institutions
 ```
   User.ID Category.1 Category.2 Category.3 Category.4 Category.5 Category.6 Category.7 Category.8 Category.9 Category.10
 1  User 1       0.93       1.80       2.29       0.62       0.80       2.42       3.19       2.79       1.82        2.42
@@ -516,7 +516,7 @@ task scene.
 ![pic_3.3](./img/sil_1.jpg)
 
 After clustering with K=4, we plot the nodes with the top 3 components in the 
-3D nodes scatter figure.
+3D nodes scatter figure. 
 
 ![pic_3.4](./img/3d_1.jpg)
 
