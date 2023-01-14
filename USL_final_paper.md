@@ -25,7 +25,7 @@ In the chapter Algorithms, we will discuss these three algorithms and
 implement them by code. We will explore the data we use in this paper 
 in the chapter on Data. Chapter Clustering shows the analytic process 
 and results of getting the centers, which will conclude PCA and 
-k-means. Chapter Recommendation discusses how we get the recommend
+k-means. Chapter Recommendation discusses how we get the recommendation
 list using Apriori, and how we combine cluster centers and recommend
 lists together to recommend for the new. The Presentation chapter 
 is a simple data analysis website I built to explore data visually. 
