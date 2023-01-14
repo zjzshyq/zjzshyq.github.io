@@ -17,7 +17,7 @@ fulfill our final course task. The clustering center from k-means
 delivers the new user recommend list which produced by Apriori. 
 PCA reduces the dimensions of user features and assists to
 determine the number of k in k-means. 
-<br>**Key Words:** K-means, PCA, Apriori, Recommendation System
+<br>**Keywords:** K-means, PCA, Apriori, Recommendation System
 
 
 ## 0. Structure
@@ -27,9 +27,11 @@ in the chapter on Data. Chapter Clustering shows the analytic process
 and results of getting the centers, which will conclude PCA and 
 k-means. Chapter Recommendation discusses how we get the recommendation
 list using Apriori, and how we combine cluster centers and recommend
-lists together to recommend for the new. The Presentation chapter 
+lists together to recommend for the new. The Platform chapter 
 is a simple data analysis website I built to explore data visually. 
 And we have a Conclusion in the last chapter.
+
+![pic_1.1](./img/UL_structrue.png)
 
 For the unsupervised learning course, I will use PCA and K-means in chapter 
 Clustering and Apriori in chapter Recommendation. Because it is not convenient
@@ -607,7 +609,7 @@ cluster 3 rec lst top10:  ['whole_milk', 'rolls_buns', 'yogurt', 'other_vegetabl
 ```
 
 
-## 5. Presentation
+## 5. Platform
 Data Visualization platform is an important part of recommendation system for Presentation.
 The platform can very well help data analysts to carry out their work. We bulid a demo of the 
 platform to show the result of unsupervised learning. 
