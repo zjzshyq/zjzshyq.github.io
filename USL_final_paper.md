@@ -9,7 +9,8 @@
 **Abstract:** Startup recommendation for new users without 
 any behavior data is always a challenge for the recommendation system. 
 We can use several advanced algorithms or strategies to deal with 
-the startup in real production. However, in this course, we do not 
+the startup in real production which can be a classic task in cell phone
+application. However, in this course, we do not 
 have so many tools in the box we discussed in class. Using the k-means 
 to cluster old users to get centers, and getting the center with a 
 minimum distance from the new user is the feasible solution to 
