@@ -226,7 +226,14 @@ Use user data and item data are downloaded from the Internet.
 They are both CSVs. In this chapter, we will check the data quickly to 
 verify if they are qualified to run the jobs for unsupervised learning.
 ### 2.1 User Data
-User data uses travel reviews data set<a href='#ref_2'>[2]</a>  which is a data set for reviewing destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used. It is populated by crawling TripAdvisor.com. Reviews on destinations in 10 categories mentioned across East Asia are considered. Each traveler rating is mapped as Excellent (4), Very Good (3), Average (2), Poor (1), and Terrible (0) and the average rating is used against each category per user.
+User data uses travel reviews data set<a href='#ref_2'>[2]</a>  
+which is a data set for reviewing destinations in 10 categories mentioned 
+across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), 
+Average(2), Poor(1), and Terrible(0) and average rating is used. 
+It is populated by crawling TripAdvisor.com. 
+Reviews on destinations in 10 categories mentioned across
+East Asia are considered. Each traveler rating and the average rating 
+is used against each category per user.
 
 ### 2.1.1 Attribute Information
 Attribute 1: Unique user ID
@@ -362,7 +369,7 @@ na_check <- groceries[!complete.cases(groceries), ]
 
 ## 3. Clustering
 In this chapter, we will use PCA to reduce the dimension of 
-user data. With the reduced data, we run k-means multi-iterations to calculate 
+user data which are the average user feedback score. With the reduced data, we run k-means multi-iterations to calculate 
 the silhouette score in each iteration shown by a figure to determine the number 
 cluster which is K. Plotting the node with the top 3 components in the 3D figure 
 to check if the de-dimensioned K-means works well.
@@ -370,7 +377,10 @@ to check if the de-dimensioned K-means works well.
 ### 3.1 Feature reduction
 Using the package PCA() for user data check the components. From the result, 
 we can find top 3 components are 0.42, 0.17, and 0.12 respectively which make up 
-the vast majority ratio. And Components 8, 9, and 10 can be clipped. 
+the vast majority ratio. These components make the most contributions to the 
+average feedback score. And Components 8 and 9 could be trimmed, which means we
+can remove 2 feedback score features that are not so useful in this task.
+
 ```python
 pca = PCA()
 pca.fit(trip_df.values)
@@ -400,8 +410,12 @@ the importance of each feature, it is tricky to tell how important the whole
 matrix is. Usually, we can simply use linear regression in a supervised learning 
 task to get the features’ weights which determine the output value Y. In this 
 paper, we try to use PCA to pick features by the values with the largest 
-proportion in each eigenvector. The result of the first line means that feature 
-6 with the highest proportion in component 1 is 0.44. 
+proportion in each eigenvector. 
+
+</br>The result of the first line means that feature 6 with the highest proportion in 
+component 1 is 0.44. Feature 6 represents the average score of museums which means people 
+from East Asia are keen on museums when they were travelling.
+
 ```python
 important_ratio_bottom = []
 important_ratio_height = []
@@ -431,16 +445,31 @@ component_9 feature_8 0.77743
 component_10 feature_7 0.97385
 ```
 The figure below combines two results above and directly shows the ratio of
-each component and the ratio of the feature value in each component.
+each component and the ratio of the feature value in each component. 
 
 ![pic_3.1](./img/pca_1.jpg)
 
 Then we plot the figure to show the accumulation of all feature values in the 
 whole matrix. Feature 7 and 8 are the least, and they are the most important 
-feature for components 9 and 10 having the least ratios. Though the accumulation 
-feature 4 is high, feature 4 is not the top-valued feature in each eigenvector. 
-In paragraph 2.1.2, we find feature 4 and feature 7 are not paired so well with 
-other features. So we decide to drop feature 4, 7, and 8.
+feature for components 9 and 10 having the least ratios. 
+
+</br>
+Because we are going to remove Components 9 and 10. Features 8 and 7 can be removed
+from our task for making the most contribution to Components 9 and 10. Feature 7 
+is Average user feedback on resorts, feature 8 is on parks/picnic spots. 
+
+</br>
+Resorts and spots of parks/picnics would not be considered so much for 
+East Asia travellers. Comparing the correlation figure in Sector 2.1.2, 
+Resorts have no correlation with other destinations that more or less belong 
+to the conception of resorts. Spots of parks/picnics are just not so attractive 
+compared with other destinations.
+
+
+Though the accumulation feature 4 is high, feature 4 is not the top-valued feature 
+in each eigenvector. In paragraph 2.1.2, we find feature 4 and feature 7 are not 
+paired so well with other features. So we decide to drop feature 4, 7, and 8.
+
 ![pic_3.2](./img/pca_2.jpg)
 
 ## 3.2 K-selecting
