@@ -464,8 +464,12 @@ to the conception of resorts. Spots of parks/picnics are just not so attractive
 compared with other destinations.
 <br>
 Though the accumulation feature 4 is high, feature 4 is not the top-valued feature 
-in each eigenvector. Feature 4  In paragraph 2.1.2, we find feature 4 is not 
-paired so well with other features. So we decide to drop feature 4, 7, and 8.
+in each eigenvector. Feature 4 represents the average score of juice bars. 
+In our common sense, we usually don’t regard juice bars as a  destination for travelling, 
+however, juice bars may appear in most tourist destinations. 
+It makes sense to remove feature 4 from our data. Feature 4 in paragraph 2.1.2, is not 
+paired so well with other features explaining that juice bars are more independent.
+So we decide to drop feature 4, 7, and 8 which are juice bars, resorts and parks/picnic spots.
 
 ![pic_3.2](./img/pca_2.jpg)
 
