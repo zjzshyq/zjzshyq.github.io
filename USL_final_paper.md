@@ -412,7 +412,8 @@ task to get the features’ weights which determine the output value Y. In this
 paper, we try to use PCA to pick features by the values with the largest 
 proportion in each eigenvector. 
 
-</br>The result of the first line means that feature 6 with the highest proportion in 
+<br>
+The result of the first line means that feature 6 with the highest proportion in 
 component 1 is 0.44. Feature 6 represents the average score of museums which means people 
 from East Asia are keen on museums when they were travelling.
 
@@ -453,15 +454,18 @@ Then we plot the figure to show the accumulation of all feature values in the
 whole matrix. Feature 7 and 8 are the least, and they are the most important 
 feature for components 9 and 10 having the least ratios.
 
-<br>Because we are going to remove Components 9 and 10. Features 8 and 7 can be removed
+<br>
+Because we are going to remove Components 9 and 10. Features 8 and 7 can be removed
 from our task for making the most contribution to Components 9 and 10. Feature 7 
 is Average user feedback on resorts, feature 8 is on parks/picnic spots.
+
 <br>
 Resorts and spots of parks/picnics would not be considered so much for 
 East Asia travellers. Comparing the correlation figure in paragraph 2.1.2, 
 resorts have no correlation with other destinations that more or less belong 
 to the conception of resorts. Spots of parks/picnics are just not so attractive 
 compared with other destinations.
+
 <br>
 Though the accumulation feature 4 is high, feature 4 is not the top-valued feature 
 in each eigenvector. Feature 4 represents the average score of juice bars. 
@@ -469,6 +473,8 @@ In our common sense, we usually don’t regard juice bars as a  destination for 
 however, juice bars may appear in most tourist destinations. 
 It makes sense to remove feature 4 from our data. Feature 4 in paragraph 2.1.2, is not 
 paired so well with other features explaining that juice bars are more independent.
+
+<br>
 So we decide to drop feature 4, 7, and 8 which are juice bars, resorts and parks/picnic spots.
 
 ![pic_3.2](./img/pca_2.jpg)
