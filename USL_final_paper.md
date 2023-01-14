@@ -31,7 +31,7 @@ lists together to recommend for the new. The Platform chapter
 is a simple data analysis website I built to explore data visually. 
 And we have a Conclusion in the last chapter.
 
-![pic_1.1](./img/UL_structrue.png)
+![pic_0](./img/UL_structrue.png)
 
 For the unsupervised learning course, I will use PCA and K-means in chapter 
 Clustering and Apriori in chapter Recommendation. Because it is not convenient
