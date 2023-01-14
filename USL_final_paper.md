@@ -453,21 +453,21 @@ Then we plot the figure to show the accumulation of all feature values in the
 whole matrix. Feature 7 and 8 are the least, and they are the most important 
 feature for components 9 and 10 having the least ratios. 
 
-</br>
+<br>
 Because we are going to remove Components 9 and 10. Features 8 and 7 can be removed
 from our task for making the most contribution to Components 9 and 10. Feature 7 
 is Average user feedback on resorts, feature 8 is on parks/picnic spots. 
 
-</br>
+<br>
 Resorts and spots of parks/picnics would not be considered so much for 
-East Asia travellers. Comparing the correlation figure in Sector 2.1.2, 
-Resorts have no correlation with other destinations that more or less belong 
+East Asia travellers. Comparing the correlation figure in paragraph 2.1.2, 
+resorts have no correlation with other destinations that more or less belong 
 to the conception of resorts. Spots of parks/picnics are just not so attractive 
 compared with other destinations.
 
-
+<br>
 Though the accumulation feature 4 is high, feature 4 is not the top-valued feature 
-in each eigenvector. In paragraph 2.1.2, we find feature 4 and feature 7 are not 
+in each eigenvector. In paragraph 2.1.2, we find feature 4 is not 
 paired so well with other features. So we decide to drop feature 4, 7, and 8.
 
 ![pic_3.2](./img/pca_2.jpg)
