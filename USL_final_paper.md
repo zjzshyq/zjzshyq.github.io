@@ -411,11 +411,7 @@ the importance of each feature, it is tricky to tell how important the whole
 matrix is. Usually, we can simply use linear regression in a supervised learning 
 task to get the features’ weights which determine the output value Y. In this 
 paper, we try to use PCA to pick features by the values with the largest 
-proportion in each eigenvector. 
-
-The result of the first line means that feature 6 with the highest proportion in 
-component 1 is 0.44. Feature 6 represents the average score of resorts which means people 
-from East Asia are keen on resorts to have rests as their travelling destinations.
+proportion in each eigenvector.
 
 ```python
 important_ratio_bottom = []
@@ -445,6 +441,11 @@ component_8 feature_10 0.33426
 component_9 feature_8 0.77743
 component_10 feature_7 0.97385
 ```
+The result of the first line means that feature 3 with the highest proportion in 
+component 1 is 0.44. Feature 3 represents the average score of  juice bars  which means people 
+from East Asia are keen on the travelling destinations with juice bars that 
+may enhance the travel experience.
+
 The figure below combines two results above and directly shows the ratio of
 each component and the ratio of the feature value in each component. 
 
@@ -480,6 +481,7 @@ We drop feature  4, 7, and 8 to get new data set for training k-means. The 4
 comments in the function of my_kmeans() show how to code and run k-means 
 algorithms in the scikit-learn package. We run my_kmeans() with a k number 
 from 2 to 20 to calculate the silhouette score for selecting the number of clusters.
+
 ```python
 pca_df = trip_df.drop(['Category_7','Category_8', 'Category_4'], axis=1)
 def my_kmeans(data_df, k):
@@ -517,11 +519,19 @@ task scene.
 After clustering with K=4, we plot the nodes with the top 3 components in the 
 3D nodes scatter figure. 
 
+These 4 clusters are people from East Asia representing travelling destination 
+preferences with juice bars, dance clubs and resorts. Travellers in the blue cluster 
+do not like these 3 destinations but can accept resorts at least. Travellers in the 
+green cluster are keen on resorts and someone thinks dance clubs are also not bad choices. 
+Travellers in the red cluster like both resorts and juice bars. Travellers in the yellow 
+cluster may choose resorts as their first priority.
+
 ![pic_3.4](./img/3d_1.jpg)
 
 Dropping feature 3, 6, and 2 which are the most important features for the top 
 3 components will get the silhouette score figure and nodes scatter figure below 
 showing the instability of the silhouette score and the implicit result of nodes scatter.
+
 ![pic_3.5](./img/sil_3d_2.jpg)
 
 Dropping feature 9,1,10 which are not so important and not so unimportant 
