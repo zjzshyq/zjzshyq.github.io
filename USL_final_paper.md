@@ -536,7 +536,7 @@ showing the instability of the silhouette score and the implicit result of nodes
 
 Dropping feature 9,1,10 which are not so important and not so unimportant 
 features will get the silhouette score and nodes scatter figure below. The 
-results of clusters without clear division get better than the second one 
+results get better than the second one 
 but are not as good as the first situation.
 
 ![pic_3.6](./img/sil_3d_3.jpg)
@@ -588,7 +588,7 @@ input_items = list(map(lambda x: tuple(set(x.split(','))),
                        ))
 ```
 The output below is the result from the code above. It is the examples which we 
-will regard as  the input data for apriori
+will regard as  the input data for apriori.
 ```
 input_items sample: 
 [('sausage', 'hygiene_articles', 'salty_snack', 'misc._beverages', 'whole_milk', 'pastry', 'canned_beer', 'soda', 'yogurt', 'semi-finished_bread', 'pickled_vegetables'), 
@@ -706,9 +706,9 @@ from apriori in this page.
 
 
 ## 6. Conclusion
-We combine three paper into one, and add an extra R paper content in this paper.
-Hoping it is ok to pass the course. The conclusion is just a formality to
-complete for the entire paper. Let's end up here, thank you.
+We combine three paper into one, and add some R content in this paper.
+Hoping it is ok to pass the course. This conclusion chapter is just a formality to
+complete for the entire paper. Let's end up here. Thanks for reading.
 
 ## REFERENCES 
 <a id='ref_1'>[1]</a> Rakesh Agrawal and Ramakrishnan Srikant Fast algorithms for mining association rules. Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile, September 1994.
