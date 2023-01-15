@@ -41,7 +41,7 @@ Because it is not convenient to seprate one for R coding. So I add some R code i
 
 ## 1. Algorithms
 In this chapter, we will quickly review k-means, PCA, and Apriori algorithms.
-### 1.1 K-mean
+### 1.1 K-means
 The k-means clustering implementation contains 4 steps:
 1. Selecting the number of clusters. In my previous work 
 dealing with user data that has more than 400,000 DAU. 
@@ -610,7 +610,7 @@ for tup in reflect_rec:
 print('rules_dictionary', rules_dict)
 ```
 We store the dictionary into memory database like Redis. When users click certain item, 
-system will access the Redis to get the dictionary for the recommend item below.
+system will access the Redis to get the dictionary for recommending items below.
 ```
 rules_dictionary
  {'whole_milk': ['bottled_water', 'other_vegetables', 'rolls_buns', 'root_vegetables', 'sausage', 'soda', 'tropical_fruit', 'yogurt'], 
@@ -623,7 +623,7 @@ rules_dictionary
  'tropical_fruit': ['whole_milk']
  }
 ```
-<br>In each cluster, we imply the apriori for the recommend list which contains top 10 items. 
+<br>In each cluster, we imply the apriori for the recommend list which contains top 10 frequency items. 
 As the flow chart at the beginning of this sector, users from interface will check which cluster
 he is most similar with, and then get recommend list of this cluster. When he clicks some item having
 the association rules, the system can continually push the item recommend.
