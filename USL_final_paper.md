@@ -414,8 +414,8 @@ paper, we try to use PCA to pick features by the values with the largest
 proportion in each eigenvector. 
 
 The result of the first line means that feature 6 with the highest proportion in 
-component 1 is 0.44. Feature 6 represents the average score of museums which means people 
-from East Asia are keen on museums when they were travelling.
+component 1 is 0.44. Feature 6 represents the average score of resorts which means people 
+from East Asia are keen on resorts to have rests as their travelling destinations.
 
 ```python
 important_ratio_bottom = []
@@ -456,24 +456,23 @@ feature for components 9 and 10 having the least ratios.
 
 Because we are going to remove Components 9 and 10. Features 8 and 7 can be removed
 from our task for making the most contribution to Components 9 and 10. Feature 7 
-is Average user feedback on resorts, feature 8 is on parks/picnic spots.
+is average user feedback on parks/picnic spots, feature 8 is on beaches.
 
-From above analysis, Resorts and spots of parks/picnics would not be considered so much for 
+From above analysis, beaches and spots of parks/picnics would not be considered so much for 
 East Asia travellers. Comparing the correlation figure in paragraph 2.1.2, 
-resorts have no correlation with other destinations that more or less belong 
-to the conception of resorts. Spots of parks/picnics may be just not so attractive 
-compared with other destinations.
+spots of parks/picnics have no correlation with other destinations. 
+Beaches may be just not so attractive to East Asia tourist compared with other destinations.
 
 ![pic_3.2](./img/pca_2.jpg)
 
 Though the accumulation feature 4 is high, feature 4 is not the top-valued feature 
-in each eigenvector. Feature 4 represents the average score of juice bars. 
-In our common sense, we usually don’t regard juice bars as a  destination for travelling, 
-however, juice bars may appear in most tourist destinations. 
+in each eigenvector. Feature 4 represents the average score of restaurants. 
+In our common sense, we usually don’t regard restaurants as a destination for travelling, 
+however, restaurants may appear in most tourist destinations. 
 It makes sense to remove feature 4 from our data. Feature 4 in paragraph 2.1.2, is not 
-paired so well with other features explaining that juice bars are more independent.
+paired so well with other features explaining that restaurants are more independent.
 
-So we decide to drop feature 4, 7, and 8 which are juice bars, resorts and parks/picnic spots.
+So we decide to drop feature 4, 7, and 8 which are restaurants, beaches and parks/picnic spots.
 
 
 ## 3.2 K-selecting
@@ -527,8 +526,8 @@ showing the instability of the silhouette score and the implicit result of nodes
 
 Dropping feature 9,1,10 which are not so important and not so unimportant 
 features will get the silhouette score and nodes scatter figure below. The 
-results get better than the second one but are not as good as the first 
-situation.
+results of clusters without clear division get better than the second one 
+but are not as good as the first situation.
 
 ![pic_3.6](./img/sil_3d_3.jpg)
 
