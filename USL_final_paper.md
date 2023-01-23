@@ -368,6 +368,15 @@ na_check <- groceries[!complete.cases(groceries), ]
 <0 rows> (or 0-length row.names)
 ```
 
+### 2.2.3 Item frequency
+We use Apriori in R to observe the frequency of items.
+```R
+itemFrequencyPlot(Groceries, support = 0.1)
+itemFrequencyPlot(Groceries , topN = 20)
+```
+![pic_2.3](./img/item_distr1.png)
+![pic_2.4](./img/item_distr2.png)
+
 ## 3. Clustering
 In this chapter, we will use PCA to reduce the dimension of 
 user data which are the average user feedback score. With the reduced data, we run k-means multi-iterations to calculate 
@@ -644,11 +653,11 @@ for k in set(trip_df['cluster_label']):
     print("cluster %d rec lst top10: " % k, rec_lst_top10)
 ```
 
-These 4 recommendation lists show that the groups clustered by people with different 
-travelling spot preferences have different shopping preferences. However, some products 
-like whole_milk are a favourite choice for most people no matter which clusters they are 
-in. In clusters 1 and 2, most recommend products are the same, which suggests that these
-two clusters can be combined into one in this recommendation scenario.
+These 4 recommendation lists show that the groups clustered by people with different travelling 
+spot preferences have different shopping preferences. However, some products like whole_milk with 
+high bought frequency are a favourite choice for most people no matter which clusters they 
+are in. In clusters 1 and 2, most recommend products are the same, which suggests that 
+these two clusters can be combined into one in this recommendation scenario.
 ```
 cluster 0 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pastry', 'bottled_beer']
 cluster 1 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pip_fruit', 'citrus_fruit']
