@@ -618,8 +618,11 @@ for tup in reflect_rec:
         rules_dict[tup[0]].append(tup[1])
 print('rules_dictionary', rules_dict)
 ```
-We store the dictionary into memory database like Redis. When users click certain item, 
-system will access the Redis to get the dictionary for recommending items below.
+
+Using Apriori to get the associate rules below indicates people tend to buy bottled water 
+after buying whole milk. So we store the dictionary of rules in a memory database like Redis.
+When users click a certain item, our system will access Redis to get the dictionary for 
+recommending items below.
 ```
 rules_dictionary
  {'whole_milk': ['bottled_water', 'other_vegetables', 'rolls_buns', 'root_vegetables', 'sausage', 'soda', 'tropical_fruit', 'yogurt'], 
