@@ -644,6 +644,11 @@ for k in set(trip_df['cluster_label']):
     print("cluster %d rec lst top10: " % k, rec_lst_top10)
 ```
 
+These 4 recommendation lists show that the groups clustered by people with different 
+travelling spot preferences have different shopping preferences. However, some products 
+like whole_milk are a favourite choice for most people no matter which clusters they are 
+in. In clusters 1 and 2, most recommend products are the same, which suggests that these
+two clusters can be combined into one in this recommendation scenario.
 ```
 cluster 0 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pastry', 'bottled_beer']
 cluster 1 rec lst top10:  ['whole_milk', 'other_vegetables', 'rolls_buns', 'yogurt', 'soda', 'root_vegetables', 'bottled_water', 'tropical_fruit', 'pip_fruit', 'citrus_fruit']
