@@ -362,11 +362,39 @@ na_check <- groceries[!complete.cases(groceries), ]
 <0 rows> (or 0-length row.names)
 ```
 
-### 2.2.3 Item Exploration
-We use Apriori in R to observe the frequency of items.
-
+Observing the frequency of grocery items, it is easy to find that whole milk, 
+other vegetables are the most two favourite products for consumers.
+```R
+itemsets <- apriori(Groceries, 
+                    parameter=list(minlen=1, 
+                                   maxlen=1, 
+                                   support=0.05, 
+                                   target="frequent itemsets"))
+inspect(
+  head(
+    sort(itemsets, 
+         by = c("support", 'count')), 
+    10))
+```
+```
+     items              support    count
+[1]  {whole milk}       0.25551601 2513 
+[2]  {other vegetables} 0.19349263 1903 
+[3]  {rolls/buns}       0.18393493 1809 
+[4]  {soda}             0.17437722 1715 
+[5]  {yogurt}           0.13950178 1372 
+[6]  {bottled water}    0.11052364 1087 
+[7]  {root vegetables}  0.10899847 1072 
+[8]  {tropical fruit}   0.10493137 1032 
+[9]  {shopping bags}    0.09852567  969 
+[10] {sausage}          0.09395018  924 
+```
 ![pic_2.3](./img/item_distr1.png)
 ![pic_2.4](./img/item_distr2.png)
+
+### 2.2.3 Item Exploration
+
+
 
 ## 3. Clustering
 In this chapter, we will use PCA to reduce the dimension of 
