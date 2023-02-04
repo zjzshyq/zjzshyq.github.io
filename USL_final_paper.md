@@ -393,8 +393,37 @@ inspect(
 ![pic_2.4](./img/item_distr2.png)
 
 ### 2.2.3 Item Exploration
+```R
+rules <- apriori(Groceries, 
+                 parameter=list(support=0.05,
+                                confidence=0.1, 
+                                target = "rules"))
+inspect(
+  head(
+    sort(rules, 
+         by=c('lift',"support", 'confidence'), 
+         decreasing=T), 
+    10))
 
+plot(rules)
+plot(rules@quality)
+```
+![pic_2.5](./img/scatter_lift_conf_sup.png)
+![pic_2.6](./img/scatters_corr_conf_sup.png)
 
+```R
+confidentRules <- rules[quality(rules)$confidence > 0.1]
+plot(confidentRules, method="matrix", 
+     measure=c("lift", "confidence"), 
+     control=list(recorder=TRUE))
+```
+![pic_2.7](./img/mtx_lift_conf.png)
+
+```R
+highLiftRules <- head(sort(rules, by="lift"), 5)
+plot(highLiftRules, method="graph", control=list(type="items"))
+```
+![pic_2.8](./img/top5_lift.png)
 
 ## 3. Clustering
 In this chapter, we will use PCA to reduce the dimension of 
