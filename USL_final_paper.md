@@ -393,6 +393,8 @@ inspect(
 ![pic_2.4](./img/item_distr2.png)
 
 ### 2.2.3 Item Exploration
+In this sector, we use Apriori in R to explore the association of 
+grocery items by visualization.
 ```R
 rules <- apriori(Groceries, 
                  parameter=list(support=0.05,
@@ -404,7 +406,23 @@ inspect(
          by=c('lift',"support", 'confidence'), 
          decreasing=T), 
     10))
+```
 
+```
+     lhs                   rhs                support    confidence coverage  lift     count
+[1]  {yogurt}           => {whole milk}       0.05602440 0.4016035  0.1395018 1.571735  551 
+[2]  {whole milk}       => {yogurt}           0.05602440 0.2192598  0.2555160 1.571735  551 
+[3]  {other vegetables} => {whole milk}       0.07483477 0.3867578  0.1934926 1.513634  736 
+[4]  {whole milk}       => {other vegetables} 0.07483477 0.2928770  0.2555160 1.513634  736 
+[5]  {rolls/buns}       => {whole milk}       0.05663447 0.3079049  0.1839349 1.205032  557 
+[6]  {whole milk}       => {rolls/buns}       0.05663447 0.2216474  0.2555160 1.205032  557 
+[7]  {}                 => {rolls/buns}       0.18393493 0.1839349  1.0000000 1.000000 1809 
+[8]  {}                 => {yogurt}           0.13950178 0.1395018  1.0000000 1.000000 1372 
+[9]  {}                 => {whole milk}       0.25551601 0.2555160  1.0000000 1.000000 2513 
+[10] {}                 => {other vegetables} 0.19349263 0.1934926  1.0000000 1.000000 1903 
+```
+
+```
 plot(rules)
 plot(rules@quality)
 ```
@@ -783,4 +801,3 @@ complete for the entire paper. Let's end up here. Thanks for reading.
 <a id='ref_3'>[3]</a> Heeral Dedhia, Kaggle, 2020. Groceries dataset. https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset.
 
 <a id='ref_4'>[4]</a> Shepard, Roger N. (1962). "The analysis of proximities: Multidimensional scaling with an unknown distance function. I.". Psychometrika. 27 (2): 125–140. doi:10.1007/BF02289630. S2CID 186222646.
-
