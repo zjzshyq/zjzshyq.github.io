@@ -441,11 +441,12 @@ Like support and confidence, they have positive a relation to the rules.
 plot(rules)
 plot(rules@quality)
 ```
-
-
 ![pic_2.5](./img/scatter_lift_conf_sup.png)
 ![pic_2.6](./img/scatters_corr_conf_sup.png)
 
+The plot of the matrix for rules with confidence>1 and strong associations 
+shows the distribution of the items with rhs and lhs. For example, yogurt in 
+rules data table has 1 lhs and 8 rhs, and it appears on the top left of the graph.
 ```R
 confidentRules <- rules[quality(rules)$confidence > 0.1]
 plot(confidentRules, method="matrix", 
