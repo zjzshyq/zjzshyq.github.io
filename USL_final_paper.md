@@ -430,11 +430,19 @@ and there is a strong association on the order of purchase.
 [10] {}                 => {other vegetables} 0.19349263 0.1934926  1.0000000 1.000000 1903 
 ```
 
+Then we get the rule plot on confidence and support with lift. 
+Item pairs with strong association(lift>1), Their confidence and support 
+gather in the upper right corner of this plot. There are not so many strong 
+associations with high support in grocery purchase behaviour.
 
+In the second plot, we can get the correlation between the two parameters. 
+Like support and confidence, they have positive a relation to the rules.
 ```
 plot(rules)
 plot(rules@quality)
 ```
+
+
 ![pic_2.5](./img/scatter_lift_conf_sup.png)
 ![pic_2.6](./img/scatters_corr_conf_sup.png)
 
