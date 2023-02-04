@@ -455,10 +455,14 @@ plot(confidentRules, method="matrix",
 ```
 ![pic_2.7](./img/mtx_lift_conf.png)
 
+We can get top 5 lift in the rules by the codes below.
 ```R
 highLiftRules <- head(sort(rules, by="lift"), 5)
 plot(highLiftRules, method="graph", control=list(type="items"))
 ```
+And the plot shows a weak association that we would buy whole milk after buying 
+rolls/buns. And we always buy whole milk and other vegetables together. 
+Yogurt and milk are another paired choice.
 ![pic_2.8](./img/top5_lift.png)
 
 ## 3. Clustering
@@ -600,8 +604,9 @@ for k in k_lst:
     score = silhouette_score(pca_df, clusters, metric='euclidean')
     sil_score_lst.append(score)
 ```
-When K=2, the silhouette score gets the highest, normally, selecting 2 clusters 
-is the best choice.  But our task is the recommendation, too small of the K is 
+When K=2, the silhouette score gets the highest, and the plot of MDS in chapter2 
+proved visually that 2 cluster may be a good choose. So normally, selecting 2 clusters 
+is a best choice. But our task is the recommendation, too small of the K is 
 not good for recommending which will reduce the richness and difference of 
 recommendation. When K=4, the score gets sable, so we choose 4 clusters for our 
 remaining tasks. Actually, choosing 4-7 are all accepted, only depending on the 
