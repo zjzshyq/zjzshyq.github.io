@@ -407,7 +407,15 @@ inspect(
          decreasing=T), 
     10))
 ```
+We can get association rules from Apriori in the code above. And the rules data table is 
+below which contains columns of lhs(rule pre-rule item) and rhs((rule post-item). The lhs 
+indicates the condition that needs to be met to trigger the rule, and the rhs indicates the 
+expected result after the condition is met. The column lift here means the degree of 
+improvement, and describes the strong and weak association of this rule. Lift>1 means 
+strong association, and vice versa.
 
+For example about rhs, lhs and lift, we will buy whole milk after yogurt purchase, 
+and there is a strong association on the order of purchase.
 ```
      lhs                   rhs                support    confidence coverage  lift     count
 [1]  {yogurt}           => {whole milk}       0.05602440 0.4016035  0.1395018 1.571735  551 
@@ -421,6 +429,7 @@ inspect(
 [9]  {}                 => {whole milk}       0.25551601 0.2555160  1.0000000 1.000000 2513 
 [10] {}                 => {other vegetables} 0.19349263 0.1934926  1.0000000 1.000000 1903 
 ```
+
 
 ```
 plot(rules)
