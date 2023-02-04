@@ -28,7 +28,7 @@ in the chapter on Data. Chapter Clustering shows the analytic process
 and results of getting the centers, which will conclude PCA and 
 k-means. Chapter Recommendation discusses how we get the recommendation
 list using Apriori, and how we combine cluster centers and recommend
-lists together to recommend for the new. The Platform chapter 
+lists together to recommend for the new. The Results chapter 
 is a simple data analysis website I built to explore data visually. 
 And we have a Conclusion in the last chapter.
 
@@ -37,7 +37,8 @@ And we have a Conclusion in the last chapter.
 For the unsupervised learning course, I will use PCA and K-means in chapter 
 3.Clustering and Apriori in chapter 4.Recommendation. 
 We will deal with the main work and analysis in these two chapters.
-Because it is not convenient to seprate one for R coding. So I add some R code in chapter 2.Data.
+Because it is not convenient to separate one for R coding. So I add some R code in chapter 2.Data
+mainly exploring item data with Apriori.
 
 ## 1. Algorithms
 In this chapter, we will quickly review k-means, PCA, and Apriori algorithms.
@@ -307,27 +308,20 @@ plot(mds_fitted$conf, main="MDS for all users", pch=20)
 ```
 The average stress is 0.2022141 which is acceptable. The distribution based on MDS with
 euclidean distance between users are shown as below. Most of the users gather
-together, not separate too much.
+together, not separate too much with the distance of two dimensions. 
+Furthermore, users at the right of the red line are more centralized than the left ones,
+meaning users for some trip spots have consistent preferences that may be commonly liked. 
+Users at the right line tend to have wider choices. The outlier exists, of course, small 
+tourist attractions will always attract some people.
 
 ![pic_2.2](./img/MDS4users.png)
 
-
-Hierarchical clustering shows near height 4, data can form 5 stable clusters.
-```R
-htree<-hclust(dist1, method="complete")
-plot(htree, main="hierarchical clustering",sub='', xla='distance between users', labels=F)
-```
-
-![pic_2.2](./img/hierarchical_clustering.png)
-
-Selecting 5 as cluster number for convex clustering, we can find data in these
-clusters are not so dispersed.
-
+After analysis the MDS result, we select 5 as cluster number for convex clustering, 
+we can find users in these clusters represent travelling preferences are not so dispersed.
 ```R
 cc<-cclust(trips, 5, dist="euclidean")
 stripes(cc)
 ```
-
 ![pic_2.2](./img/cclust.png)
 
 
@@ -368,12 +362,9 @@ na_check <- groceries[!complete.cases(groceries), ]
 <0 rows> (or 0-length row.names)
 ```
 
-### 2.2.3 Item frequency
+### 2.2.3 Item Exploration
 We use Apriori in R to observe the frequency of items.
-```R
-itemFrequencyPlot(Groceries, support = 0.1)
-itemFrequencyPlot(Groceries , topN = 20)
-```
+
 ![pic_2.3](./img/item_distr1.png)
 ![pic_2.4](./img/item_distr2.png)
 
@@ -669,7 +660,7 @@ cluster 3 rec lst top10:  ['whole_milk', 'rolls_buns', 'yogurt', 'other_vegetabl
 ```
 
 
-## 5. Platform
+## 5. Results
 Data Visualization platform is an important part of recommendation system for Presentation.
 The platform can very well help data analysts to carry out their work. We bulid a demo of the 
 platform to show the result of unsupervised learning. 
