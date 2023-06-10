@@ -157,19 +157,7 @@ div.csl-indent {
   <li><a href="#marginal-effects" id="toc-marginal-effects" class="nav-link" data-scroll-target="#marginal-effects"><span class="header-section-number">7.2</span> Marginal Effects</a></li>
   </ul></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography"><span class="header-section-number">8</span> Bibliography</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">9</span> Appendix</a>
-  <ul class="collapse">
-  <li><a href="#polr" id="toc-polr" class="nav-link" data-scroll-target="#polr"><span class="header-section-number">9.1</span> polr</a></li>
-  <li><a href="#clm" id="toc-clm" class="nav-link" data-scroll-target="#clm"><span class="header-section-number">9.2</span> clm</a></li>
-  <li><a href="#ologit.reg" id="toc-ologit.reg" class="nav-link" data-scroll-target="#ologit.reg"><span class="header-section-number">9.3</span> ologit.reg</a></li>
-  <li><a href="#lipsitz-and-logitgof-tests" id="toc-lipsitz-and-logitgof-tests" class="nav-link" data-scroll-target="#lipsitz-and-logitgof-tests"><span class="header-section-number">9.4</span> lipsitz and logitgof tests</a></li>
-  <li><a href="#pulkrob-tests" id="toc-pulkrob-tests" class="nav-link" data-scroll-target="#pulkrob-tests"><span class="header-section-number">9.5</span> pulkrob tests</a></li>
-  <li><a href="#brants-test-1" id="toc-brants-test-1" class="nav-link" data-scroll-target="#brants-test-1"><span class="header-section-number">9.6</span> Brant’s test</a></li>
-  <li><a href="#pr2-test" id="toc-pr2-test" class="nav-link" data-scroll-target="#pr2-test"><span class="header-section-number">9.7</span> pR2 test</a></li>
-  <li><a href="#lrtest." id="toc-lrtest." class="nav-link" data-scroll-target="#lrtest."><span class="header-section-number">9.8</span> lrtest.</a></li>
-  <li><a href="#example-of-variables-selection" id="toc-example-of-variables-selection" class="nav-link" data-scroll-target="#example-of-variables-selection"><span class="header-section-number">9.9</span> Example of Variables Selection</a></li>
-  <li><a href="#margins.oglmx" id="toc-margins.oglmx" class="nav-link" data-scroll-target="#margins.oglmx"><span class="header-section-number">9.10</span> margins.oglmx</a></li>
-  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">9</span> Appendix</a></li>
   </ul>
 </nav>
 </div>
@@ -843,8 +831,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1 data-number="9"><span class="header-section-number">9</span> Appendix</h1>
 <p>The codes provided in the Appendix are simplified examples for illustration purposes. In practice, additional steps such as data preprocessing, handling missing values, and further diagnostics would be conducted.</p>
 <p>By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.</p>
-<section id="polr" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="polr"><span class="header-section-number">9.1</span> polr</h2>
+<section id="polr" class="level3" data-number="9.0.1">
+<h3 data-number="9.0.1" class="anchored" data-anchor-id="polr"><span class="header-section-number">9.0.1</span> polr</h3>
 <p>In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
@@ -859,8 +847,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we convert the ‘rank’ variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views.</p>
 </section>
-<section id="clm" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="clm"><span class="header-section-number">9.2</span> clm</h2>
+<section id="clm" class="level3" data-number="9.0.2">
+<h3 data-number="9.0.2" class="anchored" data-anchor-id="clm"><span class="header-section-number">9.0.2</span> clm</h3>
 <p>In this section, we present the code implementation and the results for the probit model probit_ai. This model examines the influence of various variables on the rankings of AI-generated images.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
@@ -874,8 +862,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first convert the ‘rank’ variable in the ai data set to a factor variable named ‘tier’, representing the rankings of AI-generated images. Then, we fit the probit model probit_ai to analyze the relationship between the ‘tier’ variable and predictor variables such as like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, and date_diff_day.</p>
 </section>
-<section id="ologit.reg" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="ologit.reg"><span class="header-section-number">9.3</span> ologit.reg</h2>
+<section id="ologit.reg" class="level3" data-number="9.0.3">
+<h3 data-number="9.0.3" class="anchored" data-anchor-id="ologit.reg"><span class="header-section-number">9.0.3</span> ologit.reg</h3>
 <p>n this section, we provide the code implementation and the summary results for the probit models probit_ai and probit_man. These models examine the influence of various variables on the rankings of AI-generated images (probit_ai) and hand-drawn artwork (probit_man).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the probit model for AI-generated images</span></span>
@@ -900,8 +888,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>In the above code, we fit the probit model probit_ai to analyze the rankings of AI-generated images, considering variables such as like_rate, mark_rate, is_comic, is_Genshin, comments, top_cnt, date_diff_day, and mark_rate2. Similarly, we fit the probit model probit_man to examine the rankings of hand-drawn artwork, considering variables such as like_rate, mark_rate2, mark_rate3, is_comic, is_Honkai, top_cnt, date_diff_day, and views.</p>
 <p>We then obtain the summary results for each model using the summary function, which provides information on the estimated coefficients, standard errors, p-values, and other relevant statistics.</p>
 </section>
-<section id="lipsitz-and-logitgof-tests" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="lipsitz-and-logitgof-tests"><span class="header-section-number">9.4</span> lipsitz and logitgof tests</h2>
+<section id="lipsitz-and-logitgof-tests" class="level3" data-number="9.0.4">
+<h3 data-number="9.0.4" class="anchored" data-anchor-id="lipsitz-and-logitgof-tests"><span class="header-section-number">9.0.4</span> lipsitz and logitgof tests</h3>
 <p>In this section, we provide the code implementation for conducting goodness-of-fit tests on the fitted logit model using the lipsitz.test and logitgof functions in R. These tests are used to assess the adequacy of the model and evaluate its fit to the observed data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Lipsitz test for goodness-of-fit</span></span>
@@ -920,8 +908,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we must load the necessary libraries, including the ordinal library, which provides the functions for conducting the goodness-of-fit tests. We then proceed to perform the Lipsitz test using the lipsitz.test function, which evaluates the overall fit of the logit model. Additionally, we conduct the Lemeshow test using the logitgof function, which assesses the calibration of the model by comparing the observed and expected probabilities across groups.</p>
 </section>
-<section id="pulkrob-tests" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="pulkrob-tests"><span class="header-section-number">9.5</span> pulkrob tests</h2>
+<section id="pulkrob-tests" class="level3" data-number="9.0.5">
+<h3 data-number="9.0.5" class="anchored" data-anchor-id="pulkrob-tests"><span class="header-section-number">9.0.5</span> pulkrob tests</h3>
 <p>n this section, we provide the code implementation for conducting the Pulkstenis-Robinson tests on the fitted logit model using the pulkrob.chisq and pulkrob.deviance functions in R. These tests are used to assess the significance of specific variables in the model and evaluate their contribution to the overall fit.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Pulkstenis-Robinson chi-square test</span></span>
@@ -940,16 +928,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first load the necessary libraries, including the ordinal library, which provides the functions for conducting the Pulkstenis-Robinson tests. We then proceed to perform the Pulkstenis-Robinson chi-square test using the pulkrob.chisq function, which assesses the significance of the specified variables in the logit model. Additionally, we calculate the Pulkstenis-Robinson deviance using the pulkrob.deviance function, which measures the contribution of the variables to the overall deviance of the model.</p>
 </section>
-<section id="brants-test-1" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="brants-test-1"><span class="header-section-number">9.6</span> Brant’s test</h2>
+<section id="brants-test-1" class="level3" data-number="9.0.6">
+<h3 data-number="9.0.6" class="anchored" data-anchor-id="brants-test-1"><span class="header-section-number">9.0.6</span> Brant’s test</h3>
 <p>In this section, we present the code implementation for conducting the Brant test on the fitted logit model using the brant function in R. The Brant test is used to assess the assumption of proportional odds in the ordered choice model and helps determine whether the logit or probit model is more appropriate.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brant</span>(logit_ai)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we first load the necessary libraries, including the ordinal library, which provides the brant function for conducting the Brant test. We then proceed to perform the Brant test on the fitted logit model logit_ai.</p>
 </section>
-<section id="pr2-test" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="pr2-test"><span class="header-section-number">9.7</span> pR2 test</h2>
+<section id="pr2-test" class="level3" data-number="9.0.7">
+<h3 data-number="9.0.7" class="anchored" data-anchor-id="pr2-test"><span class="header-section-number">9.0.7</span> pR2 test</h3>
 <p>In this section, we present the code implementation for calculating the McFadden R2 statistic using the pR2 function from the pscl library in R. The McFadden R2 is a measure of the goodness-of-fit for logistic and probit models in ordered choice analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(logit_ai) </span>
@@ -958,8 +946,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we should load the necessary pscl library fristly, which provides the pR2 function for calculating the McFadden R2 statistic. We then proceed to calculate the McFadden R2 for the logit model logit_ai, as well as the probit models probit_ai and probit_man.</p>
 </section>
-<section id="lrtest." class="level2" data-number="9.8">
-<h2 data-number="9.8" class="anchored" data-anchor-id="lrtest."><span class="header-section-number">9.8</span> lrtest.</h2>
+<section id="lrtest." class="level3" data-number="9.0.8">
+<h3 data-number="9.0.8" class="anchored" data-anchor-id="lrtest."><span class="header-section-number">9.0.8</span> lrtest.</h3>
 <p>In this section, we present the code implementation for conducting the Likelihood Ratio Test (LRT) to compare the full probit model probit_ai with a restricted model probit_ai_restricted. The LRT is used to assess the significance of additional variables in the full model compared to a reduced or restricted model.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the restricted probit model</span></span>
@@ -970,8 +958,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first fit the restricted probit model probit_ai_restricted, which includes only the intercept term. We then proceed to perform the Likelihood Ratio Test using the lrtest function, comparing the full probit model probit_ai with the restricted model.</p>
 </section>
-<section id="example-of-variables-selection" class="level2" data-number="9.9">
-<h2 data-number="9.9" class="anchored" data-anchor-id="example-of-variables-selection"><span class="header-section-number">9.9</span> Example of Variables Selection</h2>
+<section id="example-of-variables-selection" class="level3" data-number="9.0.9">
+<h3 data-number="9.0.9" class="anchored" data-anchor-id="example-of-variables-selection"><span class="header-section-number">9.0.9</span> Example of Variables Selection</h3>
 <p>In this section, we present the code implementation for applying variable power transformations in the probit model probit_ai to examine the impact of including squared variables (like_rate2 and mark_rate2) on the model’s fit. The anova function is then used to compare the full model probit_ai with the model including the squared variables probit_ai_power.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>probit_ai_power <span class="ot">&lt;-</span> <span class="fu">clm</span>(tier <span class="sc">~</span> like_rate<span class="sc">+</span>mark_rate</span>
@@ -982,8 +970,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we extend the probit model probit_ai by including squared variables (like_rate2 and mark_rate2) to capture potential non-linear relationships between these variables and the response variable. We fit the extended model probit_ai_power and then use the anova function to compare the full model probit_ai with the model including the squared variables.</p>
 </section>
-<section id="margins.oglmx" class="level2" data-number="9.10">
-<h2 data-number="9.10" class="anchored" data-anchor-id="margins.oglmx"><span class="header-section-number">9.10</span> margins.oglmx</h2>
+<section id="margins.oglmx" class="level3" data-number="9.0.10">
+<h3 data-number="9.0.10" class="anchored" data-anchor-id="margins.oglmx"><span class="header-section-number">9.0.10</span> margins.oglmx</h3>
 <p>In this section, we present the code implementation and the results for the marginal effects analysis of the probit model probit_ai. This analysis allows us to examine the differential impact of various variables on the rankings of AI-generated images.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>probit_ai_power <span class="ot">&lt;-</span> <span class="fu">clm</span>(tier <span class="sc">~</span> like_rate<span class="sc">+</span>mark_rate</span>
