@@ -524,7 +524,7 @@ The codes provided in the Appendix are simplified examples for illustration purp
 
 By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.
 
-### polr
+## polr
 
 [^1]: Please refer to the Appendix of the paper for the relevant code pertaining to the polr algorithm. for logtic model.
 
@@ -535,7 +535,7 @@ In this section, we provide the code implementation for fitting a logit model us
 
 In the above code, we convert the 'rank' variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views. 
 
-### clm
+## clm
 
 [^5]: Please refer to the Appendix of the paper for the relevant code pertaining to the clm algorithm.
 
@@ -546,7 +546,7 @@ In this section, we present the code implementation and the results for the prob
 
 In the above code, we first convert the 'rank' variable in the ai data set to a factor variable named 'tier', representing the rankings of AI-generated images. Then, we fit the probit model probit_ai to analyze the relationship between the 'tier' variable and predictor variables such as like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, and date_diff_day.
 
-### ologit.reg
+## ologit.reg
 
 [^8]: Please refer to the Appendix of the paper for the relevant code pertaining to the ologit.reg algorithm.
 
@@ -559,7 +559,7 @@ In the above code, we fit the probit model probit_ai to analyze the rankings of 
 
 We then obtain the summary results for each model using the summary function, which provides information on the estimated coefficients, standard errors, p-values, and other relevant statistics.
 
-### lipsitz and logitgof tests
+## lipsitz and logitgof tests
 [^2]: Please refer to the Appendix of the paper for the relevant code pertaining to the lipsitz and Lipsitz tests.
 
 In this section, we provide the code implementation for conducting goodness-of-fit tests on the fitted logit model using the lipsitz.test and logitgof functions in R. These tests are used to assess the adequacy of the model and evaluate its fit to the observed data.
@@ -569,7 +569,7 @@ In this section, we provide the code implementation for conducting goodness-of-f
 
 In the above code, we must load the necessary libraries, including the ordinal library, which provides the functions for conducting the goodness-of-fit tests. We then proceed to perform the Lipsitz test using the lipsitz.test function, which evaluates the overall fit of the logit model. Additionally, we conduct the Lemeshow test using the logitgof function, which assesses the calibration of the model by comparing the observed and expected probabilities across groups.
 
-### pulkrob tests
+## pulkrob tests
 [^3]: Please refer to the Appendix of the paper for the relevant code pertaining to the  pulkrob tests.
 
 n this section, we provide the code implementation for conducting the Pulkstenis-Robinson tests on the fitted logit model using the pulkrob.chisq and pulkrob.deviance functions in R. These tests are used to assess the significance of specific variables in the model and evaluate their contribution to the overall fit.
@@ -579,7 +579,7 @@ n this section, we provide the code implementation for conducting the Pulkstenis
 
 In the above code, we first load the necessary libraries, including the ordinal library, which provides the functions for conducting the Pulkstenis-Robinson tests. We then proceed to perform the Pulkstenis-Robinson chi-square test using the pulkrob.chisq function, which assesses the significance of the specified variables in the logit model. Additionally, we calculate the Pulkstenis-Robinson deviance using the pulkrob.deviance function, which measures the contribution of the variables to the overall deviance of the model.
 
-### Brant's test
+## Brant's test
 
 [^4]: Please refer to the Appendix of the paper for the relevant code pertaining to the Brant's test.
 
@@ -590,7 +590,7 @@ In this section, we present the code implementation for conducting the Brant tes
 
 In the above code, we first load the necessary libraries, including the ordinal library, which provides the brant function for conducting the Brant test. We then proceed to perform the Brant test on the fitted logit model logit_ai.
 
-### pR2 test
+## pR2 test
 
 [^6]: Please refer to the Appendix of the paper for the relevant code pertaining to the pR2 test.
 
@@ -601,7 +601,7 @@ In this section, we present the code implementation for calculating the McFadden
 
 In the above code, we should load the necessary pscl library fristly, which provides the pR2 function for calculating the McFadden R2 statistic. We then proceed to calculate the McFadden R2 for the logit model logit_ai, as well as the probit models probit_ai and probit_man.
 
-### lrtest.
+## lrtest.
 
 [^7]: Please refer to the Appendix of the paper for the relevant code pertaining to the lrtest. 
 
@@ -612,7 +612,7 @@ In this section, we present the code implementation for conducting the Likelihoo
 
 In the above code, we first fit the restricted probit model probit_ai_restricted, which includes only the intercept term. We then proceed to perform the Likelihood Ratio Test using the lrtest function, comparing the full probit model probit_ai with the restricted model.
 
-### Example of Variables Selection
+## Example of Variables Selection
 
 [^8]: Please refer to the Appendix of the paper for the relevant code pertaining to the anova which is a example of variables selection. 
 
@@ -623,7 +623,7 @@ In this section, we present the code implementation for applying variable power 
 
 In the above code, we extend the probit model probit_ai by including squared variables (like_rate2 and mark_rate2) to capture potential non-linear relationships between these variables and the response variable. We fit the extended model probit_ai_power and then use the anova function to compare the full model probit_ai with the model including the squared variables.
 
-### margins.oglmx
+## margins.oglmx
 
 [^9]: Please refer to the Appendix of the paper for the relevant code pertaining to the margins.oglmx algorithm for marginal effects.
 
