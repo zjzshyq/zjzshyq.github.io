@@ -4,4 +4,5 @@
 
 [UW][AE][Analysis of User Preferences between AI-generated and Hand-drawn Artwork: A Case Study of pixiv.net](ae_final_paper/ae_final_paper.html)
 
+new
 [UW][RR][Data Visualization Platform Report](RR_Report/RR_Report.html)
