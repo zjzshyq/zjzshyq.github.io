@@ -27,7 +27,7 @@ implement them by code. We will explore the data we use in this paper
 in the chapter on Data. Chapter Clustering shows the analytic process 
 and results of getting the centers, which will conclude PCA and 
 k-means. Chapter Recommendation discusses how we get the recommendation
-list using Apriori, and how we combine cluster centers and recommend
+list[matrix_t_0_troll.csv](..%2F..%2FDownloads%2F%E8%80%83%E8%AF%95%2Fexam_micro%2Ftask%203%2FDeGroot%2Fmatrix_t_0_troll.csv) using Apriori, and how we combine cluster centers and recommend
 lists together to recommend for the new. The Results chapter 
 is a simple data analysis website I built to explore data visually. 
 And we have a Conclusion in the last chapter.
