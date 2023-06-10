@@ -4,4 +4,4 @@ fontsize: 11pt
 geometry: margin=1in
 latex-tinytex: false
 metadata-files:
-  - _pdf.yml
+  - _html.yml
