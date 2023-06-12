@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yiqing Hu">
 <meta name="author" content="Rahila Mammadova Huseynova">
-<meta name="dcterms.date" content="2023-06-10">
+<meta name="dcterms.date" content="2023-06-12">
 
 <title>Analysis of User Preferences between AI-generated and Hand-drawn Artwork: A Case Study of pixiv.net</title>
 <style>
@@ -120,7 +120,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 10, 2023</p>
+        <p class="date">June 12, 2023</p>
       </div>
     </div>
     
@@ -141,7 +141,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#samples" id="toc-samples" class="nav-link" data-scroll-target="#samples"><span class="header-section-number">4.1</span> Samples</a></li>
   <li><a href="#varibles" id="toc-varibles" class="nav-link" data-scroll-target="#varibles"><span class="header-section-number">4.2</span> Varibles</a></li>
-  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates"><span class="header-section-number">4.3</span> Covariates</a></li>
+  <li><a href="#covariate" id="toc-covariate" class="nav-link" data-scroll-target="#covariate"><span class="header-section-number">4.3</span> Covariate</a></li>
   </ul></li>
   <li><a href="#methodmodel" id="toc-methodmodel" class="nav-link" data-scroll-target="#methodmodel"><span class="header-section-number">5</span> Method/Model</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">6</span> Results</a>
@@ -174,7 +174,6 @@ div.csl-indent {
 <section id="introduction" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
 <p>Generative AI models have revolutionized various industries, including the labor market, with their transformative capabilities<span class="citation" data-cites="EconomicsChatGPT"><a href="#ref-EconomicsChatGPT" role="doc-biblioref">[1]</a></span>. However, the influence of AI-generated artwork on user preferences within the online art community remains a topic of significant interest. As the prevalence of AI drawing models, such as Stable-Diffusion (SD) and Midjourney, continues to grow, it becomes crucial to investigate the factors influencing the rankings of AI-generated images and understand user preferences in comparison to hand-drawn artwork. Therefore, our study aims to explore these factors and preferences through the application of an ordered choice model.</p>
-<p>The primary hypothesis of our study is that AI-generated artwork significantly influences user preferences and rankings within the online art community. We expect that certain factors, such as the content of AI-generated images, their novelty, and the interaction between users and AI algorithms, will play a crucial role in shaping these preferences. Additionally, we propose a secondary hypothesis that user demographics, art genre preferences, and previous exposure to AI-generated artwork will also impact their rankings and preferences.</p>
 <p>Our primary hypothesis focuses on comparing the effects of AI-generated and man-made art on rankings within the online art community. To investigate this, we analyze various user behaviors such as liked rates, bookmarked rates, and the content indicated by artwork tags. By comparing these features between AI-generated and man-made artwork, we can gain valuable insights into the unique characteristics and influences of AI-generated creations. This analysis allows us to assess whether AI-generated art has a distinct impact on user preferences and rankings compared to traditional hand-drawn art.</p>
 <p>Additionally, we propose a secondary hypothesis that explores which user behaviors and specific content attributes contribute to higher rankings for AI-generated artwork. By examining factors such as user interactions, engagement patterns, and the content of the artwork itself, we aim to identify the elements that attract users and lead to greater popularity and preference for AI-generated art.</p>
 <p>The outcomes of this study hold significant implications for various stakeholders in the art community. Artists and creators can gain insights into the factors that make AI-generated artwork more appealing to users, helping them refine their creative processes and incorporate AI-assisted techniques effectively. Art enthusiasts and platform developers can utilize the findings to enhance user experiences and curate content that aligns with user preferences. Furthermore, policymakers and researchers can leverage this knowledge to shape policies and regulations that promote the integration of AI-generated art while preserving the diversity and quality of traditional art forms.</p>
@@ -298,8 +297,8 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="covariates" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="covariates"><span class="header-section-number">4.3</span> Covariates</h2>
+<section id="covariate" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="covariate"><span class="header-section-number">4.3</span> Covariate</h2>
 <p>Our research focuses on investigating the impact of various independent variables on the rankings of daily top 50 artworks on pixiv.net. The primary objective of our study is to develop an evaluation model that effectively captures the factors influencing these rankings.</p>
 <p>To address the issue of excessively detailed rankings ranging from 1 to 50, we have categorized the rankings into five levels by equally dividing the range. This categorization allows for a more manageable and meaningful analysis. The formula used to categorize the ranks is as follows:</p>
 <p><span class="math display">\[
@@ -311,7 +310,7 @@ div.csl-indent {
 <section id="methodmodel" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Method/Model</h1>
 <p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit models to examine the relationships between the independent variables and the categorized rankings effectively.</p>
-<p>In our analysis, we utilized the R programming language to fit a logit model to the data. Specifically, we employed the logit function，polr <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, which is suitable for estimating ordered choice models.</p>
+<p>In our analysis, we utilized the R programming language to fit a logit model to the data. Specifically, we employed the logit function，polr <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> at the beginning, which is suitable for estimating ordered choice models.</p>
 <p>To assess the feasibility and goodness-of-fit of the baseline models, several Goodness-of-Fit tests were conducted. The tests employed were the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are commonly used in empirical research to evaluate the fit of logistic regression models and ordered choice models.</p>
 <p>The Hosmer-Lemeshow test examines the agreement between the observed and predicted probabilities by dividing the data into several groups based on predicted probabilities and assessing the differences between the observed and expected frequencies within each group. A non-significant p-value indicates a good fit between the model and the observed data.</p>
 <p>The Lipsitz test is specifically designed for ordered choice models and assesses the proportional odds assumption. This assumption states that the relationship between the predictors and the response variable is constant across all levels of the response variable. Violation of this assumption may indicate the need for a different modeling approach. The Lipsitz test calculates a chi-square statistic to evaluate the fit of the model to the proportional odds assumption.</p>
@@ -893,17 +892,17 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>In this section, we provide the code implementation for conducting goodness-of-fit tests on the fitted logit model using the lipsitz.test and logitgof functions in R. These tests are used to assess the adequacy of the model and evaluate its fit to the observed data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Lipsitz test for goodness-of-fit</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>Lipsitz <span class="ot">&lt;-</span> <span class="fu">lipsitz.test</span>(logit_ai) </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>Lipsitz <span class="ot">&lt;-</span> <span class="fu">lipsitz.test</span>(logit_ai)</span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(Lipsitz<span class="sc">$</span>method,<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>))</span>
 <span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'X-squared = '</span>, Lipsitz<span class="sc">$</span>statistic,</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, Lipsitz<span class="sc">$</span>p.value, </span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, Lipsitz<span class="sc">$</span>p.value,</span>
 <span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Lemeshow test for goodness-of-fit</span></span>
-<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>Lemeshow <span class="ot">&lt;-</span> <span class="fu">logitgof</span>(tier, <span class="fu">fitted</span>(logit_ai), <span class="at">g=</span><span class="dv">5</span>, <span class="at">ord =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>Lemeshow <span class="ot">&lt;-</span> <span class="fu">logitgof</span>(tier, <span class="fu">fitted</span>(logit_ai), <span class="at">g=</span><span class="dv">5</span>, <span class="at">ord =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(Lemeshow<span class="sc">$</span>method,<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>))</span>
 <span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'X-squared = '</span>, Lemeshow<span class="sc">$</span>statistic,</span>
-<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, Lemeshow<span class="sc">$</span>p.value, </span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, Lemeshow<span class="sc">$</span>p.value,</span>
 <span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>           <span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we must load the necessary libraries, including the ordinal library, which provides the functions for conducting the goodness-of-fit tests. We then proceed to perform the Lipsitz test using the lipsitz.test function, which evaluates the overall fit of the logit model. Additionally, we conduct the Lemeshow test using the logitgof function, which assesses the calibration of the model by comparing the observed and expected probabilities across groups.</p>
@@ -916,14 +915,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>chi <span class="ot">&lt;-</span> <span class="fu">pulkrob.chisq</span>(logit_ai, <span class="fu">c</span>(<span class="st">"is_comic"</span>,<span class="st">'is_Genshin'</span>, <span class="st">'is_Honkai'</span>))</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(chi<span class="sc">$</span>method,<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>))</span>
 <span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'X-squared = '</span>, chi<span class="sc">$</span>statistic,</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, chi<span class="sc">$</span>p.value, </span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, chi<span class="sc">$</span>p.value,</span>
 <span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>           <span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span>
 <span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Pulkstenis-Robinson deviance</span></span>
 <span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>dev <span class="ot">&lt;-</span> <span class="fu">pulkrob.deviance</span>(logit_ai, <span class="fu">c</span>(<span class="st">"is_comic"</span>,<span class="st">'is_Genshin'</span>, <span class="st">'is_Honkai'</span>))</span>
 <span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste</span>(dev<span class="sc">$</span>method,<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>))</span>
 <span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'X-squared = '</span>, dev<span class="sc">$</span>statistic,</span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, dev<span class="sc">$</span>p.value, </span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>           <span class="st">', p-value = '</span>, dev<span class="sc">$</span>p.value,</span>
 <span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>           <span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we first load the necessary libraries, including the ordinal library, which provides the functions for conducting the Pulkstenis-Robinson tests. We then proceed to perform the Pulkstenis-Robinson chi-square test using the pulkrob.chisq function, which assesses the significance of the specified variables in the logit model. Additionally, we calculate the Pulkstenis-Robinson deviance using the pulkrob.deviance function, which measures the contribution of the variables to the overall deviance of the model.</p>
@@ -940,7 +939,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h3 data-number="9.0.7" class="anchored" data-anchor-id="pr2-test"><span class="header-section-number">9.0.7</span> pR2 test</h3>
 <p>In this section, we present the code implementation for calculating the McFadden R2 statistic using the pR2 function from the pscl library in R. The McFadden R2 is a measure of the goodness-of-fit for logistic and probit models in ordered choice analysis.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(logit_ai) </span>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(logit_ai)</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(probit_ai)</span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(probit_man)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -996,7 +995,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li id="fn5"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the clm algorithm.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the pR2 test.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the lrtest.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the anova which is a example of variables selection.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the ologit.reg algorithm.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the anova which is a example of variables selection.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the margins.oglmx algorithm for marginal effects.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
