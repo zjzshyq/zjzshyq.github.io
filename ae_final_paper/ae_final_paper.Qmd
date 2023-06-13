@@ -110,7 +110,7 @@ $$
 
 By categorizing the ranks, we transform the dependent variable into an ordered, discrete, and continuous variable with five levels. This enables us to better understand the impact of the independent variables on the categorized rankings.
 
-# Method/Model
+# Method
 
 Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit models to examine the relationships between the independent variables and the categorized rankings effectively.
 
@@ -326,8 +326,8 @@ It is worth noting that the McFadden R2 values, while providing a measure of the
 
 Overall, the comparison of McFadden R2 values suggests that the probit model performs relatively better in explaining the rankings of both AI-generated samples and man-made artworks samples. However, further examination of the model coefficients and statistical tests is required to gain a comprehensive understanding of the factors influencing the rankings in each case.
 
-## Model Selection
-### Likelihood Ratio Test
+# Model
+## Likelihood Ratio Test
 We conducted a likelihood ratio test to compare the unrestricted model, which includes the independent variables, with the restricted model, which only includes a constant term (as.factor(tier)~1). The purpose of this test was to determine if the inclusion of the independent variables in the model significantly improved its fit.
 
 ```{r likelihood_ai, echo=FALSE, warning=FALSE}
@@ -342,7 +342,7 @@ After running the lrtest test[^7], test likelihood ratio test yielded a p-value 
 
 Based on the results of the likelihood ratio test, we can confidently choose the unrestricted model over the restricted model. This confirms that the inclusion of the independent variables improves the model's ability to explain and predict the rankings of the artworks on pixiv.net.
 
-### Variable Power Transformations
+## Variable Power Transformations
 
 To investigate the potential nonlinear relationships between the independent variables and the dependent variable, we performed a test on the inclusion of power terms in the model. We compared the unrestricted model, which includes the original independent variables (like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day), with an extended model that incorporates additional power terms (like_rate^2 and mark_rate^2).
 
@@ -358,7 +358,7 @@ The analysis using anova to measure likelihood ratio test[^8] indicated a p-valu
 
 These findings highlight the importance of considering nonlinear associations between the independent variables and the dependent variable. By including the power terms, we capture potential nonlinear patterns and enhance the model's ability to accurately represent the complex relationship between the independent variables (such as like_rate and mark_rate) and the dependent variable (tier). This refined model provides a more comprehensive understanding of the factors influencing the rankings of the artworks on pixiv.net.
 
-### Variables Selection
+## Variables Selection
 
 To select the most relevant variables for our AI model, we employed the general-to-specific method. We began by examining the coefficients of the variables in the extended model (probit_ai_power). The p-values associated with 'like_rate2' and 'is_Honkai1' were found to be less than 5%, indicating that these variables were statistically insignificant for the model.
 
