@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yiqing Hu">
 <meta name="author" content="Rahila Mammadova Huseynova">
-<meta name="dcterms.date" content="2023-06-13">
+<meta name="dcterms.date" content="2023-06-14">
 
 <title>Analysis of User Preferences between AI-generated and Hand-drawn Artwork: A Case Study of pixiv.net</title>
 <style>
@@ -120,7 +120,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 13, 2023</p>
+        <p class="date">June 14, 2023</p>
       </div>
     </div>
     
@@ -136,21 +136,28 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract"><span class="header-section-number">1</span> Abstract</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
-  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review"><span class="header-section-number">3</span> Literature review</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review"><span class="header-section-number">3</span> Literature review</a>
+  <ul class="collapse">
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">3.1</span> Introduction</a></li>
+  <li><a href="#short-term-impact-of-generative-ai-on-the-labor-market" id="toc-short-term-impact-of-generative-ai-on-the-labor-market" class="nav-link" data-scroll-target="#short-term-impact-of-generative-ai-on-the-labor-market"><span class="header-section-number">3.2</span> Short-term Impact of Generative AI on the Labor Market</a></li>
+  <li><a href="#long-term-impact-of-generative-ai-on-the-labor-market" id="toc-long-term-impact-of-generative-ai-on-the-labor-market" class="nav-link" data-scroll-target="#long-term-impact-of-generative-ai-on-the-labor-market"><span class="header-section-number">3.3</span> Long-term Impact of Generative AI on the Labor Market</a></li>
+  <li><a href="#effects-of-generative-ai-on-specific-occupations" id="toc-effects-of-generative-ai-on-specific-occupations" class="nav-link" data-scroll-target="#effects-of-generative-ai-on-specific-occupations"><span class="header-section-number">3.4</span> Effects of Generative AI on Specific Occupations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3.5</span> Conclusion</a></li>
+  </ul></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">4</span> Data</a>
   <ul class="collapse">
   <li><a href="#samples" id="toc-samples" class="nav-link" data-scroll-target="#samples"><span class="header-section-number">4.1</span> Samples</a></li>
   <li><a href="#varibles" id="toc-varibles" class="nav-link" data-scroll-target="#varibles"><span class="header-section-number">4.2</span> Varibles</a></li>
   <li><a href="#covariate" id="toc-covariate" class="nav-link" data-scroll-target="#covariate"><span class="header-section-number">4.3</span> Covariate</a></li>
   </ul></li>
-  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method"><span class="header-section-number">5</span> Method</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">5</span> Methods</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">6</span> Results</a>
   <ul class="collapse">
-  <li><a href="#goodness-of-fit-tests" id="toc-goodness-of-fit-tests" class="nav-link" data-scroll-target="#goodness-of-fit-tests"><span class="header-section-number">6.1</span> Goodness-of-fit tests</a></li>
+  <li><a href="#goodness-of-fit-tests" id="toc-goodness-of-fit-tests" class="nav-link" data-scroll-target="#goodness-of-fit-tests"><span class="header-section-number">6.1</span> Goodness-of-fit Tests</a></li>
   <li><a href="#odds-assumption-test" id="toc-odds-assumption-test" class="nav-link" data-scroll-target="#odds-assumption-test"><span class="header-section-number">6.2</span> Odds Assumption Test</a></li>
   <li><a href="#r2-statistics" id="toc-r2-statistics" class="nav-link" data-scroll-target="#r2-statistics"><span class="header-section-number">6.3</span> R2 statistics</a></li>
   </ul></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model"><span class="header-section-number">7</span> Model</a>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling"><span class="header-section-number">7</span> Modeling</a>
   <ul class="collapse">
   <li><a href="#likelihood-ratio-test" id="toc-likelihood-ratio-test" class="nav-link" data-scroll-target="#likelihood-ratio-test"><span class="header-section-number">7.1</span> Likelihood Ratio Test</a></li>
   <li><a href="#variable-power-transformations" id="toc-variable-power-transformations" class="nav-link" data-scroll-target="#variable-power-transformations"><span class="header-section-number">7.2</span> Variable Power Transformations</a></li>
@@ -158,7 +165,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings"><span class="header-section-number">8</span> Findings</a>
   <ul class="collapse">
-  <li><a href="#estimation" id="toc-estimation" class="nav-link" data-scroll-target="#estimation"><span class="header-section-number">8.1</span> Estimation</a></li>
+  <li><a href="#estimation-and-comparation" id="toc-estimation-and-comparation" class="nav-link" data-scroll-target="#estimation-and-comparation"><span class="header-section-number">8.1</span> Estimation and Comparation</a></li>
   <li><a href="#marginal-effects" id="toc-marginal-effects" class="nav-link" data-scroll-target="#marginal-effects"><span class="header-section-number">8.2</span> Marginal Effects</a></li>
   </ul></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography"><span class="header-section-number">9</span> Bibliography</a></li>
@@ -188,6 +195,27 @@ div.csl-indent {
 </section>
 <section id="literature-review" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Literature review</h1>
+<p><em>A Labor Market View on the Occupational Impact of Artificial Intelligence</em></p>
+<section id="introduction-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">3.1</span> Introduction</h2>
+<p>The article “A Labor Market View on the Occupational Impact of Artificial Intelligence” explores the effects of artificial intelligence (AI) on the labor market and its implications for various occupations. The study acknowledges the potential of AI to automate tasks, create new job opportunities, and increase productivity. However, it also highlights the challenges associated with AI adoption, disparities across industries and countries, and the potential for job displacement. The review provides an overview of the short-term and long-term impacts of AI on the labor market, examines the effects of generative AI services like ChatGPT, and emphasizes the importance of reskilling and upskilling initiatives to mitigate negative consequences.</p>
+</section>
+<section id="short-term-impact-of-generative-ai-on-the-labor-market" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="short-term-impact-of-generative-ai-on-the-labor-market"><span class="header-section-number">3.2</span> Short-term Impact of Generative AI on the Labor Market</h2>
+<p>The short-term impact of generative AI services like ChatGPT on the labor market is characterized by unpredictability. While automation may lead to job losses in certain areas, generative AI can also create new job opportunities, particularly in high-skilled occupations related to AI development. Moreover, the overall workforce can become more productive, potentially resulting in increased wages. However, the rate of technology adoption and the ability of workers to acquire new skills play a crucial role in determining the magnitude of these effects. The complexity of AI’s impact on the job market can lead to temporary mismatches between worker skills and employer needs, potentially resulting in unemployment or underemployment in some sectors.</p>
+</section>
+<section id="long-term-impact-of-generative-ai-on-the-labor-market" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="long-term-impact-of-generative-ai-on-the-labor-market"><span class="header-section-number">3.3</span> Long-term Impact of Generative AI on the Labor Market</h2>
+<p>The long-term impact of generative AI on the labor market is uncertain and dependent on various factors. Two possible scenarios are identified: Scenario 1 suggests that increased productivity resulting from generative AI services can lead to economic growth and more job opportunities, potentially leading to higher wages. This scenario creates a favorable environment for employees. Scenario 2, however, indicates that increased automation facilitated by generative AI may reduce the demand for human workers, resulting in fewer job opportunities and lower wages for certain occupations. Industries heavily impacted by automation are particularly vulnerable in this scenario. It is crucial to note that the exact outcome depends on industry-specific and occupation-specific dynamics and cannot be conclusively predicted</p>
+</section>
+<section id="effects-of-generative-ai-on-specific-occupations" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="effects-of-generative-ai-on-specific-occupations"><span class="header-section-number">3.4</span> Effects of Generative AI on Specific Occupations</h2>
+<p>Generative AI, including ChatGPT, can have various effects on different occupations. Jobs involving coding, software development, programming, data science, media, and the legal industry are at risk of displacement due to AI. Certain occupations, such as customer service representatives, teachers, finance-related roles, and market research analysts, may also face significant impacts. The nature of work in these occupations may change, with AI automating certain tasks and improving data analysis capabilities. However, the extent of these impacts varies across industries and job responsibilities</p>
+</section>
+<section id="conclusion" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3.5</span> Conclusion</h2>
+<p>The literature review highlights both the positive and negative consequences of generative AI, such as ChatGPT, on the job market. While AI can create new job opportunities, enhance productivity, and drive economic growth, it can also displace workers, lead to lower wages, and contribute to income inequality. The key factor influencing the impact of AI on the labor market is the skills mismatch between displaced workers and the requirements of new jobs. Reskilling and upskilling initiatives are vital in mitigating the negative effects of AI. The study suggests that a significant portion of the workforce may be affected by AI, necessitating proactive measures from governments, businesses, and workers to ensure a smooth transition and equitable distribution of AI’s benefits</p>
+</section>
 </section>
 <section id="data" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Data</h1>
@@ -197,7 +225,7 @@ div.csl-indent {
 <p>By utilizing the data from pixiv.net, we are able to examine the dynamic relationship between AI-generated artwork and user preferences over time. This allows us to gain valuable insights into the evolving landscape of the online art community and understand the factors that influence the rankings and preferences of AI-generated images compared to hand-drawn artwork.</p>
 <section id="samples" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="samples"><span class="header-section-number">4.1</span> Samples</h2>
-<p>We collected the data spanning from October 31, 2022, to May 15, 2023 from the top list of AI-generated and man-made image pages. After de-duplicating same image pages which may appear in top with differnet and different day, we gathered the samples:</p>
+<p>We collected the data spanning from October 31, 2022, to May 15, 2023 from the top list of AI-generated and man-made image pages. After de-duplicating same image pages which may appear in top with different ranks and different days, we gathered the samples:</p>
 <ul>
 <li>Number of all samples: 14576</li>
 <li>Number of samples of AI-generated Artworks: 8092</li>
@@ -312,27 +340,29 @@ div.csl-indent {
 <p>By categorizing the ranks, we transform the dependent variable into an ordered, discrete, and continuous variable with five levels. This enables us to better understand the impact of the independent variables on the categorized rankings.</p>
 </section>
 </section>
-<section id="method" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Method</h1>
-<p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit models to examine the relationships between the independent variables and the categorized rankings effectively.</p>
-<p>In our analysis, we utilized the R programming language to fit a logit model to the data. Specifically, we employed the logit function，polr <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> at the beginning, which is suitable for estimating ordered choice models.</p>
+<section id="methods" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Methods</h1>
+<p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.</p>
+<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, which is suitable for estimating ordered choice model as our baseline.</p>
 <p>To assess the feasibility and goodness-of-fit of the baseline models, several Goodness-of-Fit tests were conducted. The tests employed were the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are commonly used in empirical research to evaluate the fit of logistic regression models and ordered choice models.</p>
 <p>The Hosmer-Lemeshow test examines the agreement between the observed and predicted probabilities by dividing the data into several groups based on predicted probabilities and assessing the differences between the observed and expected frequencies within each group. A non-significant p-value indicates a good fit between the model and the observed data.</p>
-<p>The Lipsitz test is specifically designed for ordered choice models and assesses the proportional odds assumption. This assumption states that the relationship between the predictors and the response variable is constant across all levels of the response variable. Violation of this assumption may indicate the need for a different modeling approach. The Lipsitz test calculates a chi-square statistic to evaluate the fit of the model to the proportional odds assumption.</p>
-<p>The Pulkstenis-Robinson test is another test for assessing the proportional odds assumption in ordered choice models. It examines the parallelism of the cumulative logits across response categories. A non-significant result suggests that the model satisfies the proportional odds assumption.</p>
+<p>The Lipsitz test divides the data into groups based on predicted probabilities and compares the observed and expected frequencies within each group. It calculates a chi-square statistic to determine if there are significant differences between the observed and expected frequencies.</p>
+<p>Similarly, the Pulkstenis-Robinson test also uses a chi-square statistic to evaluate the lack of fit between the model and the observed data.</p>
 <p>Based on the results of the Goodness-of-Fit tests, if the baseline models do not demonstrate a satisfactory fit, model optimization techniques will be employed to improve the fit and meet the Goodness-of-Fit criteria.</p>
 <p>Furthermore, the Brant test will be used to determine the appropriate model type for our ordered choice model. The Brant test examines the assumption of proportional odds and helps decide whether to use a Logit or Probit model. The test assesses the parallel regression assumption by comparing the coefficients from the Logit and Probit models. If the coefficients are not significantly different, indicating parallel regression, the Logit model will be selected due to its more straightforward interpretation. On the other hand, if the coefficients are significantly different, suggesting non-parallel regression, the Probit model will be chosen.</p>
 <p>The selection of the appropriate model type (Logit or Probit) is crucial as it affects the interpretation of the estimated coefficients and the overall model performance. By conducting the Brant test, we ensure that the chosen model type aligns with the underlying assumptions of the data and provides valid and reliable results for our analysis.</p>
-<p>By employing these modeling techniques, we aim to gain valuable insights into the influence of the independent variables on the rankings of artworks on pixiv.net. These methodological considerations adhere to the standards expected in academic research and contribute to the advancement of knowledge in the field.</p>
+<p>By employing these testing techniques, we aim to gain valuable insights into the influence of the independent variables on the tiers of artworks on pixiv.net. These methodological considerations adhere to the standards expected in academic research and contribute to the advancement of knowledge in the field.</p>
 </section>
 <section id="results" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Results</h1>
+<p>The Results chapter presents the outcomes of the analysis, utilizing various statistical methods and tests to assess the goodness-of-fit and validate the models used. Specifically, we employed the Hosmer-Lemeshow test, Lipsitz test, and Pulkstenis-Robinson test to evaluate the goodness-of-fit of our models. Additionally, we utilized Brant’s test to assess the proportional odds assumption. The McFadden R2 statistic was also employed to measure the explanatory power of the models and guide model refinement.</p>
+<p>By applying these rigorous methods, we aim to ensure the accuracy and reliability of our results, ultimately obtaining a suitable model that can serve as a foundation for subsequent work. This introductory section sets the stage for the detailed presentation of the analysis outcomes and their implications in the following sections of the Results chapter.</p>
 <section id="goodness-of-fit-tests" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="goodness-of-fit-tests"><span class="header-section-number">6.1</span> Goodness-of-fit tests</h2>
+<h2 data-number="6.1" class="anchored" data-anchor-id="goodness-of-fit-tests"><span class="header-section-number">6.1</span> Goodness-of-fit Tests</h2>
 <section id="hosmer-lemeshow-and-lipsitz-tests" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="hosmer-lemeshow-and-lipsitz-tests"><span class="header-section-number">6.1.1</span> Hosmer-Lemeshow and Lipsitz tests</h3>
 <p>To assess the appropriateness of our model, we conducted Hosmer-Lemeshow and Lipsitz tests. These tests examine whether the form of our model adequately fits the data. If either of these tests indicates that the model is inappropriate, it suggests the presence of issues that need to be addressed.</p>
-<p>The H0 (null hypothesis) of the Lipsitz test and logitgof test is that the form of our model is appropriate for the data. If either test indicates that the H0 cannot be rejected, it implies that the model may have a problem, and corrective measures are needed. Only when both tests indicate that the model is appropriate can we confidently state that the model is suitable for our analysis. we imply Lipsitz and logitgof tests<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in R to check the hypothesis.</p>
+<p>The H0 (null hypothesis) of the Lipsitz test and logitgof test is that the form of our model is appropriate for the data. If either test indicates that the H0 is rejected, it implies that the model may have a problem, and corrective measures are needed. Only when both tests indicate that the model is appropriate can we confidently state that the model is suitable for our analysis. we imply Lipsitz and logitgof tests<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in R to check the hypothesis.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Lipsitz goodness of fit test for ordinal response models </code></pre>
@@ -347,14 +377,14 @@ div.csl-indent {
 <pre><code>X-squared = 35.7491570936594, p-value = 0.00192116136889442</code></pre>
 </div>
 </div>
-<p>The Lipsitz test was performed, and the resulting p-value is 0.0000002942, which is less than the significance level of 5%. Therefore, we cannot reject the H0, indicating that the form of our model has a problem.</p>
-<p>Similarly, the logitgof test (Hosmer-Lemeshow test) was conducted with the model’s fitted values, and the resulting p-value is 0.00007257, also less than the significance level of 5%. Consequently, we cannot reject the H0, suggesting that the form of our model has a problem.</p>
+<p>The Lipsitz test was performed, and the resulting p-value is 0.0000002942, which is less than the significance level of 5%. Therefore, we have to reject the H0, indicating that the form of our model has a problem.</p>
+<p>Similarly, the logitgof test (Hosmer-Lemeshow test) was conducted with the model’s fitted values, and the resulting p-value is 0.00007257, also less than the significance level of 5%. Consequently, we reject the H0, suggesting that the form of our model has a problem.</p>
 <p>These goodness-of-fit tests provide valuable insights into the adequacy of our model. Their outcomes indicate the presence of issues that need to be addressed to improve the model’s fit to the data. By recognizing and addressing these problems, we can refine our model and enhance its reliability for further analysis. These methodological considerations align with the rigorous standards expected in academic research, contributing to the robustness of our findings.</p>
 </section>
 <section id="pulkstenis-robinson-tests" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="pulkstenis-robinson-tests"><span class="header-section-number">6.1.2</span> Pulkstenis-Robinson tests</h3>
 <p>In addition to the Hosmer-Lemeshow and Lipsitz tests, we also conducted Pulkstenis-Robinson tests to assess the goodness of fit of our model. These tests are particularly suitable when dealing with models that include dummy variables, such as our model, which incorporates the dummy variables “is_comic,” “is_Genshin,” and “is_Honkai.” The Pulkstenis-Robinson tests provide valuable insights into the model’s fit and the impact of additional predictors.</p>
-<p>The Pulkstenis-Robinson chi-squared test evaluates the null hypothesis that there is no significant departure from the expected frequencies based on the ordinal logistic regression model. In simpler terms, this test assesses whether the model fits the observed data adequately, without evidence of lack of fit. The Pulkstenis-Robinson deviance test, on the other hand, compares the more complex model (our model with additional predictors) to a simpler baseline model to determine if the additional predictors significantly improve the model fit.</p>
+<p>The Pulkstenis-Robinson chi-squared test evaluates the null hypothesis that there is no significant departure from the expected frequencies based on the ordinal logistic regression model. In simpler terms, this test assesses whether the model fits the observed data adequately, without evidence of lack of fit. The Pulkstenis-Robinson deviance test, on the other hand, compares the more complex model (the model with additional predictors) to a simpler baseline model to determine if the additional predictors significantly improve the model fit.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Pulkstenis-Robinson chi-squared test </code></pre>
@@ -372,7 +402,8 @@ div.csl-indent {
 <p>Upon conducting the Pulkstenis-Robinson tests<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, we obtained the following results:</p>
 <p>Pulkstenis-Robinson chi-squared test: The p-value was calculated as 0.03315, which is less than the significance level of 5%. Therefore, we reject the null hypothesis and conclude that the model does not fit the observed data well.</p>
 <p>Pulkstenis-Robinson deviance test: The p-value was found to be 0.01776, also below the significance level of 5%. Consequently, we reject the null hypothesis, indicating that the additional predictors in the more complex model significantly improve the model fit.</p>
-<p>Based on the results of these goodness-of-fit tests, it becomes apparent that the initial model for our task is not appropriate. This finding suggests the need for further refinement and consideration of potential issues such as feedback or endogeneity between views and ranks. To explore this, we removed the parameter of ‘views’ from the model and reevaluated the goodness of fit using the Pulkstenis-Robinson tests.</p>
+<p>Based on the results of these goodness-of-fit tests, it becomes apparent that the initial model for our task is not appropriate. This finding suggests the need for further refinement and consideration of potential issues such as feedback or endogeneity between views and ranks.</p>
+<p>To explore this, we removed the parameter of ‘views’ which may be influenced by the dependent variable, tiers, from the model and reevaluated the goodness of fit using the Pulkstenis-Robinson tests.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Pulkstenis-Robinson chi-squared test </code></pre>
@@ -395,7 +426,7 @@ div.csl-indent {
 <h2 data-number="6.2" class="anchored" data-anchor-id="odds-assumption-test"><span class="header-section-number">6.2</span> Odds Assumption Test</h2>
 <section id="brants-test" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="brants-test"><span class="header-section-number">6.2.1</span> Brant’s test</h3>
-<p>To assess the validity of the proportional odds assumption, we conducted Brant’s test. This test specifically examines the parallel regression assumption in the context of the polr model. The null hypothesis of Brant’s test is that the parallel regression assumption holds.</p>
+<p>To assess the validity of the proportional odds assumption, we conducted Brant’s test. This test specifically examines the parallel regression assumption in the context of the polr method. The null hypothesis of Brant’s test is that the parallel regression assumption holds.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>-------------------------------------------- 
@@ -417,9 +448,9 @@ H0: Parallel Regression Assumption holds</code></pre>
 </div>
 <p>By applying Brant’s test<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> to our model, we obtained the following results:</p>
 <ul>
-<li>Omnibus test: The test statistic (X2) was calculated as 67.41, with a corresponding p-value of 0. As a result, we reject the null hypothesis, indicating that the parallel regression assumption does not hold for our model. This finding suggests that the ordered logit model is not suitable for our analysis.</li>
+<li><p>Omnibus test: The test statistic (X2) was calculated as 67.41, with a corresponding p-value of 0. As a result, we reject the null hypothesis, indicating that the parallel regression assumption does not hold for our model. This finding suggests that the ordered logit model is not suitable for our analysis.</p></li>
+<li><p>Furthermore, it is important to consider the variables associated with the rejection of the test, as indicated by their probabilities. Variables with probabilities higher than 5% are considered connected to the rejection of the test.</p></li>
 </ul>
-<p>Furthermore, it is important to consider the variables associated with the rejection of the test, as indicated by their probabilities. Variables with probabilities higher than 5% are considered connected to the rejection of the test.</p>
 <p>Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, which does not rely on the proportional odds assumption.</p>
 <p>To validate the appropriateness of the ordered probit model, we conducted the Pulkstenis-Robinson tests for goodness of fit. The results of these tests confirmed that the probit model is suitable for our analysis.</p>
 <div class="cell">
@@ -454,7 +485,7 @@ H0: Parallel Regression Assumption holds</code></pre>
 </div>
 <p>After excluding the ‘comments’ parameter and incorporating additional variables such as like_rate2, mark_rate2, and mark_rate3, our model for the man-made artworks demonstrates improved performance.</p>
 <p>The exclusion of the ‘comments’ parameter addresses the issue of endogeneity, which may have been present in the original model. By removing this variable, we mitigate the potential bias caused by the reciprocal relationship between comments and the ranks of the artworks.</p>
-<p>Furthermore, the inclusion of higher-order terms, such as the power and cube of mark_rate, allows us to capture potential nonlinear associations between the independent variable (like_rate) and the dependent variable (ranks). This consideration accounts for the possibility of non-linear patterns in the data, enhancing the model’s ability to accurately represent the underlying relationship between like_rate and ranks. The introduction of these new variables enables a more flexible and nuanced analysis, potentially leading to improved goodness-of-fit test results.</p>
+<p>Furthermore, the inclusion of higher-order terms, such as the power and cube of mark_rate, allows us to capture potential nonlinear associations between the independent variable (like_rate) and the dependent variable (tiers). This consideration accounts for the possibility of non-linear patterns in the data, enhancing the model’s ability to accurately represent the underlying relationship between like_rate and ranks. The introduction of these new variables enables a more flexible and nuanced analysis, potentially leading to improved goodness-of-fit test results.</p>
 <p>By incorporating these adjustments into the model, we aim to refine our understanding of the factors influencing the rankings of man-made artworks. These methodological refinements align with the rigorous standards expected in academic research and contribute to the advancement of knowledge in the field.</p>
 </section>
 </section>
@@ -492,12 +523,14 @@ H0: Parallel Regression Assumption holds</code></pre>
 <p>In analyzing the R2 values for the logit and probit models, it is important to note that the McFadden R2 alone cannot be interpreted in isolation. Comparing the McFadden R2 values of different models<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> provides a basis for understanding the relative goodness-of-fit among the models.</p>
 <p>For the AI-generated samples, the McFadden R2 of the probit model is 0.0823, while the McFadden R2 of the logit model is slightly lower at 0.0816. This suggests that both models have a similar level of explanatory power in capturing the variations in the data.</p>
 <p>On the other hand, for the man-made artworks samples, the McFadden R2 of the probit model is notably higher at 0.248. This indicates that the probit model explains a larger proportion of the variances in the rankings of man-made artworks compared to the logit model.</p>
-<p>It is worth noting that the McFadden R2 values, while providing a measure of the models’ fit, do not offer insight into the significance or magnitude of individual independent variables. Therefore, additional analysis is necessary to interpret the effects and significance of the variables included in the models.</p>
-<p>Overall, the comparison of McFadden R2 values suggests that the probit model performs relatively better in explaining the rankings of both AI-generated samples and man-made artworks samples. However, further examination of the model coefficients and statistical tests is required to gain a comprehensive understanding of the factors influencing the rankings in each case.</p>
+<p>Furthermore, comparing the McFadden R2 values between the AI-generated samples and the man-made artworks samples suggests that the probit model with additional powered and cubed variables perform better in the rankings of man-made artworks compared to AI-generated samples. The higher McFadden R2 for the man-made artworks indicates a stronger relationship between the predictors and the rankings, conducting that the factors considered in the model have a more substantial impact on the rankings of man-made artworks.</p>
+<p>It is worth noting that the McFadden R2 values, while providing a measure of the models’ fit, do not offer insight into the significance or magnitude of individual independent variables. Therefore, additional analysis is necessary to interpret the effects and significance of the variables included in the models. Further examination of the model coefficients and statistical tests is required to gain a comprehensive understanding of the factors influencing the rankings in each case.</p>
 </section>
 </section>
-<section id="model" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Model</h1>
+<section id="modeling" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Modeling</h1>
+<p>In the Modeling chapter, we refine the obtained models to enhance their explanatory power and interpretability. We compare the unrestricted and restricted models using a likelihood ratio test and explore the inclusion of power terms to capture potential nonlinear relationships. We employ the general-to-specific method to select the most relevant variables for our AI model. This iterative process helps us identify statistically significant variables and improve the model’s accuracy.</p>
+<p>Through these modeling techniques and variable selection processes, we aim to refine our AI model and uncover the most influential factors in determining the rankings of AI-generated artworks. These findings will provide valuable insights into the underlying dynamics and relationships within the dataset.</p>
 <section id="likelihood-ratio-test" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="likelihood-ratio-test"><span class="header-section-number">7.1</span> Likelihood Ratio Test</h2>
 <p>We conducted a likelihood ratio test to compare the unrestricted model, which includes the independent variables, with the restricted model, which only includes a constant term (as.factor(tier)~1). The purpose of this test was to determine if the inclusion of the independent variables in the model significantly improved its fit.</p>
@@ -523,20 +556,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>To investigate the potential nonlinear relationships between the independent variables and the dependent variable, we performed a test on the inclusion of power terms in the model. We compared the unrestricted model, which includes the original independent variables (like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day), with an extended model that incorporates additional power terms (like_rate^2 and mark_rate^2).</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Likelihood ratio tests of cumulative link models:
- 
-                formula:                                                                                                                       
-probit_ai       tier ~ like_rate + mark_rate + is_comic + is_Genshin + is_Honkai + comments + top_cnt + date_diff_day                          
-probit_ai_power tier ~ like_rate + mark_rate + is_comic + is_Genshin + is_Honkai + comments + top_cnt + date_diff_day + like_rate2 + mark_rate2
-                link:  threshold:
-probit_ai       probit flexible  
-probit_ai_power probit flexible  
-
-                no.par   AIC logLik LR.stat df Pr(&gt;Chisq)    
-probit_ai           12 23923 -11949                          
-probit_ai_power     14 23909 -11940  18.048  2  0.0001205 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+<pre><code>            probit_ai_power
+Pr(&gt;Chisq)  0.000120457022189619
+LR.stat     18.048435061959
+df          2</code></pre>
 </div>
 </div>
 <p>The analysis using anova to measure likelihood ratio test<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> indicated a p-value of 0.00012, which is less than the predetermined significance level of 5%. Consequently, we reject the null hypothesis that the power terms have coefficients of zero, suggesting that the two models are significantly different. Hence, including the power terms in the model (probit_ai_power) yields a better fit than the model without the power terms (probit_ai).</p>
@@ -571,35 +594,19 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Likelihood ratio tests of cumulative link models:
- 
-                 formula:                                                                                                                       
-probit_ai_honkai tier ~ like_rate + mark_rate + is_comic + is_Genshin + comments + top_cnt + date_diff_day + like_rate2 + mark_rate2            
-probit_ai_power  tier ~ like_rate + mark_rate + is_comic + is_Genshin + is_Honkai + comments + top_cnt + date_diff_day + like_rate2 + mark_rate2
-                 link:  threshold:
-probit_ai_honkai probit flexible  
-probit_ai_power  probit flexible  
-
-                 no.par   AIC logLik LR.stat df Pr(&gt;Chisq)
-probit_ai_honkai     13 23908 -11941                      
-probit_ai_power      14 23909 -11940  1.3683  1     0.2421</code></pre>
+<pre><code>            probit_ai_honkaiTag
+Pr(&gt;Chisq)  0.242107449380938
+LR.stat     1.36828101149877
+df          1</code></pre>
 </div>
 </div>
 <p>To refine the model further, we employed the process of elimination using the anova test. First, we compared the extended model (probit_ai_power) with a simplified model that excluded the ‘is_Honkai’ variable (probit_ai_honkai). The resulting p-value of 0.24 was greater than the predetermined significance level of 0.05, suggesting that the two models were not significantly different. Consequently, we selected the simpler model without the ‘is_Honkai’ variable.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Likelihood ratio tests of cumulative link models:
- 
-                        formula:                                                                                                           
-probit_ai_honkai_liked2 tier ~ like_rate + mark_rate + is_comic + is_Genshin + comments + top_cnt + date_diff_day + mark_rate2             
-probit_ai_honkai        tier ~ like_rate + mark_rate + is_comic + is_Genshin + comments + top_cnt + date_diff_day + like_rate2 + mark_rate2
-                        link:  threshold:
-probit_ai_honkai_liked2 probit flexible  
-probit_ai_honkai        probit flexible  
-
-                        no.par   AIC logLik LR.stat df Pr(&gt;Chisq)
-probit_ai_honkai_liked2     12 23906 -11941                      
-probit_ai_honkai            13 23908 -11941  0.2185  1     0.6402</code></pre>
+<pre><code>            probit_ai_likeRate^2
+Pr(&gt;Chisq)  0.64018723852826
+LR.stat     0.218497371701233
+df          1</code></pre>
 </div>
 </div>
 <p>Next, we compared the selected model (probit_ai_honkai) with another variant that excluded the ‘like_rate2’ variable (probit_ai_honkai_liked2). Again, the resulting p-value of 0.24 was greater than 0.05, indicating that the two models were not significantly different. Hence, we chose the model without the ‘like_rate2’ variable for its simplicity.</p>
@@ -679,12 +686,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>In summary, through the general-to-specific method, we arrived at an optimized model (probit_man_opt) for the analysis of man-made artworks. This model incorporates the significant variables of ‘like_rate’, ‘mark_rate2’, ‘mark_rate3’, ‘is_comic’, ‘is_Honkai’, ‘top_cnt’, ‘date_diff_day’, and ‘views’. By selecting these variables, we ensure that our model focuses on the most influential factors and provides a more accurate representation of the ranking process for man-made artworks on pixiv.net.</p>
+<p>Through these modeling techniques and variable selection processes, we are able to refine our models and uncover the most influential factors in determining the rankings of AI-generated abd man-made artworks. These findings will provide valuable insights into the underlying dynamics and relationships within the data set.</p>
 </section>
 </section>
 <section id="findings" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Findings</h1>
-<section id="estimation" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="estimation"><span class="header-section-number">8.1</span> Estimation</h2>
+<section id="estimation-and-comparation" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="estimation-and-comparation"><span class="header-section-number">8.1</span> Estimation and Comparation</h2>
 <p>To Compare the results of the two models using an academic perspective, we observe both similarities and differences in the qualitative analysis of the variables’ effects on the tier outcome in the ordered choice model of probit using ologit.reg algorithm<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
 <p>In analyzing the results, it is important to focus on the estimated coefficients rather than the threshold parameters. The estimated coefficients provide valuable insights into the effects of each variable on the tier rankings in both the AI-generated and man-made sample models.</p>
 <div class="cell">
@@ -809,11 +817,36 @@ mark_rate2    -1.84915912  0.46071338  -4.0137 0.0000597777070404874 ***
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-<p>In the case of Outcome==1, which corresponds to tier 1 in the ranking, artworks related to Genshin have a higher probability compared to artworks related to other topics, with a difference of 2.8119 percentage points. This implies that Genshin-themed artworks are more likely to be ranked in the top tier.</p>
-<p>Furthermore, an increase a unit in the ‘like_rate’ variable would lead to an increase in the probability of an artwork being ranked in tier 1 by 108.1806 percentage points. This suggests that higher like rate contribute to a higher likelihood of achieving a top-tier ranking.</p>
-<p>Based on the code output, we can analyze the effects of different outcomes on rank and the influence of various variables.</p>
-<p>For Outcome==1, which represents the first tier ranking, the following other variables have an impact on the rank: - is_comic1 (whether it is related to comics): Increasing the presence of comic-related artworks significantly reduces the probability of achieving the first tier rank, decreasing it by 11.753 percentage points. - is_Genshin1 (whether it is related to Genshin): Artworks related to Genshin have a higher probability of achieving the first tier rank compared to other themes, increasing it by 2.8119 percentage points. - like_rate: An increase in the like rate of the artwork leads to a higher probability of attaining the first tier rank, with a marginal effect of 1.0818. - mark_rate: Higher mark rates are associated with a lower probability of achieving the first tier rank, resulting in a marginal effect of -1.2748. - comments: The number of comments received has a positive impact on the probability of achieving the first tier rank, with a marginal effect of 0.0080. - top_cnt: Increasing the number of times the artwork appears in the top selection enhances the likelihood of attaining the first tier rank, with a marginal effect of 0.1312. - date_diff_day: Longer time intervals since the artwork’s creation date are associated with a higher probability of achieving the first tier rank, resulting in a marginal effect of 0.0632. - like_rate2: The square of the like rate also positively influences the probability of attaining the first tier rank, with a marginal effect of 4.9383.</p>
-<p>Similarly, we can analyze the effects of these variables on other outcomes (Outcome==2, Outcome==3, Outcome==4, Outcome==5) by referring to the respective marginal effects provided in the code output.</p>
+<p>Based on the code output, we can analyze the effects of different outcomes on rank and the influence of various variables. Here are some key interpretations for each outcome category:</p>
+<p><strong>Outcome==1:</strong></p>
+<ul>
+<li><p>“is_Genshin1” has a positive marginal effect (0.02897413). This indicates that a one-unit increase in the “is_Genshin1” variable (possibly a binary variable indicating whether something is related to Genshin) leads to an increase in the probability of tier 1 by approximately 0.029 compared to artworks related to other topics. This implies that Genshin-themed artworks are more likely to be ranked in the top tier.</p></li>
+<li><p>“is_comic1” has a negative marginal effect (-0.12007167). This means that if the “is_comic1” increases by one unit, the probability of an artwork being tier 1 decreases by approximately 0.12, while holding other variables constant.</p></li>
+<li><p>“mark_rate” has a negative (-2.25225022). This means that if the “mark_rate” increases by one unit, the probability of top tier decreases by approximately 2.25, while holding other variables constant.</p></li>
+<li><p>“like_rate” , “comments”, “top_cnt”, “date_diff_day” and “mark_rate2” all have significant positive marginal effects. This suggests that increases in these variables result in higher probabilities of achieving a top-tier ranking, while controlling for other variables.</p></li>
+</ul>
+<p><strong>Outcome==2:</strong></p>
+<ul>
+<li><p>“is_comic1” has a negative marginal effect (-0.13736230), indicating that it decreases the probability of tier 2.</p></li>
+<li><p>“is_Genshin1” has a positive marginal effect (0.02015730), increasing the probability of tier 2.</p></li>
+<li><p>“mark_rate” has a negative (-1.60105712), which also indicates that it decreases the probability of tier 2.</p></li>
+<li><p>Other variables such as “like_rate”, “comments”, “top_cnt”, “date_diff_day” and “mark_rate2” have significant positive effects, suggesting an increased likelihood of tier 2.</p></li>
+</ul>
+<p><strong>Outcome==3:</strong></p>
+<ul>
+<li><p>“mark_rate” has a positive marginal effect (0.20463648). For a one-unit increase in the variable “mark_rate”, the probability of the outcome being 3 increases by approximately 0.205.</p></li>
+<li><p>Other variables of outcome 3 have negative effects, indicating decreased probabilities of tier 3.</p></li>
+</ul>
+<p><strong>Outcome==4:</strong></p>
+<ul>
+<li><p>“is_comic1” and “mark_rate” have a positive marginal effect (0.06158231 and 1.5055185 respectively), suggesting an increased probability of tier 4.</p></li>
+<li><p>Other variables have significant negative effects, implying a lower probability of tier 4.</p></li>
+</ul>
+<p><strong>Outcome==5:</strong></p>
+<ul>
+<li><p>“is_comic1” and “mark_rate” have a positive marginal effect (0.26233753 and 2.14315230r espectively), suggesting an increased probability of tier 5.</p></li>
+<li><p>Other variables have significant negative effects, implying a lower probability of Outcome 5</p></li>
+</ul>
 <p>By analyzing the Marginal Effects, we gain insights into the impact of specific variables on the probabilities of different ranking outcomes. These findings provide valuable information for understanding the factors influencing the rankings of AI-generated artworks on the platform.</p>
 </section>
 </section>
@@ -970,7 +1003,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>is_comic<span class="sc">+</span>is_Genshin<span class="sc">+</span>is_Honkai</span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>comments<span class="sc">+</span>top_cnt<span class="sc">+</span>date_diff_day</span>
 <span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>like_rate2<span class="sc">+</span>mark_rate2, <span class="at">data =</span> ai, <span class="at">link=</span><span class="fu">c</span>(<span class="st">'probit'</span>))</span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(probit_ai, probit_ai_power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> <span class="fu">anova</span>(probit_ai, probit_ai_power)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'</span><span class="sc">\t\t\t</span><span class="st">probit_ai_power</span><span class="sc">\n</span><span class="st">Pr(&gt;Chisq)</span><span class="sc">\t</span><span class="st">'</span>, sim<span class="sc">$</span><span class="st">`</span><span class="at">Pr(&gt;Chisq)</span><span class="st">`</span>[<span class="dv">2</span>],</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="sc">\n</span><span class="st">LR.stat</span><span class="sc">\t\t</span><span class="st">'</span>,sim<span class="sc">$</span>LR.stat[<span class="dv">2</span>], <span class="st">'</span><span class="sc">\n</span><span class="st">df</span><span class="sc">\t\t\t</span><span class="st">'</span>,sim<span class="sc">$</span>df[<span class="dv">2</span>],<span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we extend the probit model probit_ai by including squared variables (like_rate2 and mark_rate2) to capture potential non-linear relationships between these variables and the response variable. We fit the extended model probit_ai_power and then use the anova function to compare the full model probit_ai with the model including the squared variables.</p>
 </section>
@@ -982,7 +1018,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>is_comic<span class="sc">+</span>is_Genshin<span class="sc">+</span>is_Honkai</span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>comments<span class="sc">+</span>top_cnt<span class="sc">+</span>date_diff_day</span>
 <span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">+</span>like_rate2<span class="sc">+</span>mark_rate2, <span class="at">data =</span> ai, <span class="at">link=</span><span class="fu">c</span>(<span class="st">'probit'</span>))</span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(probit_ai, probit_ai_power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>sim <span class="ot">&lt;-</span> <span class="fu">anova</span>(probit_ai, probit_ai_power)</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(<span class="st">'</span><span class="sc">\t\t\t</span><span class="st">probit_ai_power</span><span class="sc">\n</span><span class="st">Pr(&gt;Chisq)</span><span class="sc">\t</span><span class="st">'</span>, sim<span class="sc">$</span><span class="st">`</span><span class="at">Pr(&gt;Chisq)</span><span class="st">`</span>[<span class="dv">2</span>],</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="sc">\n</span><span class="st">LR.stat</span><span class="sc">\t\t</span><span class="st">'</span>,sim<span class="sc">$</span>LR.stat[<span class="dv">2</span>], <span class="st">'</span><span class="sc">\n</span><span class="st">df</span><span class="sc">\t\t\t</span><span class="st">'</span>,sim<span class="sc">$</span>df[<span class="dv">2</span>],<span class="st">'</span><span class="sc">\n\n</span><span class="st">'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we use the margins.oglmx() function to calculate the marginal effects for the probit_ai model. This function computes the average marginal effects of each predictor variable on the predicted probabilities of the different rank levels.</p>
 <p>The results of the marginal effects analysis provide insights into how changes in each predictor variable affect the probabilities of different rankings for AI-generated images.</p>
@@ -993,16 +1032,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the polr algorithm. for logtic model.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the lipsitz and Lipsitz tests.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the pulkrob tests.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the Brant’s test.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the clm algorithm.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the pR2 test.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Please refer to the Appendix for the relevant code pertaining to the polr algorithm. for logtic model.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Please refer to the Appendix for the relevant code pertaining to the lipsitz and Lipsitz tests.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Please refer to the Appendix for the relevant code pertaining to the pulkrob tests.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Please refer to the Appendix for the relevant code pertaining to the Brant’s test.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Please refer to the Appendix for the relevant code pertaining to the clm algorithm.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Please refer to the Appendix for the relevant code pertaining to the pR2 test.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the lrtest.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the ologit.reg algorithm.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the anova which is a example of variables selection.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the margins.oglmx algorithm for marginal effects.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Please refer to the Appendix for the relevant code pertaining to the ologit.reg algorithm.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Please refer to the Appendix for the relevant code pertaining to the anova which is a example of variables selection.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Please refer to the Appendix for the relevant code pertaining to the margins.oglmx algorithm for marginal effects.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->
