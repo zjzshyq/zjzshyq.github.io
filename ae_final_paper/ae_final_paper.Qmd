@@ -1,4 +1,5 @@
 ```{r echo=FALSE, message = FALSE}
+# if quarto crushed again, use cmd: quarto install tinytex
 setwd('/Users/huyiqing/PycharmProjects/zjzshyq.github.io/ae_final_paper')
 csv_dir <- '../data/pixiv_tops_lm.csv'
 Sys.setenv(LANG = "en")
@@ -37,25 +38,6 @@ In this study, we utilize a comprehensive data set obtained from pixiv.net, a pr
 To analyze the data, we employ established econometric techniques[@AIThemedCryptocurrencies], including logistic regression (MASS::polr) and probit regression (oglmx::ologit.reg and ordinal::clm). We also conduct Goodness-of-fit tests, such as the Hosmer-Lemeshow, Lipsitz, and Pulkstenis-Robinson tests, to assess the initial performance of the models. Variable selection is conducted using the lrtest for Likelihood and anova for the general-to-specific method [@General-to-specific]. The evaluation of the models includes examining the impact of various variables on the rankings of AI-generated images and conducting Marginal Effects analysis specifically for the AI-generated model.
 
 By employing this comprehensive analytical framework, our study aims to provide a nuanced understanding of the intricate dynamics between AI-generated artwork and user preferences. The subsequent sections will present the empirical findings, contributing to the literature on the effects of AI-generated artwork within the online art community.
-
-# Literature review
-
-_A Labor Market View on the Occupational Impact of Artificial Intelligence_
-
-## Introduction
-The article "A Labor Market View on the Occupational Impact of Artificial Intelligence" explores the effects of artificial intelligence (AI) on the labor market and its implications for various occupations. The study acknowledges the potential of AI to automate tasks, create new job opportunities, and increase productivity. However, it also highlights the challenges associated with AI adoption, disparities across industries and countries, and the potential for job displacement. The review provides an overview of the short-term and long-term impacts of AI on the labor market, examines the effects of generative AI services like ChatGPT, and emphasizes the importance of reskilling and upskilling initiatives to mitigate negative consequences.
-
-## Short-term Impact of Generative AI on the Labor Market
-The short-term impact of generative AI services like ChatGPT on the labor market is characterized by unpredictability. While automation may lead to job losses in certain areas, generative AI can also create new job opportunities, particularly in high-skilled occupations related to AI development. Moreover, the overall workforce can become more productive, potentially resulting in increased wages. However, the rate of technology adoption and the ability of workers to acquire new skills play a crucial role in determining the magnitude of these effects. The complexity of AI's impact on the job market can lead to temporary mismatches between worker skills and employer needs, potentially resulting in unemployment or underemployment in some sectors.
-
-## Long-term Impact of Generative AI on the Labor Market
-The long-term impact of generative AI on the labor market is uncertain and dependent on various factors. Two possible scenarios are identified: Scenario 1 suggests that increased productivity resulting from generative AI services can lead to economic growth and more job opportunities, potentially leading to higher wages. This scenario creates a favorable environment for employees. Scenario 2, however, indicates that increased automation facilitated by generative AI may reduce the demand for human workers, resulting in fewer job opportunities and lower wages for certain occupations. Industries heavily impacted by automation are particularly vulnerable in this scenario. It is crucial to note that the exact outcome depends on industry-specific and occupation-specific dynamics and cannot be conclusively predicted
-
-## Effects of Generative AI on Specific Occupations
-Generative AI, including ChatGPT, can have various effects on different occupations. Jobs involving coding, software development, programming, data science, media, and the legal industry are at risk of displacement due to AI. Certain occupations, such as customer service representatives, teachers, finance-related roles, and market research analysts, may also face significant impacts. The nature of work in these occupations may change, with AI automating certain tasks and improving data analysis capabilities. However, the extent of these impacts varies across industries and job responsibilities
-
-## Conclusion
-The literature review highlights both the positive and negative consequences of generative AI, such as ChatGPT, on the job market. While AI can create new job opportunities, enhance productivity, and drive economic growth, it can also displace workers, lead to lower wages, and contribute to income inequality. The key factor influencing the impact of AI on the labor market is the skills mismatch between displaced workers and the requirements of new jobs. Reskilling and upskilling initiatives are vital in mitigating the negative effects of AI. The study suggests that a significant portion of the workforce may be affected by AI, necessitating proactive measures from governments, businesses, and workers to ensure a smooth transition and equitable distribution of AI's benefits
 
 # Data
 
@@ -127,7 +109,7 @@ By categorizing the ranks, we transform the dependent variable into an ordered, 
 
 Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.
 
-In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr [^1], which is suitable for estimating ordered choice model as our baseline.
+In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr @polr-appendix, which is suitable for estimating ordered choice model as our baseline.
 
 ```{r logtic1, echo=FALSE, message = FALSE}
 # Convert the 'rank' variable to a factor
@@ -399,7 +381,6 @@ probit_ai_honkai <- clm(tier ~ like_rate+mark_rate
                   +like_rate2+mark_rate2
                   , data = ai, link=c('probit'))
 sim <- anova(probit_ai_power, probit_ai_honkai)
-
 cat(paste0('\t\t\tprobit_ai_honkaiTag\nPr(>Chisq)\t', sim$`Pr(>Chisq)`[2],
        '\nLR.stat\t\t',sim$LR.stat[2], '\ndf\t\t\t',sim$df[2],'\n\n'))
 ```
@@ -576,7 +557,7 @@ The codes provided in the Appendix are simplified examples for illustration purp
 
 By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.
 
-### polr
+### polr {#polr-appwndix}
 
 [^1]: Please refer to the Appendix for the relevant code pertaining to the polr algorithm. for logtic model.
 
