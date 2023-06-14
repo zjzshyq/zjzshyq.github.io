@@ -553,11 +553,12 @@ By analyzing the Marginal Effects, we gain insights into the impact of specific 
 :::
 
 # Appendix
+## Codes
 The codes provided in the Appendix are simplified examples for illustration purposes. In practice, additional steps such as data preprocessing, handling missing values, and further diagnostics would be conducted.
 
 By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.
 
-# polr {#sec-polr}
+### polr {#sec-polr}
 
 In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.
 
@@ -566,7 +567,7 @@ In this section, we provide the code implementation for fitting a logit model us
 
 In the above code, we convert the 'rank' variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views.
 
-## clm {#sec-clm}
+### clm {#sec-clm}
 
 In this section, we present the code implementation and the results for the probit model probit_ai. This model examines the influence of various variables on the rankings of AI-generated images.
 
@@ -575,7 +576,7 @@ In this section, we present the code implementation and the results for the prob
 
 In the above code, we first convert the 'rank' variable in the ai data set to a factor variable named 'tier', representing the rankings of AI-generated images. Then, we fit the probit model probit_ai to analyze the relationship between the 'tier' variable and predictor variables such as like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, and date_diff_day.
 
-## ologit.reg {#sec-reg}
+### ologit.reg {#sec-reg}
 
 n this section, we provide the code implementation and the summary results for the probit models probit_ai and probit_man. These models examine the influence of various variables on the rankings of AI-generated images (probit_ai) and hand-drawn artwork (probit_man).
 
@@ -586,7 +587,7 @@ In the above code, we fit the probit model probit_ai to analyze the rankings of 
 
 We then obtain the summary results for each model using the summary function, which provides information on the estimated coefficients, standard errors, p-values, and other relevant statistics.
 
-## lipsitz and logitgof tests {#sec-lipsitz}
+### lipsitz and logitgof tests {#sec-lipsitz}
 
 In this section, we provide the code implementation for conducting goodness-of-fit tests on the fitted logit model using the lipsitz.test and logitgof functions in R. These tests are used to assess the adequacy of the model and evaluate its fit to the observed data.
 
@@ -595,7 +596,7 @@ In this section, we provide the code implementation for conducting goodness-of-f
 
 In the above code, we must load the necessary libraries, including the ordinal library, which provides the functions for conducting the goodness-of-fit tests. We then proceed to perform the Lipsitz test using the lipsitz.test function, which evaluates the overall fit of the logit model. Additionally, we conduct the Lemeshow test using the logitgof function, which assesses the calibration of the model by comparing the observed and expected probabilities across groups.
 
-## pulkrob tests {#sec-pulkrob}
+### pulkrob tests {#sec-pulkrob}
 
 n this section, we provide the code implementation for conducting the Pulkstenis-Robinson tests on the fitted logit model using the pulkrob.chisq and pulkrob.deviance functions in R. These tests are used to assess the significance of specific variables in the model and evaluate their contribution to the overall fit.
 
@@ -604,7 +605,7 @@ n this section, we provide the code implementation for conducting the Pulkstenis
 
 In the above code, we first load the necessary libraries, including the ordinal library, which provides the functions for conducting the Pulkstenis-Robinson tests. We then proceed to perform the Pulkstenis-Robinson chi-square test using the pulkrob.chisq function, which assesses the significance of the specified variables in the logit model. Additionally, we calculate the Pulkstenis-Robinson deviance using the pulkrob.deviance function, which measures the contribution of the variables to the overall deviance of the model.
 
-## Brant's test {#sec-brant}
+### Brant's test {#sec-brant}
 
 In this section, we present the code implementation for conducting the Brant test on the fitted logit model using the brant function in R. The Brant test is used to assess the assumption of proportional odds in the ordered choice model and helps determine whether the logit or probit model is more appropriate.
 
@@ -613,7 +614,7 @@ In this section, we present the code implementation for conducting the Brant tes
 
 In the above code, we first load the necessary libraries, including the ordinal library, which provides the brant function for conducting the Brant test. We then proceed to perform the Brant test on the fitted logit model logit_ai.
 
-## pR2 test {#sec-pr2}
+### pR2 test {#sec-pr2}
 
 In this section, we present the code implementation for calculating the McFadden R2 statistic using the pR2 function from the pscl library in R. The McFadden R2 is a measure of the goodness-of-fit for logistic and probit models in ordered choice analysis.
 
@@ -622,7 +623,7 @@ In this section, we present the code implementation for calculating the McFadden
 
 In the above code, we should load the necessary pscl library fristly, which provides the pR2 function for calculating the McFadden R2 statistic. We then proceed to calculate the McFadden R2 for the logit model logit_ai, as well as the probit models probit_ai and probit_man.
 
-## lrtest {#sec-lrtest}
+### lrtest {#sec-lrtest}
 
 In this section, we present the code implementation for conducting the Likelihood Ratio Test (LRT) to compare the full probit model probit_ai with a restricted model probit_ai_restricted. The LRT is used to assess the significance of additional variables in the full model compared to a reduced or restricted model.
 
@@ -631,7 +632,7 @@ In this section, we present the code implementation for conducting the Likelihoo
 
 In the above code, we first fit the restricted probit model probit_ai_restricted, which includes only the intercept term. We then proceed to perform the Likelihood Ratio Test using the lrtest function, comparing the full probit model probit_ai with the restricted model.
 
-## Example of Variables Selection {#sec-anova}
+### Example of Variables Selection {#sec-anova}
 
 In this section, we present the code implementation for applying variable power transformations in the probit model probit_ai to examine the impact of including squared variables (like_rate2 and mark_rate2) on the model's fit. The anova function is then used to compare the full model probit_ai with the model including the squared variables probit_ai_power.
 
@@ -640,7 +641,7 @@ In this section, we present the code implementation for applying variable power 
 
 In the above code, we extend the probit model probit_ai by including squared variables (like_rate2 and mark_rate2) to capture potential non-linear relationships between these variables and the response variable. We fit the extended model probit_ai_power and then use the anova function to compare the full model probit_ai with the model including the squared variables.
 
-## margins.oglmx {#sec-margins.oglmx}
+### margins.oglmx {#sec-margins.oglmx}
 
 In this section, we present the code implementation and the results for the marginal effects analysis of the probit model probit_ai. This analysis allows us to examine the differential impact of various variables on the rankings of AI-generated images.
 
