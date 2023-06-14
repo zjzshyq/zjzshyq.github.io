@@ -4,11 +4,10 @@ author:
   - name: Rahila Mammadova Huseynova
 format:
   html:
-    number-sections: false
     toc: true
     toc-depth: 2
     theme:
       light: flatly
       dark: superhero
-    number-sections: true
+    number-sections: false
     title-block-banner: true

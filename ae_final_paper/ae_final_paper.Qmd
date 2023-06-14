@@ -242,7 +242,7 @@ By applying Brant's test[^4] to our model, we obtained the following results:
 
 - Furthermore, it is important to consider the variables associated with the rejection of the test, as indicated by their probabilities. Variables with probabilities higher than 5% are considered connected to the rejection of the test.
 
-Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm[^5], which does not rely on the proportional odds assumption.
+Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm, see @clm-appendix, which does not rely on the proportional odds assumption.
 
 ```{r probit_ai, echo=FALSE, message = FALSE, warning=FALSE}
 # Convert the 'rank' variable to a factor
@@ -557,9 +557,7 @@ The codes provided in the Appendix are simplified examples for illustration purp
 
 By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.
 
-### polr {#polr-appwndix}
-
-[^1]: Please refer to the Appendix for the relevant code pertaining to the polr algorithm. for logtic model.
+### polr {#polr-appendix}
 
 In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.
 
@@ -568,7 +566,7 @@ In this section, we provide the code implementation for fitting a logit model us
 
 In the above code, we convert the 'rank' variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views.
 
-### clm
+### clm {#clm-appendix}
 
 [^5]: Please refer to the Appendix for the relevant code pertaining to the clm algorithm.
 
