@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yiqing Hu">
-<meta name="author" content="Rahila Mammadova Huseynova">
 <meta name="dcterms.date" content="2023-06-14">
 
 <title>Analysis of User Preferences between AI-generated and Hand-drawn Artwork: A Case Study of pixiv.net</title>
@@ -110,10 +109,9 @@ div.csl-indent {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
                <p>Yiqing Hu </p>
-               <p>Rahila Mammadova Huseynova </p>
             </div>
     </div>
       
@@ -311,7 +309,7 @@ div.csl-indent {
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.</p>
-<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr <span class="citation" data-cites="polr-appendix"><a href="#ref-polr-appendix" role="doc-biblioref"><strong>polr-appendix?</strong></a></span>, which is suitable for estimating ordered choice model as our baseline.</p>
+<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr, see <span class="citation" data-cites="polr-appendix"><a href="#ref-polr-appendix" role="doc-biblioref"><strong>polr-appendix?</strong></a></span> , which is suitable for estimating ordered choice model as our baseline.</p>
 <p>To assess the feasibility and goodness-of-fit of the baseline models, several Goodness-of-Fit tests were conducted. The tests employed were the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are commonly used in empirical research to evaluate the fit of logistic regression models and ordered choice models.</p>
 <p>The Hosmer-Lemeshow test examines the agreement between the observed and predicted probabilities by dividing the data into several groups based on predicted probabilities and assessing the differences between the observed and expected frequencies within each group. A non-significant p-value indicates a good fit between the model and the observed data.</p>
 <p>The Lipsitz test divides the data into groups based on predicted probabilities and compares the observed and expected frequencies within each group. It calculates a chi-square statistic to determine if there are significant differences between the observed and expected frequencies.</p>
