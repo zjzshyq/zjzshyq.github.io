@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yiqing Hu">
-<meta name="author" content="Rahila Mammadova Huseynova">
+<meta name="author" content="Rahila M. Huseynova">
 <meta name="dcterms.date" content="2023-06-14">
 
 <title>Analysis of User Preferences between AI-generated and Hand-drawn Artwork: A Case Study of pixiv.net</title>
@@ -113,7 +113,7 @@ div.csl-indent {
       <div class="quarto-title-meta-heading">Authors</div>
       <div class="quarto-title-meta-contents">
                <p>Yiqing Hu </p>
-               <p>Rahila Mammadova Huseynova </p>
+               <p>Rahila M. Huseynova </p>
             </div>
     </div>
       
@@ -161,7 +161,19 @@ div.csl-indent {
   <li><a href="#marginal-effects" id="toc-marginal-effects" class="nav-link" data-scroll-target="#marginal-effects">Marginal Effects</a></li>
   </ul></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#sec-polr" id="toc-sec-polr" class="nav-link" data-scroll-target="#sec-polr">polr</a></li>
+  <li><a href="#sec-clm" id="toc-sec-clm" class="nav-link" data-scroll-target="#sec-clm">clm</a></li>
+  <li><a href="#sec-reg" id="toc-sec-reg" class="nav-link" data-scroll-target="#sec-reg">ologit.reg</a></li>
+  <li><a href="#sec-lipsitz" id="toc-sec-lipsitz" class="nav-link" data-scroll-target="#sec-lipsitz">lipsitz and logitgof tests</a></li>
+  <li><a href="#sec-pulkrob" id="toc-sec-pulkrob" class="nav-link" data-scroll-target="#sec-pulkrob">pulkrob tests</a></li>
+  <li><a href="#sec-brant" id="toc-sec-brant" class="nav-link" data-scroll-target="#sec-brant">Brant’s test</a></li>
+  <li><a href="#sec-pr2" id="toc-sec-pr2" class="nav-link" data-scroll-target="#sec-pr2">pR2 test</a></li>
+  <li><a href="#sec-lrtest" id="toc-sec-lrtest" class="nav-link" data-scroll-target="#sec-lrtest">lrtest</a></li>
+  <li><a href="#sec-anova" id="toc-sec-anova" class="nav-link" data-scroll-target="#sec-anova">Example of Variables Selection</a></li>
+  <li><a href="#sec-margins.oglmx" id="toc-sec-margins.oglmx" class="nav-link" data-scroll-target="#sec-margins.oglmx">margins.oglmx</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -187,9 +199,9 @@ div.csl-indent {
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
-<p>In this study, we developed a web spider to crawl the dataset from <a href="http://pixiv.net">pixiv.net</a>, a prominent online platform where artists share their artwork. Pixiv.net is widely recognized and highly regarded within the online art community, making it an ideal source for collecting data related to AI-generated artwork and user preferences.</p>
-<p>Pixiv.net provides a rich and diverse collection of artwork, including both AI-generated and hand-drawn creations. Artists from various backgrounds and genres contribute to the platform, resulting in a vast repository of artistic expressions.</p>
-<p>The dataset we collected covers a specific period, starting from November of the previous year and spanning a continuous influx of AI-generated works. It comprises essential information related to the artworks, such as tags, views, likes, bookmarks, and comments. Specifically, we focused on the Top 50 artworks or pictures each day, ensuring a comprehensive representation of the most popular and engaging content within the online art community.</p>
+<p>In this study, we developed a web spider to crawl the dataset from <a href="http://pixiv.net">pixiv.net</a>, a prominent online platform where artists share their artwork. The website pixiv.net is widely recognized and highly regarded within the online art community, making it an ideal source for collecting data related to AI-generated artwork and user preferences.</p>
+<p>The website <a href="http://pixiv.net">pixiv.net</a> provides a rich and diverse collection of artwork, including both AI-generated and hand-drawn creations. Artists from various backgrounds and genres contribute to the platform, resulting in a vast repository of artistic expressions.</p>
+<p>The dataset we collected from top list of <a href="https://www.pixiv.net/ranking.php">pixiv.net/ranking</a> covers a specific period, starting from November of the previous year and spanning a continuous influx of AI-generated works. It comprises essential information related to the artworks, such as tags, views, likes, bookmarks, and comments. Specifically, we focused on the Top 50 artworks or pictures each day, ensuring a comprehensive representation of the most popular and engaging content within the online art community.</p>
 <p>By utilizing the data from pixiv.net, we are able to examine the dynamic relationship between AI-generated artwork and user preferences over time. This allows us to gain valuable insights into the evolving landscape of the online art community and understand the factors that influence the rankings and preferences of AI-generated images compared to hand-drawn artwork.</p>
 <section id="samples" class="level2">
 <h2 class="anchored" data-anchor-id="samples">Samples</h2>
@@ -311,7 +323,7 @@ div.csl-indent {
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.</p>
-<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr, see <a href="#sec-polr">Section&nbsp;9.0.1</a> , which is suitable for estimating ordered choice model as our baseline.</p>
+<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function, see <a href="#sec-polr">Section&nbsp;9.1</a> , which is suitable for estimating ordered choice model as our baseline.</p>
 <p>To assess the feasibility and goodness-of-fit of the baseline models, several Goodness-of-Fit tests were conducted. The tests employed were the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are commonly used in empirical research to evaluate the fit of logistic regression models and ordered choice models.</p>
 <p>The Hosmer-Lemeshow test examines the agreement between the observed and predicted probabilities by dividing the data into several groups based on predicted probabilities and assessing the differences between the observed and expected frequencies within each group. A non-significant p-value indicates a good fit between the model and the observed data.</p>
 <p>The Lipsitz test divides the data into groups based on predicted probabilities and compares the observed and expected frequencies within each group. It calculates a chi-square statistic to determine if there are significant differences between the observed and expected frequencies.</p>
@@ -330,7 +342,7 @@ div.csl-indent {
 <section id="hosmer-lemeshow-and-lipsitz-tests" class="level3">
 <h3 class="anchored" data-anchor-id="hosmer-lemeshow-and-lipsitz-tests">Hosmer-Lemeshow and Lipsitz tests</h3>
 <p>To assess the appropriateness of our model, we conducted Hosmer-Lemeshow and Lipsitz tests. These tests examine whether the form of our model adequately fits the data. If either of these tests indicates that the model is inappropriate, it suggests the presence of issues that need to be addressed.</p>
-<p>The H0 (null hypothesis) of the Lipsitz test and logitgof test is that the form of our model is appropriate for the data. If either test indicates that the H0 is rejected, it implies that the model may have a problem, and corrective measures are needed. Only when both tests indicate that the model is appropriate can we confidently state that the model is suitable for our analysis. we imply Lipsitz and logitgof tests<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in R to check the hypothesis.</p>
+<p>The H0 (null hypothesis) of the Lipsitz test and logitgof test is that the form of our model is appropriate for the data. If either test indicates that the H0 is rejected, it implies that the model may have a problem, and corrective measures are needed. Only when both tests indicate that the model is appropriate can we confidently state that the model is suitable for our analysis. we imply Lipsitz and logitgof tests, see <a href="#sec-lipsitz">Section&nbsp;9.4</a> in R to check the hypothesis.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Lipsitz goodness of fit test for ordinal response models </code></pre>
@@ -367,7 +379,7 @@ div.csl-indent {
 <pre><code>X-squared = 66.3154376991681, p-value = 0.0164308098416701</code></pre>
 </div>
 </div>
-<p>Upon conducting the Pulkstenis-Robinson tests<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, we obtained the following results:</p>
+<p>Upon conducting the Pulkstenis-Robinson tests, see <a href="#sec-pulkrob">Section&nbsp;9.5</a>, we obtained the following results:</p>
 <p>Pulkstenis-Robinson chi-squared test: The p-value was calculated as 0.03315, which is less than the significance level of 5%. Therefore, we reject the null hypothesis and conclude that the model does not fit the observed data well.</p>
 <p>Pulkstenis-Robinson deviance test: The p-value was found to be 0.01776, also below the significance level of 5%. Consequently, we reject the null hypothesis, indicating that the additional predictors in the more complex model significantly improve the model fit.</p>
 <p>Based on the results of these goodness-of-fit tests, it becomes apparent that the initial model for our task is not appropriate. This finding suggests the need for further refinement and consideration of potential issues such as feedback or endogeneity between views and ranks.</p>
@@ -414,12 +426,12 @@ date_diff_day   8.96    3   0.03
 H0: Parallel Regression Assumption holds</code></pre>
 </div>
 </div>
-<p>By applying Brant’s test<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> to our model, we obtained the following results:</p>
+<p>By applying Brant’s test, see <a href="#sec-brant">Section&nbsp;9.6</a>, to our model, we obtained the following results:</p>
 <ul>
 <li><p>Omnibus test: The test statistic (X2) was calculated as 67.41, with a corresponding p-value of 0. As a result, we reject the null hypothesis, indicating that the parallel regression assumption does not hold for our model. This finding suggests that the ordered logit model is not suitable for our analysis.</p></li>
 <li><p>Furthermore, it is important to consider the variables associated with the rejection of the test, as indicated by their probabilities. Variables with probabilities higher than 5% are considered connected to the rejection of the test.</p></li>
 </ul>
-<p>Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm, see <a href="#sec-clm">Section&nbsp;9.0.2</a>, which does not rely on the proportional odds assumption.</p>
+<p>Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm, see <a href="#sec-clm">Section&nbsp;9.2</a>, which does not rely on the proportional odds assumption.</p>
 <p>To validate the appropriateness of the ordered probit model, we conducted the Pulkstenis-Robinson tests for goodness of fit. The results of these tests confirmed that the probit model is suitable for our analysis.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -488,7 +500,7 @@ H0: Parallel Regression Assumption holds</code></pre>
      0.5729761 </code></pre>
 </div>
 </div>
-<p>In analyzing the R2 values for the logit and probit models, it is important to note that the McFadden R2 alone cannot be interpreted in isolation. Comparing the McFadden R2 values of different models<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> provides a basis for understanding the relative goodness-of-fit among the models.</p>
+<p>In analyzing the R2 values for the logit and probit models, it is important to note that the McFadden R2 alone cannot be interpreted in isolation. Comparing the McFadden R2 values of different models, see <a href="#sec-pr2">Section&nbsp;9.7</a>, provides a basis for understanding the relative goodness-of-fit among the models.</p>
 <p>For the AI-generated samples, the McFadden R2 of the probit model is 0.0823, while the McFadden R2 of the logit model is slightly lower at 0.0816. This suggests that both models have a similar level of explanatory power in capturing the variations in the data.</p>
 <p>On the other hand, for the man-made artworks samples, the McFadden R2 of the probit model is notably higher at 0.248. This indicates that the probit model explains a larger proportion of the variances in the rankings of man-made artworks compared to the logit model.</p>
 <p>Furthermore, comparing the McFadden R2 values between the AI-generated samples and the man-made artworks samples suggests that the probit model with additional powered and cubed variables perform better in the rankings of man-made artworks compared to AI-generated samples. The higher McFadden R2 for the man-made artworks indicates a stronger relationship between the predictors and the rankings, conducting that the factors considered in the model have a more substantial impact on the rankings of man-made artworks.</p>
@@ -516,7 +528,7 @@ Model 2: as.factor(tier) ~ 1
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-<p>After running the lrtest test<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, test likelihood ratio test yielded a p-value close to zero, indicating strong evidence against the null hypothesis (H0: beta1=beta2=0), which represents the condition of restriction in the restricted model. Therefore, we reject the null hypothesis and conclude that the independent variables in the unrestricted model are jointly significant.</p>
+<p>After running the lrtest test, see <a href="#sec-lrtest">Section&nbsp;9.8</a>, test likelihood ratio test yielded a p-value close to zero, indicating strong evidence against the null hypothesis (H0: beta1=beta2=0), which represents the condition of restriction in the restricted model. Therefore, we reject the null hypothesis and conclude that the independent variables in the unrestricted model are jointly significant.</p>
 <p>Based on the results of the likelihood ratio test, we can confidently choose the unrestricted model over the restricted model. This confirms that the inclusion of the independent variables improves the model’s ability to explain and predict the rankings of the artworks on pixiv.net.</p>
 </section>
 <section id="variable-power-transformations" class="level2">
@@ -530,7 +542,7 @@ LR.stat     18.048435061959
 df          2</code></pre>
 </div>
 </div>
-<p>The analysis using anova to measure likelihood ratio test<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> indicated a p-value of 0.00012, which is less than the predetermined significance level of 5%. Consequently, we reject the null hypothesis that the power terms have coefficients of zero, suggesting that the two models are significantly different. Hence, including the power terms in the model (probit_ai_power) yields a better fit than the model without the power terms (probit_ai).</p>
+<p>The analysis using anova to measure likelihood ratio test, see <a href="#sec-reg">Section&nbsp;9.3</a>,indicated a p-value of 0.00012, which is less than the predetermined significance level of 5%. Consequently, we reject the null hypothesis that the power terms have coefficients of zero, suggesting that the two models are significantly different. Hence, including the power terms in the model (probit_ai_power) yields a better fit than the model without the power terms (probit_ai).</p>
 <p>These findings highlight the importance of considering nonlinear associations between the independent variables and the dependent variable. By including the power terms, we capture potential nonlinear patterns and enhance the model’s ability to accurately represent the complex relationship between the independent variables (such as like_rate and mark_rate) and the dependent variable (tier). This refined model provides a more comprehensive understanding of the factors influencing the rankings of the artworks on pixiv.net.</p>
 </section>
 <section id="variables-selection" class="level2">
@@ -661,7 +673,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1>Findings</h1>
 <section id="estimation-and-comparation" class="level2">
 <h2 class="anchored" data-anchor-id="estimation-and-comparation">Estimation and Comparation</h2>
-<p>To Compare the results of the two models using an academic perspective, we observe both similarities and differences in the qualitative analysis of the variables’ effects on the tier outcome in the ordered choice model of probit using ologit.reg algorithm<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+<p>To Compare the results of the two models using an academic perspective, we observe both similarities and differences in the qualitative analysis of the variables’ effects on the tier outcome in the ordered choice model of probit using ologit.reg algorithm, see <a href="#sec-anova">Section&nbsp;9.9</a>.</p>
 <p>In analyzing the results, it is important to focus on the estimated coefficients rather than the threshold parameters. The estimated coefficients provide valuable insights into the effects of each variable on the tier rankings in both the AI-generated and man-made sample models.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -724,7 +736,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 <section id="marginal-effects" class="level2">
 <h2 class="anchored" data-anchor-id="marginal-effects">Marginal Effects</h2>
-<p>To analyze the Marginal Effects of the AI-generated artworks model, we examine the output of the code provided. The marginal effects represent the change in the probability of each outcome category based on a unit change in the corresponding independent variable, while holding other variables constant. We choose margins.oglm<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> to imply marginal effects.</p>
+<p>To analyze the Marginal Effects of the AI-generated artworks model, we examine the output of the code provided. The marginal effects represent the change in the probability of each outcome category based on a unit change in the corresponding independent variable, while holding other variables constant. We choose margins.oglmx, see <a href="#sec-margins.oglmx">Section&nbsp;9.10</a>, to imply marginal effects.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Marginal Effects on Pr(Outcome==1)
@@ -836,8 +848,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1>Appendix</h1>
 <p>The codes provided in the Appendix are simplified examples for illustration purposes. In practice, additional steps such as data preprocessing, handling missing values, and further diagnostics would be conducted.</p>
 <p>By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.</p>
-<section id="sec-polr" class="level3">
-<h3 class="anchored" data-anchor-id="sec-polr">polr</h3>
+<section id="sec-polr" class="level2">
+<h2 class="anchored" data-anchor-id="sec-polr">polr</h2>
 <p>In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
@@ -852,8 +864,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we convert the ‘rank’ variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views.</p>
 </section>
-<section id="sec-clm" class="level3">
-<h3 class="anchored" data-anchor-id="sec-clm">clm</h3>
+<section id="sec-clm" class="level2">
+<h2 class="anchored" data-anchor-id="sec-clm">clm</h2>
 <p>In this section, we present the code implementation and the results for the probit model probit_ai. This model examines the influence of various variables on the rankings of AI-generated images.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
@@ -867,8 +879,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first convert the ‘rank’ variable in the ai data set to a factor variable named ‘tier’, representing the rankings of AI-generated images. Then, we fit the probit model probit_ai to analyze the relationship between the ‘tier’ variable and predictor variables such as like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, and date_diff_day.</p>
 </section>
-<section id="ologit.reg" class="level3">
-<h3 class="anchored" data-anchor-id="ologit.reg">ologit.reg</h3>
+<section id="sec-reg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reg">ologit.reg</h2>
 <p>n this section, we provide the code implementation and the summary results for the probit models probit_ai and probit_man. These models examine the influence of various variables on the rankings of AI-generated images (probit_ai) and hand-drawn artwork (probit_man).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the probit model for AI-generated images</span></span>
@@ -893,8 +905,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>In the above code, we fit the probit model probit_ai to analyze the rankings of AI-generated images, considering variables such as like_rate, mark_rate, is_comic, is_Genshin, comments, top_cnt, date_diff_day, and mark_rate2. Similarly, we fit the probit model probit_man to examine the rankings of hand-drawn artwork, considering variables such as like_rate, mark_rate2, mark_rate3, is_comic, is_Honkai, top_cnt, date_diff_day, and views.</p>
 <p>We then obtain the summary results for each model using the summary function, which provides information on the estimated coefficients, standard errors, p-values, and other relevant statistics.</p>
 </section>
-<section id="lipsitz-and-logitgof-tests" class="level3">
-<h3 class="anchored" data-anchor-id="lipsitz-and-logitgof-tests">lipsitz and logitgof tests</h3>
+<section id="sec-lipsitz" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lipsitz">lipsitz and logitgof tests</h2>
 <p>In this section, we provide the code implementation for conducting goodness-of-fit tests on the fitted logit model using the lipsitz.test and logitgof functions in R. These tests are used to assess the adequacy of the model and evaluate its fit to the observed data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Lipsitz test for goodness-of-fit</span></span>
@@ -913,8 +925,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we must load the necessary libraries, including the ordinal library, which provides the functions for conducting the goodness-of-fit tests. We then proceed to perform the Lipsitz test using the lipsitz.test function, which evaluates the overall fit of the logit model. Additionally, we conduct the Lemeshow test using the logitgof function, which assesses the calibration of the model by comparing the observed and expected probabilities across groups.</p>
 </section>
-<section id="pulkrob-tests" class="level3">
-<h3 class="anchored" data-anchor-id="pulkrob-tests">pulkrob tests</h3>
+<section id="sec-pulkrob" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pulkrob">pulkrob tests</h2>
 <p>n this section, we provide the code implementation for conducting the Pulkstenis-Robinson tests on the fitted logit model using the pulkrob.chisq and pulkrob.deviance functions in R. These tests are used to assess the significance of specific variables in the model and evaluate their contribution to the overall fit.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Pulkstenis-Robinson chi-square test</span></span>
@@ -933,16 +945,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first load the necessary libraries, including the ordinal library, which provides the functions for conducting the Pulkstenis-Robinson tests. We then proceed to perform the Pulkstenis-Robinson chi-square test using the pulkrob.chisq function, which assesses the significance of the specified variables in the logit model. Additionally, we calculate the Pulkstenis-Robinson deviance using the pulkrob.deviance function, which measures the contribution of the variables to the overall deviance of the model.</p>
 </section>
-<section id="brants-test-1" class="level3">
-<h3 class="anchored" data-anchor-id="brants-test-1">Brant’s test</h3>
+<section id="sec-brant" class="level2">
+<h2 class="anchored" data-anchor-id="sec-brant">Brant’s test</h2>
 <p>In this section, we present the code implementation for conducting the Brant test on the fitted logit model using the brant function in R. The Brant test is used to assess the assumption of proportional odds in the ordered choice model and helps determine whether the logit or probit model is more appropriate.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">brant</span>(logit_ai)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the above code, we first load the necessary libraries, including the ordinal library, which provides the brant function for conducting the Brant test. We then proceed to perform the Brant test on the fitted logit model logit_ai.</p>
 </section>
-<section id="pr2-test" class="level3">
-<h3 class="anchored" data-anchor-id="pr2-test">pR2 test</h3>
+<section id="sec-pr2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pr2">pR2 test</h2>
 <p>In this section, we present the code implementation for calculating the McFadden R2 statistic using the pR2 function from the pscl library in R. The McFadden R2 is a measure of the goodness-of-fit for logistic and probit models in ordered choice analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pR2</span>(logit_ai)</span>
@@ -951,8 +963,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we should load the necessary pscl library fristly, which provides the pR2 function for calculating the McFadden R2 statistic. We then proceed to calculate the McFadden R2 for the logit model logit_ai, as well as the probit models probit_ai and probit_man.</p>
 </section>
-<section id="lrtest." class="level3">
-<h3 class="anchored" data-anchor-id="lrtest.">lrtest.</h3>
+<section id="sec-lrtest" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lrtest">lrtest</h2>
 <p>In this section, we present the code implementation for conducting the Likelihood Ratio Test (LRT) to compare the full probit model probit_ai with a restricted model probit_ai_restricted. The LRT is used to assess the significance of additional variables in the full model compared to a reduced or restricted model.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the restricted probit model</span></span>
@@ -963,8 +975,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we first fit the restricted probit model probit_ai_restricted, which includes only the intercept term. We then proceed to perform the Likelihood Ratio Test using the lrtest function, comparing the full probit model probit_ai with the restricted model.</p>
 </section>
-<section id="example-of-variables-selection" class="level3">
-<h3 class="anchored" data-anchor-id="example-of-variables-selection">Example of Variables Selection</h3>
+<section id="sec-anova" class="level2">
+<h2 class="anchored" data-anchor-id="sec-anova">Example of Variables Selection</h2>
 <p>In this section, we present the code implementation for applying variable power transformations in the probit model probit_ai to examine the impact of including squared variables (like_rate2 and mark_rate2) on the model’s fit. The anova function is then used to compare the full model probit_ai with the model including the squared variables probit_ai_power.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>probit_ai_power <span class="ot">&lt;-</span> <span class="fu">clm</span>(tier <span class="sc">~</span> like_rate<span class="sc">+</span>mark_rate</span>
@@ -978,8 +990,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we extend the probit model probit_ai by including squared variables (like_rate2 and mark_rate2) to capture potential non-linear relationships between these variables and the response variable. We fit the extended model probit_ai_power and then use the anova function to compare the full model probit_ai with the model including the squared variables.</p>
 </section>
-<section id="margins.oglmx" class="level3">
-<h3 class="anchored" data-anchor-id="margins.oglmx">margins.oglmx</h3>
+<section id="sec-margins.oglmx" class="level2">
+<h2 class="anchored" data-anchor-id="sec-margins.oglmx">margins.oglmx</h2>
 <p>In this section, we present the code implementation and the results for the marginal effects analysis of the probit model probit_ai. This analysis allows us to examine the differential impact of various variables on the rankings of AI-generated images.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>probit_ai_power <span class="ot">&lt;-</span> <span class="fu">clm</span>(tier <span class="sc">~</span> like_rate<span class="sc">+</span>mark_rate</span>
@@ -996,20 +1008,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Please refer to the Appendix for the relevant code pertaining to the lipsitz and Lipsitz tests.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Please refer to the Appendix for the relevant code pertaining to the pulkrob tests.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Please refer to the Appendix for the relevant code pertaining to the Brant’s test.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Please refer to the Appendix for the relevant code pertaining to the pR2 test.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Please refer to the Appendix of the paper for the relevant code pertaining to the lrtest.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Please refer to the Appendix for the relevant code pertaining to the ologit.reg algorithm.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Please refer to the Appendix for the relevant code pertaining to the anova which is a example of variables selection.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Please refer to the Appendix for the relevant code pertaining to the margins.oglmx algorithm for marginal effects.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

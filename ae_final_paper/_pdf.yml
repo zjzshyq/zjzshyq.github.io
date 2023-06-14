@@ -22,8 +22,3 @@ format:
         \renewcommand*{\Authand}{, }
         \renewcommand*{\Authands}{, }
         \renewcommand\Affilfont{\small}
-output:
-  pdf_document:
-    pandoc_args: --listings
-    includes:
-      in_header: preamble.tex
