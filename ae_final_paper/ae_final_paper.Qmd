@@ -362,7 +362,7 @@ cat(paste0('\t\t\tprobit_ai_power\nPr(>Chisq)\t', sim$`Pr(>Chisq)`[2],
        '\nLR.stat\t\t',sim$LR.stat[2], '\ndf\t\t\t',sim$df[2],'\n\n'))
 ```
 
-The analysis using anova to measure likelihood ratio test, see @sec-reg,indicated a p-value of 0.00012, which is less than the predetermined significance level of 5%. Consequently, we reject the null hypothesis that the power terms have coefficients of zero, suggesting that the two models are significantly different. Hence, including the power terms in the model (probit_ai_power) yields a better fit than the model without the power terms (probit_ai).
+The analysis using anova to measure likelihood ratio test, see @sec-reg, indicated a p-value of 0.00012, which is less than the predetermined significance level of 5%. Consequently, we reject the null hypothesis that the power terms have coefficients of zero, suggesting that the two models are significantly different. Hence, including the power terms in the model (probit_ai_power) yields a better fit than the model without the power terms (probit_ai).
 
 These findings highlight the importance of considering nonlinear associations between the independent variables and the dependent variable. By including the power terms, we capture potential nonlinear patterns and enhance the model's ability to accurately represent the complex relationship between the independent variables (such as like_rate and mark_rate) and the dependent variable (tier). This refined model provides a more comprehensive understanding of the factors influencing the rankings of the artworks on pixiv.net.
 
