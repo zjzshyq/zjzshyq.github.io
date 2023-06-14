@@ -309,7 +309,7 @@ div.csl-indent {
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.</p>
-<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr, see <span class="citation" data-cites="polr-appendix"><a href="#ref-polr-appendix" role="doc-biblioref"><strong>polr-appendix?</strong></a></span> , which is suitable for estimating ordered choice model as our baseline.</p>
+<p>In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function，polr, see <a href="#sec-polr">Section&nbsp;9.0.1</a> , which is suitable for estimating ordered choice model as our baseline.</p>
 <p>To assess the feasibility and goodness-of-fit of the baseline models, several Goodness-of-Fit tests were conducted. The tests employed were the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are commonly used in empirical research to evaluate the fit of logistic regression models and ordered choice models.</p>
 <p>The Hosmer-Lemeshow test examines the agreement between the observed and predicted probabilities by dividing the data into several groups based on predicted probabilities and assessing the differences between the observed and expected frequencies within each group. A non-significant p-value indicates a good fit between the model and the observed data.</p>
 <p>The Lipsitz test divides the data into groups based on predicted probabilities and compares the observed and expected frequencies within each group. It calculates a chi-square statistic to determine if there are significant differences between the observed and expected frequencies.</p>
@@ -417,7 +417,7 @@ H0: Parallel Regression Assumption holds</code></pre>
 <li><p>Omnibus test: The test statistic (X2) was calculated as 67.41, with a corresponding p-value of 0. As a result, we reject the null hypothesis, indicating that the parallel regression assumption does not hold for our model. This finding suggests that the ordered logit model is not suitable for our analysis.</p></li>
 <li><p>Furthermore, it is important to consider the variables associated with the rejection of the test, as indicated by their probabilities. Variables with probabilities higher than 5% are considered connected to the rejection of the test.</p></li>
 </ul>
-<p>Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm, see <span class="citation" data-cites="clm-appendix"><a href="#ref-clm-appendix" role="doc-biblioref"><strong>clm-appendix?</strong></a></span>, which does not rely on the proportional odds assumption.</p>
+<p>Given that the proportional odds assumption does not hold, we need to explore alternative models. In this case, we opted for the ordered probit model by using clm algorithm, see <a href="#sec-clm">Section&nbsp;9.0.2</a>, which does not rely on the proportional odds assumption.</p>
 <p>To validate the appropriateness of the ordered probit model, we conducted the Pulkstenis-Robinson tests for goodness of fit. The results of these tests confirmed that the probit model is suitable for our analysis.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -834,8 +834,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1>Appendix</h1>
 <p>The codes provided in the Appendix are simplified examples for illustration purposes. In practice, additional steps such as data preprocessing, handling missing values, and further diagnostics would be conducted.</p>
 <p>By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.</p>
-<section id="polr-appendix" class="level3">
-<h3 class="anchored" data-anchor-id="polr-appendix">polr</h3>
+<section id="sec-polr" class="level3">
+<h3 class="anchored" data-anchor-id="sec-polr">polr</h3>
 <p>In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
@@ -850,8 +850,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>In the above code, we convert the ‘rank’ variable to a factor using the as.factor function, ensuring that it is treated as an ordered variable. Next, we fit the logit model using the polr function, specifying the dependent variable tier and the independent variables like_rate, mark_rate, is_comic, is_Genshin, is_Honkai, comments, top_cnt, date_diff_day, and views.</p>
 </section>
-<section id="clm-appendix" class="level3">
-<h3 class="anchored" data-anchor-id="clm-appendix">clm</h3>
+<section id="sec-clm" class="level3">
+<h3 class="anchored" data-anchor-id="sec-clm">clm</h3>
 <p>In this section, we present the code implementation and the results for the probit model probit_ai. This model examines the influence of various variables on the rankings of AI-generated images.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the 'rank' variable to a factor</span></span>
