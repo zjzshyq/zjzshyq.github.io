@@ -109,7 +109,7 @@ By categorizing the ranks, we transform the dependent variable into an ordered, 
 
 Given the nature of the categorized rank as an ordered, continuous, and discrete variable, we employ an ordered choice model in our analysis. Specifically, we utilize both the ordered logit and ordered probit methods to examine the relationships between the independent variables and the categorized rankings effectively.
 
-In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function, see @sec-polr , which is suitable for estimating ordered choice model as our baseline.
+In our analysis, we utilized the R programming language to fit a logit method to the data. Specifically, we employed the logit function, see @sec-polr, which is suitable for estimating ordered choice model as our baseline.
 
 ```{r logtic1, echo=FALSE, message = FALSE}
 # Convert the 'rank' variable to a factor
@@ -557,7 +557,7 @@ The codes provided in the Appendix are simplified examples for illustration purp
 
 By including such explanatory text and providing a clear explanation of the code implementation, readers will be able to follow the code and understand its relevance to the research study.
 
-## polr {#sec-polr}
+# polr {#sec-polr}
 
 In this section, we provide the code implementation for fitting a logit model using the MASS::polr function in the R programming language. The logit model is used as an ordered choice model to analyze the factors influencing the rankings of AI-generated artwork.
 
