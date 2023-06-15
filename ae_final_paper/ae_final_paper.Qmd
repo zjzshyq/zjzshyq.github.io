@@ -652,3 +652,6 @@ In the above code, we use the margins.oglmx() function to calculate the marginal
 
 The results of the marginal effects analysis provide insights into how changes in each predictor variable affect the probabilities of different rankings for AI-generated images.
 
+## PDF
+
+[link of pdf](ae_final_paper.pdf)
