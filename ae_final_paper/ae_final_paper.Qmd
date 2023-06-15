@@ -654,4 +654,4 @@ The results of the marginal effects analysis provide insights into how changes i
 
 ## PDF
 
-[link of pdf](ae_final_paper.pdf)
+[The link of PDF](ae_final_paper.pdf).
