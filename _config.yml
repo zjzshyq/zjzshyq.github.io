@@ -2,6 +2,6 @@ name: yiqing's site
 title: null
 include:
   - index.md
-  - USL_final_paper.md
+  - unsupervised/USL_final_paper.md
   - ae_final_paper/ae_final_paper.html
   - RR_Report/RR_Report.html
