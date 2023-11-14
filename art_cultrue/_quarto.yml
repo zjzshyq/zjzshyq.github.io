@@ -1,5 +1,5 @@
-project:
-  title: "Art_cultrue"
-
-
-
+title: 'Proposal'
+bibliography: bibliography.bib
+csl: ieee.csl
+metadata-files:
+  - _pdf.yml

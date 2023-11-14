@@ -1,7 +1,32 @@
----
-title: "Art_cultrue"
----
+## 0 Title
+Exploring User Preferences in the OnlineArt Market: A Comparative Analysis of Human-Created and AI-Generated Artwork on pixiv.net
 
-## Quarto
+## 1 Background
+1.1 pixiv
+1.2 Stable Diffusion[@CyberTurnArt]
+1.3 [@AirtistOrCounterfeiter]point
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## 2 Problem Statement
+
+## 3 Objectives
+### 3.1
+Our primary hypothesis focuses on comparing the effects of AI-generated and man-made art on rankings within the online art community. To investigate this, we analyze various user behaviors such as liked rates, bookmarked rates, and the content indicated by artwork tags. By comparing these features between AI-generated and man-made artwork, we can gain valuable insights into the unique characteristics and influences of AI-generated creations. This analysis allows us to assess whether AI-generated art has a distinct impact on user preferences and rankings compared to traditional hand-drawn art.
+
+### 3.2
+we propose a secondary hypothesis that explores which user behaviors and specific content attributes contribute to higher rankings for AI-generated artwork. By examining factors such as user interactions, engagement patterns, and the content of the artwork itself, we aim to identify the elements that attract users and lead to greater popularity and preference for AI-generated art.
+
+## 4 Methodology
+通过实验，探究人工智能生成的艺术品与人类艺术品在认知价值上的差异。
+分析当前在线艺术市场的数据和趋势，关注数字技术的应用。
+研究意义：
+为理解当代艺术市场数字化趋势提供深入见解。
+探讨人工智能在艺术创作中的地位，为未来数字艺术的发展提供参考。
+预期结果：
+发现人工智能生成的艺术品是否因为技术特点而受到认知偏见。
+揭示数字化技术对在线艺术市场的潜在改变。
+
+## 5 Expected Results
+
+## 6 Bibliography
+::: {#refs}
+:::
