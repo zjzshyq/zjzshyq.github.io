@@ -1,3 +1,7 @@
+\vspace{-1.5 em}
+\centerline{\textit{*Corresponding y.hu7@student.uw.edu.pl}}
+\vspace{1 em}
+
 ## 1 Title
 Exploring User Preferences in the Online Art Market:
 A Comparative Analysis of Human-Created and AI-Generated Artwork on pixiv.net
@@ -12,9 +16,8 @@ continues to grow, it becomes crucial to investigate the different topics of AI-
 images and understand user preferences in comparison to human-created artwork.
 
 ## 3 Literature Review
-Generative AI models have revolutionized various industries,
-including the labor market, with their transformative capabilities[@EconomicsChatGPT].
-Econometric techniques still make a significant contribution to analyzing the Cryptocurrencies
+A. Zarifhonarvar's study examines how ChatGPT affects the labor market[@EconomicsChatGPT].
+Econometric techniques still make a significant contribution to analyzing the cryptocurrencies
 market in the AI theme[@AIThemedCryptocurrencies].
 P. Fortuna and A. Modliński discovered a phenomenon:
 humans perceive the value of paintings made by AI as lower than the value of those made
@@ -44,7 +47,7 @@ we gathered the samples:
 - Number of samples of Hand-drawn or human-created Artworks: 6484
 
 ## 6 Methodology
-### 6.1 Econometrics Methods
+### 6.1 Econometrics Toolds
 For analyzing the daily rank of pictures as ordered data,
 we will employ econometrics tools which are ordered choice models.
 Specifically, we will utilize both the ordered logit and ordered probit methods
@@ -57,7 +60,7 @@ to finish the job in the future work.
 ## 7 Significance of the Study
 This study can provides in-depth insights into the digitization trends in the contemporary painting art market.
 and explores the role of artificial intelligence in artistic creation,
-offering now only references for the future development of digital art,
+offering not only references for the future development of digital art,
 but also a new and profitable perspective on potential user preferences in the future art market.
 
 ## 8 Expected Results
