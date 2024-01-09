@@ -1,0 +1,12 @@
+date: today
+author:
+  - name: Yiqing Hu
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme:
+      light: flatly
+      dark: superhero
+    number-sections: true
+    title-block-banner: true

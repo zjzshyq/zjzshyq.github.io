@@ -1,13 +1,13 @@
 author:
+  - name: Jacek Lewkowicz
+    affil-id: 1
   - name: Yiqing Hu
     affil-id: 1,*
     corresponding: true
     email: y.hu7@student.uw.edu.pl
-  - name: Xinchen Yang
-    affil-id: 1
 affiliations:
   - id: 1
-    name: Data Science and Business Analytics, Faculty of Economics Sciences
+    name: Faculty of Economics Sciences, University of Warsaw, Poland
 format:
   pdf:
     citation_package: natbib
