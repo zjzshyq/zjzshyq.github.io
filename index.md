@@ -10,3 +10,7 @@
 
 [UW][Topic modelling] [Topic Moddeling for the Analysis of Human-Created and AI-Generated Artwork on pixiv.net](https://colab.research.google.com/drive/1MqO3wFpDZzKUimeR-I0vdXpiprtZNJBL#scrollTo=2dUls8sMp8-E)
 
+[UW][Machine Learning 2] [Classification for AI-generated and Human-created Paintings with Tags](https://colab.research.google.com/drive/1Exy3tABi1AInaP0KSaooSZVwP90nj5Qj)
+
+[UW][Machine Learning 2] [Regression for Painting Rankings](https://colab.research.google.com/drive/1a3vdKyuwCqQeZ_voaMS_s4dgEBfTlV6a)
+
