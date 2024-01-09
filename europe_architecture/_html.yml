@@ -1,10 +1,8 @@
 date: today
 author:
   - name: Yiqing Hu
-    affil-id: 1
 affiliations:
-  - id: 1
-    name: University of Warsaw
+  - name: University of Warsaw
 format:
   html:
     toc: true

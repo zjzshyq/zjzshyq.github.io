@@ -1,6 +1,8 @@
 date: today
 author:
   - name: Yiqing Hu
+affiliations:
+  - name: Faculty of Economics Sciences, University of Warsaw
 format:
   html:
     toc: true
