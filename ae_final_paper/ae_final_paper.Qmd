@@ -17,10 +17,16 @@ library('performance') # r2_mckelvey
 library("BaylorEdPsych") # PseudoR2
 library("generalhoslem") # lipsitz, logitgof, pulkrob
 ```
+---
 
-# Abstract
-
-The emergence of AI drawing models, such as Stable-Diffusion (SD) and Midjourney, has led to a significant influx of AI-generated images in the online art community. In this study, we collected daily rankings of the top 50 AI-generated images and hand-drawn artwork from pixiv.net. Our objective was to explore the factors/variables influencing the ranking of these images and examine the preferences of ordinary users towards AI-generated images versus hand-drawn artwork using an ordered choice model. The ordered choice model allows us to analyze the ordinal nature of the rankings and investigate the impact of various factors on the preferences of users. The findings from this study will contribute to a better understanding of the impact of AI-generated artwork on user preferences and provide insights for the development of AI-assisted creative platforms.
+**Abstract—** The emergence of AI drawing models, such as Stable-Diffusion (SD) and Midjourney, has led to a significant
+influx of AI-generated images in the online art community. In this study, we collected daily rankings of the top 50
+AI-generated images and hand-drawn artwork from pixiv.net. Our objective was to explore the factors/variables influencing
+the ranking of these images and examine the preferences of ordinary users towards AI-generated images versus hand-drawn
+artwork using an ordered choice model. The ordered choice model allows us to analyze the ordinal nature of the rankings
+and investigate the impact of various factors on the preferences of users. The findings from this study will contribute
+to a better understanding of the impact of AI-generated artwork on user preferences and provide insights for the development
+of AI-assisted creative platforms.
 
 **Keywords:** Ordered Choice Model, Artificial Intelligence, Generative AI
 
