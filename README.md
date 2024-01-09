@@ -9,4 +9,4 @@ https://zjzshyq.github.io/RR_Report/RR_Report.html
 
 https://zjzshyq.github.io/ae_final_paper/ae_final_paper.html
 
-https://zjzshyq.github.io/
+https://zjzshyq.github.io/europe_architecture/EuropeArchitecture.html
