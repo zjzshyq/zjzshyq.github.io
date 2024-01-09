@@ -8,5 +8,5 @@ format:
     theme:
       light: flatly
       dark: superhero
-    number-sections: true
+    number-sections: false
     title-block-banner: true
