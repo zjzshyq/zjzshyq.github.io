@@ -4,7 +4,7 @@
 
 ---
 
-**Abstract—**This essay explores the impressive design of Santa Maria Novella Facade, a prime example of architecture in
+**Abstract**—This essay explores the impressive design of Santa Maria Novella Facade, a prime example of architecture in
 Early Modern Europe from 1400 to 1600. The main focus is on the significant impact of Leon Battista Alberti,
 a renowned architect of that era, and how he incorporated Vitruvian principles to create a harmonious and visually
 appealing facade. The analysis includes an overview of Santa Maria Novella Church, a detailed examination of the
@@ -13,7 +13,7 @@ and the timeless principles of Vitruvius. By delving into the layers of influenc
 to shed light on the importance of Santa Maria Novella Facade as a reflection of changing theories and histories
 in architecture during the Early Modern period.
 
-**Keywords:** Vitruvius, Santa Maria Novella, Leon Battista Alberti
+**Keywords**: Vitruvius, Santa Maria Novella, Leon Battista Alberti
 
 # 1 Introduction
 
@@ -175,7 +175,7 @@ On each side of the door, there are fancy columns with special tops called Corin
 showing how Alberti loved classical design. The stories on the door, sculpted by Giovanni Rucellai,
 show moments from the lives of saints, highlighting the spiritual journey of believers.
 
-## 4.2 Decorative EFeatures
+## 4.2 Decorative Features
 
 ### 4.2.1 Traditional Patterns
 
