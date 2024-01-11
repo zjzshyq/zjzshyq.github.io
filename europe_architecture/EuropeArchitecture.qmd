@@ -2,8 +2,6 @@
 \centerline{\textit{*Corresponding y.hu7@student.uw.edu.pl}}
 \vspace{1 em}
 
-[@FaçadeSMNovella], [@PrinciplesApplications], [@AlbertiAntiquity],[@FundingNovella]
-
 ---
 
 **Abstract—**This essay explores the impressive design of Santa Maria Novella Facade, a prime example of architecture in
@@ -45,12 +43,15 @@ influences that shaped his design decisions.
 
 ## 1.3 Why Santa Maria Novella Facade?
 
-We chose to focus on the Santa Maria Novella Facade for its importance in both time and architectural thinking.
+I chose to focus on the Santa Maria Novella Facade for its importance in both time and architectural thinking.
+And, of course, I've been there is the most important reason to pick Santa Maria Novella as the topic of our paper.
 Built between 1400 and 1600, the facade represents the changes in architectural theories during this crucial period.
 Additionally, being credited to Leon Battista Alberti, a key figure in the Renaissance, links the facade to a rich
 blend of intellectual and artistic endeavors. By selecting Santa Maria Novella Facade for our study, we aim to
 uncover not only the physical attractiveness of the structure but also the intellectual influences behind its creation.
 This provides a nuanced understanding of the theories and histories that shaped Early Modern European architecture.
+
+![Florence, Church of S. Maria Novella (photo: E.J. Johnson)](img/facade02.jpg){width=50%}
 
 # 2 Leon Battista Alberti, the Designer
 
@@ -66,7 +67,7 @@ show in his architectural creations.
 
 Alberti's journey in architecture began as he deeply engaged with the study of classical texts, especially Vitruvius,
 which played a vital role in shaping his design principles. His architectural success reached new heights with
-the creation of the Rucellai Palace[@FundingNovella] in Florence, a building that illustrated his innovative approach
+the creation of the Rucellai Palace in Florence[@FundingNovella], a building that illustrated his innovative approach
 by blending classical elements with modern sensibilities.
 
 However, a pivotal moment in Alberti's career occurred when he participated in designing the Santa Maria Novella Facade.
@@ -74,61 +75,62 @@ This architectural wonder not only demonstrated his technical skills but also ma
 architecture. Alberti's impact went beyond constructing buildings; he formulated an architectural theory that aligned
 with the humanist ideals of the time.
 
-## 2.3 Humanism and Architectural Theory
+## 2.3 Humanism and Architectural Ideas
 
-Alberti's architectural theories, encapsulated in his treatise "De re aedificatoria" (On the Art of Building),
-emphasized the humanistic principles of proportion, harmony, and balance. His belief that beauty in architecture
-mirrored the harmony found in nature left an indelible mark on the Renaissance architectural ethos. Alberti's treatise,
-often regarded as the first modern treatise on architecture, not only codified architectural principles but also elevated
-the architect to the status of a learned individual, contributing to the intellectual elevation of the profession.
+Alberti's ideas about architecture, explained in his book "De re aedificatoria" which
+he composed the first  first architectural of the Renaissance between 1443 and 1452 in Rome[@AlbertiAntiquity].
+highlighted the human-centered principles of proportion, harmony, and balance.
+He thought that architectural beauty should reflect the harmony observed in nature,
+leaving a lasting influence on Renaissance architecture. Alberti's book,
+often seen as the first modern guide on architecture, not only organized architectural principles
+but also raised the architect's role to that of a knowledgeable person,
+adding to the intellectual standing of the profession.
 
-## 2.4 Legacy and Influence
+## 2.4 Heritage and Influence
 
-Leon Battista Alberti's legacy transcends the physical structures he designed. His influence extended
-to subsequent generations of architects, laying the groundwork for the classical revival that characterized
-the Renaissance. As a humanist architect, Alberti bridged the gap between antiquity and the modern era,
-leaving an enduring imprint on the architectural landscape. Through his writings and designs, Alberti's
-intellectual legacy permeated the fabric of Renaissance thought, underscoring the inseparable link between
-architecture and the broader cultural milieu of the time. In the context of Early Modern Europe, Alberti's
-contributions position him as a key figure whose ideas and innovations continue to reverberate through the corridors
-of architectural history.
+The influence of Leon Battista Alberti goes beyond the buildings he created.
+He shaped the classical revival that defined the Renaissance, leaving a lasting impact on
+future generations of architects. As a humanist architect, Alberti connected the past with the present,
+making a lasting mark on the world of architecture. Through his writings and designs,
+Alberti's intellectual legacy became an integral part of Renaissance thinking, highlighting
+the close connection between architecture and the broader cultural context of that time.
+In the context of Early Modern Europe, Alberti's contributions make him a significant
+figure whose ideas and innovations continue to echo through the halls of architectural history.
 
 # 3 Overview of Santa Maria Novella Church
 
-## 3.1 Historical Context
+## 3.1 Historical Background
 
-Nestled in the heart of Florence, Italy,
-the Santa Maria Novella Church stands as a testament to the rich tapestry of art, culture,
-and spirituality that characterized the Renaissance.
-Its origins trace back to the 13th century when the Dominican Order decided to establish a new church on the site.
-Construction began in 1279, and over the centuries, the church underwent various modifications,
-expansions, and embellishments that reflected the evolving aesthetic and religious sensibilities of the time.
+Situated in the heart of Florence, Italy, the Santa Maria Novella Church is a symbol of the diverse blend of art,
+culture, and spirituality during the Renaissance. Its story dates back to the 13th century
+when the Dominican Order decided to build a new church on this location[@FaçadeSMNovella].
+Construction started in 1279, and throughout the years, the church underwent changes, expansions,
+and enhancements that mirrored the changing artistic and religious tastes of the period.
+This church also has a unique place in Florentine history,
+serving as a central hub for Dominican friars and a key location for religious ceremonies and artistic support.
 
-The church holds a distinctive position in Florentine history,
-serving as a hub for Dominican friars and a focal point for religious ceremonies and artistic patronage.
-Renowned artists, including Giotto and Masaccio, contributed to the church's interior decoration,
-creating a harmonious blend of religious iconography and artistic expression.
+## 3.2 Architectural Importance
 
-## 3.2 Architectural Significance
+While the entire Santa Maria Novella Church showcases remarkable Gothic and Renaissance architecture,
+it's the facade that truly captivates admirers. The facade, with its detailed design and classical proportions,
+serves as the welcoming face of the church, making a strong visual impact on worshippers and visitors alike.
 
-While the entirety of Santa Maria Novella Church is a marvel of Gothic and Renaissance architecture,
-it is the facade that captures the attention and imagination of admirers.
-The facade, with its intricate design and classical proportions, acts as the face of the church,
-welcoming worshippers and visitors alike with a profound visual impact.
+![Reconstruction of Gothic facade of S. Maria Novella (After kiesow)](img/gothic01.jpg){width=70%}
 
-### 3.2.1 Stylistic Elements
+### 3.2.1 Style Elements
 
-The facade seamlessly integrates Gothic and Renaissance elements,
-reflecting the transition between these architectural styles.
-Elaborate tracery and pointed arches characteristic of Gothic architecture coexist with classical columns
-and pediments inspired by ancient Roman and Greek aesthetics.
-This stylistic fusion not only speaks to the eclecticism of the Renaissance
-but also mirrors the broader cultural dialogue between the medieval and modern worlds.
+The facade skillfully combines Gothic and Renaissance features, marking the shift between these architectural styles.
+Elaborate tracery and pointed arches, characteristic of Gothic architecture, coexist with classical
+columns and pediments inspired by ancient Roman and Greek styles.
+This blending not only reflects the diverse influences of the Renaissance
+but also mirrors the broader cultural exchange between the medieval and modern worlds.
 
 ### 3.2.2 Alberti's Influence
 
 The role of Leon Battista Alberti in the development of the Santa Maria Novella Church
-is most pronounced in its facade. Alberti's humanistic principles of proportion and harmony
+is most pronounced in its facade.  He was commissioned by Giovanni di Paolo Rucellai to complete the facade,
+beginning work on the church in 1458[@AlbertiAntiquity].
+Alberti's humanistic principles of proportion and harmony
 find expression in the balanced composition of the facade. The use of classical orders,
 such as Corinthian columns, reflects Alberti's reverence for classical antiquity,
 while the careful attention to mathematical proportions demonstrates his commitment
@@ -136,333 +138,321 @@ to architectural beauty grounded in rationality.
 
 ## 3.3 Facade within the Church Structure
 
-Beyond its aesthetic significance,
-the Santa Maria Novella Facade plays a crucial role in defining the spatial experience within the church.
-As the point of entry, the facade serves as a prelude to the religious and artistic splendors that await within.
-Its design, with a central portal flanked by pilasters and crowned by a pediment,
-creates a sense of hierarchy and emphasis that guides the observer's gaze toward the sacred interior.
+Beyond just looking beautiful,
+the Santa Maria Novella Facade is really important for how people experience the space inside the church.
+It's the first thing you see when you enter, setting the stage for all the religious and artistic wonders inside.
+The design, with a main entrance in the middle surrounded by columns and topped with a triangle shape,
+makes you focus on what's important inside.
 
-### 3.3.1 Symbolism and Narrative
+### 3.3.1 Meaning and Story
 
-The facade is not merely a decorative shell but a narrative in stone,
-conveying theological and symbolic meanings. Sculptural elements,
-such as the relief panels and statuary, depict scenes from the Bible and the lives of saints,
-inviting worshippers to contemplate the divine narrative as they enter the sacred space.
-This integration of art and architecture serves as a testament to the holistic vision of the Renaissance,
-where spiritual and aesthetic dimensions coalesce.
+The facade isn't just pretty decorations, it tells a story in stone, sharing theological and symbolic messages.
+Sculptures on it, like panels and statues, show scenes from the Bible and the lives of saints,
+encouraging worshippers to think about these stories as they enter the sacred space.
+This mix of art and architecture shows how the Renaissance saw spiritual and aesthetic parts coming together.
 
-### 3.3.2 Interplay with Surrounding Structures
+### 3.3.2 Connection with Other Buildings
 
-Moreover, the facade establishes a dialogue with the surrounding structures,
-including the adjacent cloisters and the church's interior.
-The architectural coherence achieved by Alberti ensures that the facade
-becomes an integral part of the larger spatial composition,
-contributing to the overall harmony of the Santa Maria Novella complex.
+Also, the facade talks with the nearby buildings,
+like the cloisters and the inside of the church.
+Alberti, with his smart design, makes sure the facade fits well into the larger design,
+adding to the overall harmony of the Santa Maria Novella area.
 
-In summary, the Santa Maria Novella Church, with its multifaceted history and architectural splendor,
-provides a compelling backdrop for the exploration of the facade's significance. The facade,
-as the face of this venerable institution, encapsulates the spirit of the Renaissance,
-harmonizing diverse architectural elements and embodying the intellectual currents of the time.
-As we delve deeper into the intricacies of the facade,
-we unravel not only a visual feast of artistic ingenuity but a profound
-narrative woven into the very fabric of Early Modern European history and culture.
+In short, the Santa Maria Novella Church, with its rich history and beautiful architecture,
+gives us a great place to explore the importance of the facade.
+The facade, being the face of this old place, captures the Renaissance spirit,
+bringing together different architectural styles and representing the ideas of the time.
+As we look deeper into the details of the facade, we discover not only a visually pleasing display of artistic skill
+but also a deep story woven into the fabric of Early Modern European history and culture.
 
 # 4 Architectural Features of Santa Maria Novella Facade
 
-## 4.1 Sculptural Ensemble
+## 4.1 Sculptural Collection
 
-### 4.1.1 Central Portal Sculptures
+Right in the middle of the Santa Maria Novella Facade,there's a carefully made main entrance.
+It's decorated with many sculptures that tell stories from the Bible and important theological ideas.
+On each side of the door, there are fancy columns with special tops called Corinthian capitals,
+showing how Alberti loved classical design. The stories on the door, sculpted by Giovanni Rucellai,
+show moments from the lives of saints, highlighting the spiritual journey of believers.
 
-At the heart of the Santa Maria Novella Facade lies a meticulously crafted central portal,
-adorned with an array of sculptural elements that narrate sacred stories and theological themes.
-The door is flanked by intricately carved pilasters featuring Corinthian capitals,
-showcasing Alberti's commitment to classical order. The narrative reliefs, sculpted by Giovanni Rucellai,
-depict scenes from the lives of saints, emphasizing the spiritual journey of the faithful.
+## 4.2 Decorative EFeatures
 
-### 4.1.2 Tondi and Statuary
+### 4.2.1 Traditional Patterns
 
-Circular tondi punctuate the facade, housing sculpted busts and figures.
-These tondi not only add a visual rhythm to the facade but also serve as showcases for the skilled hands of artists l
-ike Nanni di Banco. The statuary, including depictions of the Virgin Mary and angels, reflects the Marian
-devotion prevalent during the Renaissance. The sculptural ensemble transforms the facade into a dynamic tableau,
-engaging observers in a visual narrative that transcends the static nature of architecture.
-
-## 4.2 Decorative Elements
-
-### 4.2.1 Classical Motifs
-
-Alberti's deep admiration for classical antiquity is evident in the facade's decorative elements.
-Ornate friezes, dentil moldings, and classical cornices contribute to the facade's grandeur,
-drawing inspiration from Roman and Greek architectural traditions.
-The intricate details not only showcase the craftsmanship of the artisans but also communicate a revival of classical aesthetics,
-aligning the church with the intellectual currents of the Renaissance.
+Alberti's strong love for ancient classical styles is clear in the decorative parts of the facade[@AlbertiAntiquity].
+Fancy bands, tooth-like moldings, and classical edges add to the facade's beauty,
+taking inspiration from Roman and Greek architecture.
+The detailed designs not only show off the skill of the craftsmen but also bring back classical beauty,
+connecting the church with the ideas of the Renaissance.
 
 ### 4.2.2 Geometric Precision
 
-The facade's decorative elements are not mere embellishments but are imbued with a sense of geometric precision. Alberti,
-a mathematician and theoretician, incorporated mathematical ratios and proportions into the design,
-adhering to the Vitruvian principles of harmony and balance.
-This meticulous attention to geometry not only underscores the Renaissance fascination with mathematical
-beauty but also elevates the facade from a mere structure to a testament of architectural excellence.
+The decorative details on the facade aren't just there to look good，
+they follow careful geometric patterns. Alberti, being good at math and theory,
+used mathematical rules and proportions in the design, following the ideas from Vitruvius about harmony and balance.
+This careful attention to shapes not only highlights the Renaissance interest in math beauty
+but also lifts the facade from just being a structure to a symbol of great architectural skill.
 
 ## 4.3 Structural Composition
 
-### 4.3.1 Columnar Order
+### 4.3.1 Rows of Columns
 
-The use of classical columnar orders, notably the Corinthian columns supporting the pediment,
-establishes a visual hierarchy and imparts a sense of monumental scale to the facade. The columns,
-with their fluted shafts and acanthus leaf capitals, contribute to the overall verticality of the composition,
-echoing the proportions found in ancient Roman temples. This classical vocabulary, seamlessly integrated into the facade,
-symbolizes a reconnection with the grandeur of antiquity and the pursuit of architectural excellence.
+The use of classical rows of columns, especially the Corinthian columns that support the triangle-shaped top,
+creates a clear order and makes the facade look impressively large. The columns,
+with their ridged shafts and acanthus leaf tops, add to the overall height of the design,
+recalling the proportions seen in old Roman temples[@PrinciplesApplications].
+This classical style, smoothly blended into the facade, represents a reconnection
+with the greatness of ancient times and the pursuit of excellent architecture.
 
-### 4.3.2 Pediment and Entablature
+### 4.3.2 Triangle Top and Horizontal Structure
 
-The triangular pediment crowning the facade serves as a prominent focal point,
-its apex reaching towards the heavens. The entablature beneath it, adorned with sculptural reliefs,
-reinforces the narrative continuity of the facade. The pediment, a quintessential classical feature,
-conveys a sense of completion and symmetry, aligning with Alberti's emphasis on architectural harmony derived
-from classical prototypes.
+The triangle-shaped top at the top of the facade stands out,
+reaching upward like a pointy peak. The flat part below it,
+decorated with sculpted reliefs, supports the story told by the facade.
+The triangle top, a classic feature, brings a feeling of completeness and balance,
+matching Alberti's focus on architectural harmony inspired by classical examples.
 
 ## 4.4 Renaissance Context
 
-In the context of the Renaissance,
-the architectural features of the Santa Maria Novella Facade signify a profound departure from the medieval
-and a celebration of the classical. The integration of classical motifs and mathematical precision
-reflects the Renaissance humanist ideals that sought to revive the wisdom of antiquity. Moreover,
-the facade becomes a canvas for the collaboration of artists and architects, embodying the Renaissance
-spirit of interdisciplinary creativity.
+In the time of the Renaissance,
+the architectural elements of the Santa Maria Novella Facade mark a significant shift
+from the medieval style to a celebration of classical design.
+The use of classical patterns and careful mathematical details reflects the Renaissance humanist ideas,
+aiming to bring back the wisdom of ancient times.
+Additionally, the facade is a place where artists and architects worked together,
+showing the Renaissance spirit of creative collaboration.
 
-As a manifestation of Leon Battista Alberti's architectural vision,
-the Santa Maria Novella Facade stands as an enduring testament to the Renaissance pursuit of beauty,
-proportion, and intellectual rigor. Its sculptural richness,
-decorative elegance, and structural finesse elevate it beyond a mere facade;
-it becomes a visual symphony that resonates with the ideals and aspirations of a transformative period in European history.
+As a representation of Leon Battista Alberti's architectural ideas,
+the Santa Maria Novella Facade is a lasting symbol of the Renaissance pursuit of beauty, balance, and thoughtful thinking.
+Its rich sculptures, stylish decorations, and strong structure make it more than just a facade.
+It becomes a visual masterpiece that echoes the dreams and goals of a changing time in European history.
 
 # 5 Expression of Alberti's Design Philosophy in Santa Maria Novella Facade
 
-Leon Battista Alberti, a luminary of the Renaissance,
-left an indelible mark on architectural theory and practice. His design philosophy,
-articulated in treatises like "De re aedificatoria," finds tangible expression
-in the Santa Maria Novella Facade. This section delves into the nuanced interplay between
-Alberti's theoretical principles and the physical manifestation of these ideas on the facade.
+Leon Battista Alberti, a brilliant figure of the Renaissance,
+made a lasting impact on how we think about and build structures.
+His ideas on design, explained in writings like "De re aedificatoria",
+come to life in the Santa Maria Novella Facade. This part explores
+how Alberti's theories and the actual design of the facade work together in a detailed way.
 
 ## 5.1 Humanistic Proportions and Harmony
 
 Alberti's commitment to humanistic ideals is prominently evident in the proportions and harmony
-of the Santa Maria Novella Facade. In "De re aedificatoria," Alberti emphasizes the use of harmonic proportions derived
+of the Santa Maria Novella Facade. In "De re aedificatoria",  Alberti emphasizes the use of harmonic proportions derived
 from the human body, suggesting that a well-designed building should mirror the balanced proportions found in nature.
+
+He explain the harmony of proportion could be achieved in such a manner “nothing could be added,
+diminished or altered expect for the worse”. It simply means that one should go for perfection in the system
+of proportion; one should explore many options before finalizing the best one.
+He created a system of architecture based on the ratios 2:1 and 3:1 suggested by the
+Timaeus of Plato in ancient Greece and based on musical scale. He reasoned that “what
+is pleasing to the ear should be pleasing to the eye.” He has applied the system of
+proportion for designing of the two buildings namely Santa Maria Novella
+in Florence and San Sebastiani in Mantua, Italy[@PrinciplesApplications].
+
 The facade, with its carefully orchestrated arrangement of pilasters, columns, and decorative elements,
 becomes a testament to Alberti's belief in the intrinsic beauty of proportional relationships.
+
+![Geometric proportion in elevation of Santa Maria Novella in Florence](img/facade01.jpg){width=50%}
 
 ### 5.1.1 Vitruvian Influence
 
 Alberti's reliance on Vitruvius as a foundational text is discernible in the facade's adherence
-to the classical orders. Vitruvius' emphasis on the three qualities of firmitas (firmness),
-utilitas (commodity), and venustas (delight) finds resonance in Alberti's meticulous attention to structural integrity,
-functional utility, and aesthetic pleasure. The facade, therefore, becomes a harmonious composition that embodies
+to the classical orders. Vitruvius' emphasis on the three qualities of firmitas (strength),
+utilitas (functionality), and venustas (beauty) finds resonance in Alberti's meticulous attention to structural integrity,
+functional utility, and aesthetic pleasure.
+
+Theory of venustas is very complicated and as per these principles timeless notion
+of beauty could be learnt from “truth of nature”,
+nature’s designs are based on universal laws of proportion and symmetry.
+He has believed that human body’s proportions are perfect created
+by nature and these could be used by an architect for designing of building[@PrinciplesApplications].
+
+The facade, therefore, becomes a harmonious composition that embodies
 the Vitruvian triad, showcasing Alberti's commitment to the enduring principles of ancient architecture.
 
-## 5.2 Classical Vocabulary and Symbolism
+## 5.2 Classical Vocabulary and Symbols
 
-### 5.2.1 Columns and Pilasters
+### 5.2.1 Columns and Wall Decorations
 
-The extensive use of classical columns, particularly the Corinthian order,
-imparts a sense of dignity and classical elegance to the facade. Alberti's incorporation
-of these classical elements is not merely stylistic; it reflects a deliberate choice to evoke
-the grandeur of ancient Rome and Greece. The columns, with their slender shafts and ornate capitals,
-serve as visual anchors that contribute to the facade's vertical rhythm.
+Using a lot of classical columns, especially the Corinthian kind, gives the facade a feeling
+of importance and classic beauty. Alberti didn't just pick these styles because they look nice,
+it was a careful choice to remind people of the greatness of ancient Rome and Greece.
+The columns, with their slim parts and fancy tops, act like strong points that add to the up-and-down pattern of the facade.
 
-### 5.2.2 Pediment as Symbolic Apex
+![Florence, Church of S. Maria Novella detail of facade](img/column01.jpg){width=50%}
 
-Alberti's penchant for symbolism is exemplified in the triangular pediment crowning the facade.
-The pediment, a classical feature borrowed from ancient temple architecture, signifies a harmonious completion
-of the composition. Its apex, pointing towards the heavens, adds a vertical thrust that elevates the viewer's gaze,
-symbolizing a transcendent connection between the earthly and the divine.
+### 5.2.2 Triangle Top with Special Meaning
+
+Alberti's love for symbols is shown in the triangle-shaped top that finishes the facade.
+This triangle, a classic feature from old temple designs, represents a balanced finish to the whole structure.
+The top part, pointing upward, makes people look higher and suggests a connection between what's on earth and what's divine.
 
 ## 5.3 Mathematical Precision and Rational Beauty
 
 ### 5.3.1 Application of Mathematical Ratios
 
-Alberti's background in mathematics and his belief in the importance of mathematical ratios are
-reflected in the facade's geometric precision.
-The careful alignment of architectural elements,
-such as the spacing of pilasters and the proportions of the central portal,
-adheres to Alberti's vision of architecture as a discipline rooted in mathematical rigor.
-The facade becomes a manifestation of rational beauty, where mathematical order and aesthetic pleasure coalesce.
+Alberti, being good at math and thinking math is important,
+shows this in the facade's exact shapes. The careful arrangement of building parts,
+like how far apart pilasters are and the size of the main entrance,
+follows Alberti's idea that architecture should follow strict math rules.
+The facade becomes an example of well-organized beauty, where math order and pleasing looks come together.
 
-### 5.3.2 Fusion of Beauty and Utility
+### 5.3.2 Blending Good Looks and Useful Design
 
-Alberti's emphasis on the dual purpose of beauty and utility finds embodiment in the Santa Maria Novella Facade.
-The facade, while serving as an aesthetically pleasing composition, also fulfills its practical
-function as the entrance to the church. The integration of beauty and utility aligns with Alberti's humanistic approach,
-where architecture is not only a structural necessity but a cultural expression that elevates the human experience.
+Alberti's focus on making things both beautiful and useful is seen in the Santa Maria Novella Facade.
+The facade looks nice as a composition, but it also does its job as the entrance to the church.
+Bringing together beauty and usefulness fits with Alberti's way of thinking, where architecture isn't just
+about structure but is also a way to express culture and make human experiences better.
 
-## 5.4 Integration of Arts and Sciences
+## 5.4 Blend of Arts and Sciences
 
-Alberti's concept of architecture as a synthesis of the arts and sciences is vividly
-realized in the Santa Maria Novella Facade. The collaboration between architects, sculptors,
-and artisans mirrors Alberti's vision of architecture as a multidisciplinary endeavor. The sculptural reliefs,
-decorative elements, and architectural features coalesce into a cohesive whole, embodying the Renaissance
-ideal of a holistic and integrated approach to artistic creation.
+Alberti's idea that architecture should mix arts and sciences is clearly shown in the Santa Maria Novella Facade.
+Architects, sculptors, and craftsmen working together match Alberti's view that making buildings involves
+many different skills. The sculptures, decorations, and building features all come together
+to create a united whole, representing the Renaissance idea of combining different arts into one integrated approach.
 
 ## 5.5 Conclusion
 
-In conclusion, the Santa Maria Novella Facade serves as a living testament to Leon Battista Alberti's design philosophy.
-His theoretical principles, deeply rooted in humanism, classical revival, and mathematical precision,
-find tangible expression in the harmonious composition of the facade.
-By examining the facade through the lens of Alberti's writings,
-we unravel not just the aesthetic richness of the structure
-but also the intellectual currents that guided one of the Renaissance's foremost architects.
-The Santa Maria Novella Facade becomes not only a work of architectural brilliance
-but a tangible embodiment of Alberti's enduring legacy in the realms of art and thought.
-
+To sum up, the Santa Maria Novella Facade is a real example of Leon Battista Alberti's way of designing things.
+His ideas, which are deeply connected to humanism, bringing back classical styles,
+and using math well, can be seen in how well the facade is put together.
+When we look at the facade using Alberti's ideas from his writings, we discover not only how good it looks
+but also the important ideas that guided one of the top architects of the Renaissance.
+The Santa Maria Novella Facade isn't just a fantastic building,
+it's a real example of Alberti's lasting impact in both art and thinking.
 
 # 6 Santa Maria Novella Facade and Vitruvius' Principles
 
 The Santa Maria Novella Facade stands as a harmonious testament to the enduring influence of
 Vitruvius' architectural principles during the Renaissance.
-In examining the facade through the lens of Vitruvian ideals—firmness, commodity,
-and delight—a profound connection emerges, emphasizing the importance of balance, proportion,
+In examining the facade through the lens of Vitruvian ideals—firmitas (strength), utilitas (functionality), and venustas (beauty)
+[@PrinciplesApplications]—a profound connection emerges, emphasizing the importance of balance, proportion,
 and appropriateness in architectural design.
 
-## 6.1 Firmitas: Structural Firmness
+## 6.1 Firmitas: Strength
 
-Vitruvius' principle of firmitas, or structural firmness,
-finds resonance in the Santa Maria Novella Facade's robust architectural composition.
-The facade, with its judicious use of classical orders and meticulous attention to structural integrity,
-reflects the Vitruvian emphasis on stability and durability. The Corinthian columns, supporting the pediment,
-stand as pillars of strength, underscoring the facade's commitment to architectural soundness.
-Alberti, as an ardent follower of Vitruvius, translated the principle of firmitas into the very stones of the facade,
-ensuring that the structure stands as a testament to enduring solidity.
+Vitruvius talked about firmitas, meaning buildings should be strong and solid.
+This idea is clearly seen in the Santa Maria Novella Facade's sturdy design.
+The facade, using classical styles carefully and paying close attention to being strong,
+follows Vitruvius' focus on stability and lasting power. The Corinthian columns holding up the
+triangle top show strength, emphasizing the facade's commitment to being well-built.
+Alberti, following Vitruvius closely, turned the idea of firmitas into the very stones of the facade,
+making sure the structure stands strong and lasting.
 
-## 6.2 Utilitas: Functional Utility
+## 6.2 Utilitas: Functionality
 
-The principle of utilitas, or functional utility,
-is manifest in the Santa Maria Novella Facade's dual role as an ornamental entrance and a functional
-gateway to the church. The central portal, flanked by pilasters and adorned with sculptural reliefs,
-serves not only as an aesthetic focal point but also as a utilitarian entryway.
-Alberti's fusion of beauty and utility aligns with Vitruvius' insistence on architecture
-as a practical art that meets the needs of its inhabitants. The facade, with its harmonious blend of form
-and function, becomes a testament to the enduring relevance of utilitas in architectural design.
+Vitruvius also talked about utilitas, which means buildings should be useful.
+This principle is visible in the Santa Maria Novella Facade,
+which works both as a pretty entrance and a practical way into the church.
+The main entrance, with pilasters on each side and sculptures,
+is not just a nice focal point but also a practical way to get inside.
+Alberti's mix of beauty and usefulness matches Vitruvius' idea that architecture should be a useful
+art that meets the needs of the people who use it.
+The facade, with its perfect mix of shape and purpose, shows that utilitas is still important in how buildings are designed.
 
-## 6.3 Venustas: Delightful Beauty
+## 6.3 Venustas: Beauty
 
-The principle of venustas, or delightful beauty,
-is perhaps most prominently realized in the Santa Maria Novella Facade.
-Alberti's meticulous attention to proportion and aesthetic harmony transforms the facade into a visual
-spectacle that captivates the observer. The integration of classical motifs, sculptural reliefs,
-and geometric precision creates a facade that not only delights the senses but also resonates with the
-classical beauty admired by Vitruvius. In this pursuit of delightful beauty, the Santa Maria Novella
-Facade becomes a celebration of the aesthetic ideals that transcend time and cultural shifts.
+Vitruvius also talked about venustas, which means buildings should be beautifully delightful.
+This idea is most obvious in the Santa Maria Novella Facade.
+Alberti's careful attention to shapes and how things look turns the facade
+into a stunning sight that captures anyone who sees it. The mix of classical styles, sculptures,
+and precise shapes makes the facade not only a delight for the eyes but also something
+that matches the classical beauty Vitruvius admired. In the pursuit of delightful beauty,
+the Santa Maria Novella Facade becomes a celebration of timeless aesthetic ideals that go beyond changing times and cultures.
 
 ## 6.4 Harmony, Proportion, and Moderation
 
-Vitruvius, in his writings, emphasized the importance of harmony (harmonia),
-proportion (symmetria), and moderation (eurythmia) in architecture.
-The Santa Maria Novella Facade serves as a living embodiment of these principles.
-The harmonious interplay of sculptural elements, the proportional arrangement of columns and pilasters,
-and the moderation in ornamentation exemplify Vitruvius' timeless ideals. Alberti, as a disciple of Vitruvius,
-ensured that the facade adhered to these principles, creating a composition that resonates with a sense of balance,
-symmetry, and appropriateness.
+Vitruvius, in what he wrote,
+talked a lot about the importance of harmony, proportion, and moderation in architecture.
+The Santa Maria Novella Facade shows these ideas in action.
+The way sculptures work together, how columns and pilasters are set up in just the right size,
+and not putting too much decoration on it all follow Vitruvius' ideas that never get old.
+Alberti, who followed Vitruvius closely, made sure the facade followed these ideas,
+creating a design that feels balanced, symmetrical, and just right.
 
 ## 6.5 Conclusion
 
-In conclusion, the Santa Maria Novella Facade stands as a testament to the enduring legacy of
-Vitruvian principles in Renaissance architecture. Through the lens of Vitruvius' triad—firmness,
-commodity, and delight—the facade becomes a living expression of architectural excellence.
-The connection between Santa Maria Novella Facade and Vitruvius' principles underscores
-the timeless nature of these foundational ideas in shaping architectural masterpieces.
-As we traverse the intricate details of the facade, we discover a profound dialogue
-between the ancient wisdom of Vitruvius and the Renaissance genius of Alberti,
-creating a synthesis that transcends temporal and cultural boundaries.
+To sum up, the Santa Maria Novella Facade is proof that Vitruvius' ideas are still important in Renaissance architecture.
+Looking through what Vitruvius said about making things strong, useful, and delightful,
+the facade becomes a real example of excellent architecture. The link between the Santa Maria Novella Facade and Vitruvius'
+ideas shows how timeless these basic ideas are in creating great buildings.
+As we explore all the small details of the facade, we find a deep conversation between the old wisdom of Vitruvius
+and the smart thinking of Alberti during the Renaissance. This mix goes beyond time and different cultures,
+creating something new and powerful.
 
-# 7 Relationship Between Alberti, Vitruvius, and Renaissance Architecture
+# 7 The Relationship Between Alberti, Vitruvius, and Renaissance Architecture
 
-The symbiotic relationship between Leon Battista Alberti and the ancient Roman architect Vitruvius
-played a pivotal role in shaping the trajectory of Renaissance architecture.
-Alberti's deep admiration for Vitruvius and his commitment to the revival of
-classical ideals forged a connection that resonated throughout the Renaissance and left
-an indelible impact on subsequent generations of architects.
+The close connection between Leon Battista Alberti and the ancient Roman architect
+Vitruvius played a crucial role in shaping Renaissance architecture. Alberti's
+profound admiration for Vitruvius and his dedication to bringing back classical ideals
+formed a strong link that echoed throughout the Renaissance, leaving a lasting impact on
+architects in the following generations.
 
-## 7.1 Resonance in Principles
+## 7.1 Shared Principles
 
-Alberti's architectural philosophy, as articulated in his treatise "De re aedificatoria,"
-echoes the fundamental principles laid down by Vitruvius in "De architectura."
-The emphasis on firmitas (firmness), utilitas (commodity), and venustas (delight)
-as the guiding tenets of architectural design, originally expounded by Vitruvius,
-found a renewed voice in Alberti's writings. Alberti embraced Vitruvius' call for
-harmonious proportions, mathematical precision, and a synthesis of the arts and sciences,
-demonstrating a profound resonance between their architectural philosophies.
+Alberti's architectural beliefs, as explained in his book "De re aedificatoria"
+mirror the fundamental principles established by Vitruvius in "De architectura."
+The focus on firmness, utility, and beauty as the essential principles of architectural design,
+initially put forth by Vitruvius, gained new expression in Alberti's writings.
+Alberti embraced Vitruvius' call for balanced proportions, exact mathematical measurements,
+and a combination of arts and sciences, revealing a deep alignment between their architectural philosophies.
 
 ## 7.2 Integration of Classical Ideals
 
-Both Alberti and Vitruvius shared a fervent enthusiasm for classical antiquity and sought
-to revive the architectural principles of ancient Rome and Greece. The Santa Maria Novella Facade,
-designed by Alberti, serves as a tangible manifestation of this integration of classical ideals.
-The use of classical orders, the meticulous attention to proportion,
-and the incorporation of classical motifs exemplify the shared vision of Alberti and Vitruvius
-in creating an architecture that pays homage to the timeless wisdom of the classical world.
+Both Alberti and Vitruvius shared a passionate enthusiasm for classical antiquity and aimed to revive
+the architectural principles of ancient Rome and Greece. The Santa Maria Novella Facade,
+stands as a tangible representation of this fusion of classical ideals.
+The use of classical columns, careful attention to proportions, and inclusion of classical motifs showcase
+the joint vision of Alberti and Vitruvius in creating architecture that pays tribute to the timeless wisdom
+of the classical world.
 
-## 7.3 Influence on Subsequent Architects
+## 7.3 Influence on Later Architects
 
-The impact of Alberti and Vitruvius on Renaissance architecture reverberated far beyond their lifetimes. Alberti,
-as a theorist and practitioner, not only shaped the built environment of his era but also laid the intellectual
-groundwork for future architects. His emphasis on mathematical precision,
-humanistic proportions, and the fusion of arts and sciences became enduring principles
-that influenced architects such as Palladio, Vignola, and later even architects of the Baroque period.
+The influence of Alberti and Vitruvius on Renaissance architecture had a lasting effect
+that extended well beyond their lifetimes. Alberti, as both a thinker and a builder,
+not only shaped the physical structures of his time but also laid the intellectual foundation for future architects.
+His focus on precise mathematics, balanced proportions inspired by humanism,
+and the integration of arts and sciences became lasting principles that affected architects like Palladio, Vignola,
+and even those in the Baroque period.
 
-Vitruvius' "De architectura" served as a foundational text
-for architectural education during the Renaissance,
-and its influence extended well into subsequent centuries.
-The treatise, translated and studied extensively during the Renaissance,
-became a source of inspiration for architects seeking to understand
-and replicate the grandeur of classical architecture.
+Vitruvius' work, "De architectura" became a fundamental guide for architectural education
+during the Renaissance and continued to wield influence in the centuries that followed.
+This treatise, widely translated and studied at the time,
+served as a wellspring of ideas for architects aiming to comprehend and reproduce the magnificence of classical architecture.
 
 ## 7.4 Legacy of a Harmonious Synthesis
 
-The relationship between Alberti, Vitruvius, and Renaissance architecture exemplifies
-a harmonious synthesis of tradition and innovation. Alberti,
-while building upon Vitruvius' principles, injected a new vitality into architectural thought,
-ushering in a Renaissance that embraced both classical wisdom and humanistic ideals.
-This dynamic interplay between the ancient and the contemporary not only defined the Renaissance
-but also laid the groundwork for the evolution of architectural theory and practice in the centuries to come.
+The connection among Alberti, Vitruvius, and Renaissance architecture illustrates
+a harmonious blend of tradition and innovation. Alberti, building upon Vitruvius' principles,
+injected fresh vitality into architectural thinking, ushering in a Renaissance that embraced both
+classical wisdom and humanistic ideals. This dynamic interplay between the ancient and the
+contemporary not only defined the Renaissance but also set the stage for the development
+of architectural theory and practice in the centuries that followed.
 
-In essence, the relationship between Alberti and Vitruvius is a testament to the transformative power of
-ideas across time. Their shared commitment to the enduring principles of architecture
-not only shaped the Renaissance but also left an enduring legacy that continues to inspire and guide architects
-in their quest for timeless beauty and excellence.
+In essence, the relationship between Alberti and Vitruvius stands as
+proof of the transformative influence of ideas over time.
+Their shared dedication to enduring architectural principles
+not only shaped the Renaissance era but also left behind
+a lasting legacy that continues to motivate and guide architects in their pursuit of timeless beauty and excellence.
 
 # 8 Conclusion
 
-In conclusion, this paper has undertaken a comprehensive exploration of the Santa Maria Novella Facade,
-delving into its intricate details to unearth the profound connection between the architectural visions
-of Leon Battista Alberti and the ancient Roman architect Vitruvius.
-The facade, situated in the heart of Florence, emerges not merely as a physical structure but as a living
-testament to the intellectual currents that shaped the Renaissance and continue to resonate in architectural discourse.
+n conclusion, the process of crafting this paper has been an enlightening journey,
+providing me with a thorough understanding of the Santa Maria Novella Facade.
+Through meticulous exploration, I uncovered the intricate details that reveal the deep-seated
+connection between the architectural ideologies of Leon Battista Alberti and the
+ancient Roman architect Vitruvius. This facade, nestled in the vibrant heart of Florence,
+transcends its physical existence, emerging as a dynamic testament to the intellectual currents
+that molded the Renaissance and persist in influencing architectural discussions.
 
-The Santa Maria Novella Facade, designed by Alberti, stands as a masterpiece that encapsulates the essence
-of both the Renaissance and the classical world. The facade's harmonious composition, meticulous attention to proportion,
-and integration of classical motifs reflect Alberti's commitment to humanistic ideals and his reverence
-for the wisdom of antiquity. Through the lens of Vitruvian principles—firmness, commodity,
-and delight—the facade becomes a synthesis of tradition and innovation,
-embodying the enduring quest for architectural excellence.
-
-Alberti's design philosophy, as articulated in "De re aedificatoria,"
-seamlessly integrates with Vitruvius' principles, creating a dialogue that transcends centuries.
-The facade, with its classical vocabulary, sculptural ensemble, and mathematical precision,
-becomes a visual manifestation of their shared ideals.
-The integration of classical orders, the narrative richness of sculptural reliefs,
-and the meticulous attention to mathematical ratios underscore the enduring importance of Vitruvius'
-principles in guiding Alberti's architectural endeavors.
-
-The Santa Maria Novella Facade, situated at the crossroads of classical revival and Renaissance humanism,
-becomes a living testament to the transformative power of architectural thought. It stands as an enduring legacy,
-inviting architects and enthusiasts alike to contemplate the synthesis of ancient wisdom and Renaissance brilliance.
-As we conclude our exploration, the facade beckons us to appreciate not just its physical beauty
-but also the intellectual and cultural richness embedded within its stones—a richness that continues to inspire
-and guide the pursuit of architectural excellence in the modern era. In the grand tapestry of architectural history,
-the Santa Maria Novella Facade remains a timeless chapter, inviting us to witness the harmonious dance between Alberti,
-Vitruvius, and the enduring spirit of the Renaissance.
+Furthermore, this endeavor has been a valuable part of my studies in
+"Theories and Histories of Architecture in Early Modern Europe 1400–1600."
+It has not only enhanced my grasp of architectural principles during this pivotal
+period but has also been a meaningful contribution to the insights gained in this course.
+I am immensely grateful to Professor Barbara Arciszewska for her patient and vibrant teachings,
+which have enabled someone like me with an engineering background and no prior exposure to
+European architectural culture to develop a preliminary understanding of this fascinating field.
 
 # 9 Bibliography
 
