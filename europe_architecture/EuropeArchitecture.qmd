@@ -2,8 +2,6 @@
 \centerline{\textit{*Corresponding y.hu7@student.uw.edu.pl}}
 \vspace{1 em}
 
----
-
 **Abstract**—This essay explores the impressive design of Santa Maria Novella Facade, a prime example of architecture in
 Early Modern Europe from 1400 to 1600. The main focus is on the significant impact of Leon Battista Alberti,
 a renowned architect of that era, and how he incorporated Vitruvian principles to create a harmonious and visually
@@ -15,8 +13,13 @@ in architecture during the Early Modern period.
 
 **Keywords**: Vitruvius, Santa Maria Novella, Leon Battista Alberti
 
+\vspace{1 em}
+
+------
+
 # 1 Introduction
 
+[@SmarthistorySMN]
 The time between the 15th and 17th centuries in Europe, called the Early Modern period, saw a special coming together of art,
 intellect, and cultural revival known as the Renaissance. During this time, classical ideas were brought back to life,
  and visionary architects played a key role in transforming the way buildings were designed. Among the many impressive
@@ -66,9 +69,10 @@ show in his architectural creations.
 ## 2.2 Architectural Talent
 
 Alberti's journey in architecture began as he deeply engaged with the study of classical texts, especially Vitruvius,
-which played a vital role in shaping his design principles. His architectural success reached new heights with
-the creation of the Rucellai Palace in Florence[@FundingNovella], a building that illustrated his innovative approach
-by blending classical elements with modern sensibilities.
+which played a vital role in shaping his design principles. Alberti's career trajectory began with his first financially secure position,
+which involved serving a pope, although the specific pontiff remains to be identified.
+His architectural success reached new heights with the creation of the Rucellai Palace in Florence[@FundingNovella],
+a building that illustrated his innovative approach by blending classical elements with modern sensibilities.
 
 However, a pivotal moment in Alberti's career occurred when he participated in designing the Santa Maria Novella Facade.
 This architectural wonder not only demonstrated his technical skills but also marked a significant change in Renaissance
@@ -78,7 +82,7 @@ with the humanist ideals of the time.
 ## 2.3 Humanism and Architectural Ideas
 
 Alberti's ideas about architecture, explained in his book "De re aedificatoria" which
-he composed the first  first architectural of the Renaissance between 1443 and 1452 in Rome[@AlbertiAntiquity].
+he composed the first architectural of the Renaissance between 1443 and 1452 in Rome[@AlbertiAntiquity],
 highlighted the human-centered principles of proportion, harmony, and balance.
 He thought that architectural beauty should reflect the harmony observed in nature,
 leaving a lasting influence on Renaissance architecture. Alberti's book,
@@ -259,7 +263,7 @@ becomes a testament to Alberti's belief in the intrinsic beauty of proportional 
 
 Alberti's reliance on Vitruvius as a foundational text is discernible in the facade's adherence
 to the classical orders. Vitruvius' emphasis on the three qualities of firmitas (strength),
-utilitas (functionality), and venustas (beauty) finds resonance in Alberti's meticulous attention to structural integrity,
+utilities (functionality), and venustas (beauty) finds resonance in Alberti's meticulous attention to structural integrity,
 functional utility, and aesthetic pleasure.
 
 Theory of venustas is very complicated and as per these principles timeless notion
@@ -326,7 +330,7 @@ it's a real example of Alberti's lasting impact in both art and thinking.
 
 The Santa Maria Novella Facade stands as a harmonious testament to the enduring influence of
 Vitruvius' architectural principles during the Renaissance.
-In examining the facade through the lens of Vitruvian ideals—firmitas (strength), utilitas (functionality), and venustas (beauty)
+In examining the facade through the lens of Vitruvian ideals—firmitas (strength), utilities (functionality), and venustas (beauty)
 [@PrinciplesApplications]—a profound connection emerges, emphasizing the importance of balance, proportion,
 and appropriateness in architectural design.
 
@@ -340,16 +344,16 @@ triangle top show strength, emphasizing the facade's commitment to being well-bu
 Alberti, following Vitruvius closely, turned the idea of firmitas into the very stones of the facade,
 making sure the structure stands strong and lasting.
 
-## 6.2 Utilitas: Functionality
+## 6.2 Utilities: Functionality
 
-Vitruvius also talked about utilitas, which means buildings should be useful.
+Vitruvius also talked about utilities, which means buildings should be useful.
 This principle is visible in the Santa Maria Novella Facade,
 which works both as a pretty entrance and a practical way into the church.
 The main entrance, with pilasters on each side and sculptures,
 is not just a nice focal point but also a practical way to get inside.
 Alberti's mix of beauty and usefulness matches Vitruvius' idea that architecture should be a useful
 art that meets the needs of the people who use it.
-The facade, with its perfect mix of shape and purpose, shows that utilitas is still important in how buildings are designed.
+The facade, with its perfect mix of shape and purpose, shows that utilities is still important in how buildings are designed.
 
 ## 6.3 Venustas: Beauty
 
@@ -392,7 +396,7 @@ architects in the following generations.
 ## 7.1 Shared Principles
 
 Alberti's architectural beliefs, as explained in his book "De re aedificatoria"
-mirror the fundamental principles established by Vitruvius in "De architectura."
+mirror the fundamental principles established by Vitruvius.
 The focus on firmness, utility, and beauty as the essential principles of architectural design,
 initially put forth by Vitruvius, gained new expression in Alberti's writings.
 Alberti embraced Vitruvius' call for balanced proportions, exact mathematical measurements,
@@ -438,7 +442,7 @@ a lasting legacy that continues to motivate and guide architects in their pursui
 
 # 8 Conclusion
 
-n conclusion, the process of crafting this paper has been an enlightening journey,
+The process of crafting this paper has been an enlightening journey,
 providing me with a thorough understanding of the Santa Maria Novella Facade.
 Through meticulous exploration, I uncovered the intricate details that reveal the deep-seated
 connection between the architectural ideologies of Leon Battista Alberti and the
@@ -454,7 +458,7 @@ I am immensely grateful to Professor Barbara Arciszewska for her patient and vib
 which have enabled someone like me with an engineering background and no prior exposure to
 European architectural culture to develop a preliminary understanding of this fascinating field.
 
-# 9 Bibliography
+# References
 
 ::: {#refs}
 :::
