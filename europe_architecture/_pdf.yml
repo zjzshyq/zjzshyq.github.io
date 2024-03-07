@@ -8,17 +8,4 @@ affiliations:
     name: Data Science and Business Analytics, Faculty of Economics Sciences
 format:
   pdf:
-    citation_package: natbib
-    documentclass: article
     fontsize: 11pt
-    geometry: margin=1in
-    latex-tinytex: false
-    template-partials:
-      - title.tex
-    include-in-header:
-      text: |
-        \usepackage[noblocks]{authblk}
-        \renewcommand*{\Authsep}{, }
-        \renewcommand*{\Authand}{, }
-        \renewcommand*{\Authands}{, }
-        \renewcommand\Affilfont{\small}

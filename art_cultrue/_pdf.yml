@@ -1,6 +1,4 @@
 author:
-  - name: Jacek Lewkowicz
-    affil-id: 1
   - name: Yiqing Hu
     affil-id: 1,*
     corresponding: true

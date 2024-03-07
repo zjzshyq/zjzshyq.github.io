@@ -14,3 +14,4 @@
 
 [UW][Machine Learning 2][COLAB]<br>[Regression for Painting Rankings](https://colab.research.google.com/drive/1a3vdKyuwCqQeZ_voaMS_s4dgEBfTlV6a)
 
+[UW][Final Thesis][HTML]<br>[Exploring User Preferences in the Online Painting Community: A Comparative Analysis of Human-Created and AI-Generated Artwork on pixiv.net](art_cultrue/Art_cultrue.html)

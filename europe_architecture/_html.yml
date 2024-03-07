@@ -15,3 +15,9 @@ format:
       dark: superhero
     number-sections: false
     title-block-banner: true
+quarto:
+  self_contained: true
+  pandoc:
+    css: "my_styles.css"
+
+

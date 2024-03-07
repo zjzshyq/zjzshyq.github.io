@@ -1,7 +1,3 @@
-\vspace{-1.5 em}
-\centerline{\textit{*Corresponding y.hu7@student.uw.edu.pl}}
-\vspace{1 em}
-
 **Abstract**—This essay explores the impressive design of Santa Maria Novella Facade, a prime example of architecture in
 Early Modern Europe from 1400 to 1600. The main focus is on the significant impact of Leon Battista Alberti,
 a renowned architect of that era, and how he incorporated Vitruvian principles to create a harmonious and visually
@@ -53,7 +49,7 @@ blend of intellectual and artistic endeavors. By selecting Santa Maria Novella F
 uncover not only the physical attractiveness of the structure but also the intellectual influences behind its creation.
 This provides a nuanced understanding of the theories and histories that shaped Early Modern European architecture.
 
-![Florence, Church of S. Maria Novella (photo: E.J. Johnson)](img/facade02.jpg){width=50%}
+![Florence, Church of S. Maria Novella](img/facade02.jpg){width=50%}
 
 # 2 Leon Battista Alberti, the Designer
 
@@ -71,23 +67,23 @@ Alberti's journey in architecture began as he deeply engaged with the study of c
 which played a vital role in shaping his design principles. Alberti's career trajectory began with his first financially secure position,
 which involved serving a pope, although the specific pontiff remains to be identified.
 Alberti's activities were centered in Florence during the years 1434 to 1436, a period marked by significant cultural and intellectual ferment.
-His architectural success reached new heights with the creation of the Rucellai Palace in Florence[@FundingNovella],
+His architectural success reached new heights with the creation of the Rucellai Palace in Florence[^1],
 a building that illustrated his innovative approach by blending classical elements with modern sensibilities.
+
+[^1]: Hatfield, 2004, 67, 81–128.
 
 However, a pivotal moment in Alberti's career occurred when he participated in designing the Santa Maria Novella Facade.
 This architectural wonder not only demonstrated his technical skills but also marked a significant change in Renaissance
 architecture. Alberti's impact went beyond constructing buildings; he formulated an architectural theory that aligned
 with the humanist ideals of the time.
 
-
 ## 2.3 Humanism and Architectural Ideas
 
-Alberti's ideas about architecture, explained in his book "De re aedificatoria" which
-he composed the first architectural of the Renaissance between 1443 and 1452 in Rome[@AlbertiAntiquity],
+Alberti's ideas about architecture, explained in his book "De re aedificatoria"[^2],
 highlighted the human-centered principles of proportion, harmony, and balance.
 He thought that architectural beauty should reflect the harmony observed in nature, for example,
-delving into themes of masculinity. He has believed that human body’s proportions are perfect created
-by nature and these could be used by an architect for designing of building[@PrinciplesApplications].
+delving into themes of masculinity. He also believed that human body’s proportions are perfect created
+by nature and these could be used by an architect for designing of building[^3].
 Alberti also conceptualized a house as a surveillance system,
 reflecting his interest in control and observation. While deeply engaged in theoretical pursuits,
 Alberti's focus on design was evident, although he may not have always been directly involved in its execution.
@@ -97,6 +93,9 @@ And his book, often seen as the first modern guide on architecture,
 not only organized architectural principles
 but also raised the architect's role to that of a knowledgeable person,
 adding to the intellectual standing of the profession.
+
+[^2]: Lehmann, 1988, 70, 388–400. Alberti composed the first architectural of the Renaissance between 1443 and 1452 in Rome(p. 388).
+[^3]: Gangwar, 2017, 4, 171–176. The human body here refers specifically to the male body.
 
 ## 2.4 Heritage and Influence
 
@@ -115,11 +114,13 @@ figure whose ideas and innovations continue to echo through the halls of archite
 
 Situated in the heart of Florence, Italy, the Santa Maria Novella Church is a symbol of the diverse blend of art,
 culture, and spirituality during the Renaissance. Its story dates back to the 13th century
-when the Dominican Order decided to build a new church on this location[@FaçadeSMNovella].
+when the Dominican Order decided to build a new church on this location[^4].
 Construction started in 1279, and throughout the years, the church underwent changes, expansions,
 and enhancements that mirrored the changing artistic and religious tastes of the period.
 This church also has a unique place in Florentine history,
 serving as a central hub for Dominican friars and a key location for religious ceremonies and artistic support.
+
+[^4]: Roy, 1997.
 
 ## 3.2 Architectural Importance
 
@@ -127,7 +128,7 @@ While the entire Santa Maria Novella Church showcases remarkable Gothic and Rena
 it's the facade that truly captivates admirers. The facade, with its detailed design and classical proportions,
 serves as the welcoming face of the church, making a strong visual impact on worshippers and visitors alike.
 
-![Reconstruction of Gothic facade of S. Maria Novella (After kiesow)](img/gothic01.jpg){width=50%}
+![Reconstruction of Gothic facade of S. Maria Novella after Kiesow](img/gothic01.jpg){width=40%}
 
 ### 3.2.1 Style Elements
 
@@ -141,12 +142,14 @@ but also mirrors the broader cultural exchange between the medieval and modern w
 
 The role of Leon Battista Alberti in the development of the Santa Maria Novella Church
 is most pronounced in its facade.  He was commissioned by Giovanni di Paolo Rucellai to complete the facade,
-beginning work on the church in 1458[@AlbertiAntiquity].
+beginning work on the church in 1458[^5].
 Alberti's humanistic principles of proportion and harmony
 find expression in the balanced composition of the facade. The use of classical orders,
 such as Corinthian columns, reflects Alberti's reverence for classical antiquity,
 while the careful attention to mathematical proportions demonstrates his commitment
 to architectural beauty grounded in rationality.
+
+[^5]: Lehmann, 1988, 70, 388–400.
 
 ## 3.3 Facade within the Church Structure
 
@@ -182,9 +185,11 @@ Alberti had some serious problems here because he was a classicist and he wanted
 conform to what he believed to be the ideals that were based on perfect geometry and rational
 order and proportion. And copying the rules of architecture handed down from ancient Rome via the
 ancient Roman architect Vitruvius. The problem is that this was a Gothic church and Gothic is anything
-but orderly[@SmarthistorySMN]. So he took this gothic church and on it put a classical facade that also recalls the Romanesque
+but orderly[^6]. So he took this gothic church and on it put a classical facade that also recalls the Romanesque
 tradition of Italy. Specifically the Baptistery of Florence and also the church of San Miniato al Monte
-which is just outside the center of the city of Florence[@SmarthistorySMN].
+which is just outside the center of the city of Florence[^6].
+
+[^6]: Zucker and Harris, 2016.
 
 ## 4.1 Gothic Heritage and Preexisting Facade
 
@@ -222,11 +227,14 @@ to the facade's central focal point.
 ![The pilasters](img/pilasters.png){width=20%}
 
 ## 4.3 Columns and Pediments
-Alberti’s strong love for ancient classical styles is clear in the decorative parts of the facade[@AlbertiAntiquity].
+Alberti’s strong love for ancient classical styles is clear in the decorative parts of the facade[^7].
 At the top of the facade, echoes of ancient Greek temple fronts emerge, particularly evident in the pediment resembling that of the Parthenon.
 Squared attached columns, especially the Corinthian ones, and pilasters provide structural support for the triangle-shaped top,
 creates a clear order and makes the facade look impressively large, evoking a sense of classical grandeur.
-The columns, with their ridged shafts and acanthus leaf tops, add to the overall height of the design, recalling the proportions seen in old Roman temples[@PrinciplesApplications]
+The columns, with their ridged shafts and acanthus leaf tops, add to the overall height of the design[^8].
+
+[^7]: Lehmann, 1988, 70, 388–400.
+[^8]: Gangwar, 2017, 4, 171–176. Recalling the proportions seen in old Roman temples.
 
 ![The top of the facade](img/templeFront.png){width=30%}
 
@@ -284,7 +292,9 @@ resulting in a visually captivating architectural marvel.
 The Santa Maria Novella Facade stands as a harmonious testament to the enduring influence of
 Vitruvius' architectural principles during the Renaissance.
 In examining the facade through the lens of Vitruvian ideals—firmitas (strength), utilities (functionality), and venustas (beauty)
-[@PrinciplesApplications]—a profound connection emerges, emphasizing the importance of balance, proportion, and appropriateness in architectural design.
+[^9]—a profound connection emerges, emphasizing the importance of balance, proportion, and appropriateness in architectural design.
+
+[^9]: Gangwar, 2017, 4, 171–176.
 
 ## 5.1 The Vitruvian Ideals
 ### 5.1.1 Firmitas: Strength
@@ -340,15 +350,23 @@ and a combination of arts and sciences, revealing a deep alignment between their
 ### 5.2.1 Humanistic Proportions and Harmony
 Alberti’s commitment to humanistic ideals is prominently evident in the proportions and harmony of
 the Santa Maria Novella Facade. In “De re aedificatoria”, Alberti emphasizes the use of harmonic
-proportions derived from the human body, especially males, suggesting that a well-designed building should mirror the balanced proportions found in nature.
+proportions derived from the human body, especially males, suggesting that a well-designed building
+should mirror the balanced proportions found in nature. He explain:[^10]
 
-He explain the harmony of proportion could be achieved in such a manner “nothing could be added,
-diminished or altered expect for the worse”. It simply means that one should go for perfection
-in the system of proportion; one should explore many options before finalizing the best one.
-He created a system of architecture based on the ratios 2:1 and 3:1 suggested by the Timaeus of
-Plato in ancient Greece and based on musical scale. He reasoned that “what is pleasing to the
-ear should be pleasing to the eye.” He has applied the system of proportion for designing of the
-two buildings namely Santa Maria Novella in Florence and San Sebastiani in Mantua, Italy[@PrinciplesApplications].
+```
+   The harmony of proportion could be achieved in such a manner “nothing
+   could be added, diminished or altered expect for the worse”. It simply
+   means that one should go for perfection in the system of proportion;
+   one should explore many options before finalizing the best one. He
+   created a system of architecture based on the ratios 2:1 and 3:1
+   suggested by the Timaeus of Plato in ancient Greece and based on musical
+   scale. He reasoned that “what is pleasing to the ear should be pleasing
+   to the eye.” He has applied the system of proportion for designing of
+   the two buildings namely Santa Maria Novella in Florence and San
+   Sebastiani in Mantua, Italy.
+```
+
+[^10]: Gangwar, 2017, 4, 171–176.
 
 ![Geometric proportion in elevation of Santa Maria Novella in Florence](img/facade01.jpg){width=50%}
 
@@ -398,5 +416,12 @@ European architectural culture to develop a preliminary understanding of this fa
 
 # References
 
-::: {#refs}
-:::
+[1] R. Hatfield, “The funding of the façade of santa maria novella,” Journal of the Warburg and Courtauld Institutes, vol. 67, pp. 81–128, 2004, Available: https://www.jstor.org/stable/ 40026027
+
+[2] P. W. Lehmann, “Alberti and antiquity: Additional observations,” The Art Bulletin, vol. 70, pp. 388–400, Sep. 1988, Available: https://www.jstor.org/stable/3051174
+
+[3] Ar. G. Gangwar, “Principles and applications of geometric proportions in architectural design,” Journal of Civil Engineering and Environmental Technology, vol. 4, pp. 171–176, Jun. 2017, Available: https://www.researchgate.net/publication/317725370
+
+[4] B. E. Roy, “The façade of santa maria novella: Architecture, context, patronage and meaning” Department of Art History, McGill University, Montreal, Aug. 1997, Available: https://escholarship.mcgill.ca/concern/theses/1544br19b
+
+[5] Dr. S. Zucker and Dr. B. Harris, “Alberti, façade of santa maria novella, florence,” Smarthistory, Oct. 2016, Available: https://smarthistory.org/alberti-santamarianovella
