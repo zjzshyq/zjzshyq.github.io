@@ -1,0 +1,23 @@
+date: today
+author:
+  - name: Yiqing Hu
+    affiliations:
+      - ref: uw
+affiliations:
+  - id: uw
+    name: University of Warsaw, Poland
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme:
+      light: flatly
+      dark: superhero
+    number-sections: false
+    title-block-banner: true
+quarto:
+  self_contained: true
+  pandoc:
+    css: "my_styles.css"
+
+
