@@ -15,6 +15,11 @@ format:
     latex-tinytex: false
     template-partials:
       - title.tex
+      - before-body.tex
+    toc: true
+    toc-depth: 3
+    lof: true
+    lot: true
     include-in-header:
       text: |
         \usepackage[noblocks]{authblk}

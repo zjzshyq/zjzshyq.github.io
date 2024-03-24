@@ -1,16 +1,108 @@
-\vspace{-1.5 em}
-\centerline{\textit{*Corresponding y.hu7@student.uw.edu.pl}}
-\vspace{1 em}
+\newpage
 
-**Abstract**—This thesis explores user preferences for AI-generated versus human-created artwork on pixiv.net, focusing on how generative AI models impact the online art market. It uses a dataset from pixiv.net, covering the period from October 31, 2022, to May 15, 2023, and employs econometric models to analyze image rankings. The study aims to understand the influence of topics derived via deep learning on user preferences and examines whether these preferences differ between AI-generated and human-created art. This could influence art production and promotion strategies or highlight the competitive relationship between these two art forms in the market. The methodology includes topic modeling with BERT and ordered choice models to investigate the relationship between image topics and rankings. The study's significance lies in its potential insights into digitization trends and the role of AI in artistic creation, offering perspectives on future user preferences in the online painting market.
+## 1 Introduction
 
-**Keywords**: User Preferences, AI-generated Content, Digital Painting
+### 1.1 Research Background
 
-## Introduction
+#### 1.1.1 Introduction to the Online Art Market
 
-## Paper Review
+The evolution of the online art market is traced back to the rise of information and communication technologies, which have accelerated the globalization of art and led to the creation of new art forms and marketing strategies. Despite the failure of first-generation online art startups during the dot.com bust in 2000, belief in the internet as a future art commerce platform persisted. The current landscape is marked by a diversity of online art businesses, including online auctions, galleries, and marketplaces, each offering new ways to buy and sell art. The structure of today's online art market encompasses both hybrid online-offline businesses and purely online enterprises, catering to a broader audience by making art more accessible and breaking down traditional barriers to art acquisition.
 
-### The ChatGPT Effect on AI-Themed Cryptocurrencies
+The online art market's capacity for rapid information dissemination, its global reach, and the challenges of assessing its size due to varying statistical reports. Despite these challenges, the online art market continues to grow, with significant contributions from traditional auction houses and new online platforms. The role of social media in the online art trade and the continuous evolution of online art market players suggest a future where online platforms could dominate the art market landscape.
+
+#### 1.1.2 The Current State of AI-Generated Art in the Context of AI Development
+
+In the rapidly evolving landscape of artificial intelligence (AI), the development of AI-generated art represents a fascinating intersection of technology and creativity. This domain has seen significant advancements, fueled by both theoretical research and practical applications, as AI systems gain the ability to create artworks that resonate with human aesthetic sensibilities.
+
+Historically, image generation has been a focus of AI research, with efforts aimed at capturing and replicating the detailed visual information that characterizes human-made art. Traditional methods relied on attribute representation and vector encoding to mimic the visual complexity found in art. However, the advent of Deep Recurrent Attentive Writers (DRAW) marked a shift towards more realistic image generation, leveraging recurrent neural networks to produce images that more closely resemble those created by human artists.
+
+The pursuit of aesthetic impressions in AI-generated art has also been a key area of exploration. Researchers have endeavored to bridge the gap between color features and descriptive fashion words, aiming to generate images that not only replicate the form but also the emotional impact of artworks. This endeavor extends to the challenge of style transfer, where convolutional neural networks (CNNs) have been employed to adapt the style of one image to another, facilitating the creation of AI art that resonates with the stylistic nuances of various artistic movements.
+
+The AI Painting system represents a significant step forward in this journey, enabling the generation of paintings based on user-provided content text, aesthetic effect words, and chosen artistic genres. This system embodies the progress in AI's capability to not only generate art but to do so with a specific aesthetic and stylistic intent, guided by human input. The integration of Generative Adversarial Networks (GANs), specifically StackGAN++, for content generation, alongside methods for aesthetic effect modification and artistic genre simulation, underscores the sophisticated approaches being developed to create AI-generated paintings that align with human artistic and aesthetic criteria.
+
+Furthermore, the AI Painting system’s ability to illustrate the painting process dynamically, offering insights into the creation of the artwork, highlights an appreciation for the artistic process itself, not just the final product. This not only enhances the user's engagement with the generated art but also deepens the system's alignment with the traditions of artistic creation.
+
+In conclusion, the development of AI-generated art, as exemplified by systems like AI Painting, stands at the forefront of AI's incursion into the realm of creativity and aesthetics. It represents a confluence of technological innovation and artistic expression, opening new avenues for exploration in both fields. As AI continues to evolve, its role in art generation promises to challenge and expand our understanding of creativity, blurring the lines between human and machine-generated beauty.
+
+#### 1.1.3 Pixiv's Role in the Online Painting Market
+
+pixiv.net is a Japanese online community for artists established in Tokyo in 2007. As of 2023, Pixiv hosts over 100 million artistic submissions and receives more than 1 billion page views per month. The platform's primary goal is to offer artists a space to showcase their illustrations and receive feedback. Unlike other platforms like Instagram, Pixiv focuses predominantly on original artworks inspired by Japanese anime and manga, excluding most forms of photography. It utilizes a comprehensive tagging system for categorizing artworks and permits the posting of explicit sexual content, employing filters for user discretion.
+
+User profiles on Pixiv give a summary of the artist, including nickname, birthday, gender, location, and a brief biography. Artists can also showcase their creative environment through a dedicated profile section. Artworks submitted can include multiple images, with the artist providing titles and captions, accompanied by up to 10 tags. These tags are essential for organizing images on the site and can be managed by the community through a system that allows adding, modifying, or reporting unpleasant tags.
+
+Interaction on Pixiv is facilitated through following other users, messaging, and commenting on images, fostering a community spirit. A significant policy update in late October 2022 allowed for the uploading of AI-generated images, with requirements for artists to indicate whether their submissions are human or AI-generated. This policy, along with updates in May 2023 addressing concerns from human creators, positions Pixiv as a pioneering platform for sharing AI-generated works, making it an ideal case study for understanding the impact of AI-generated content on social media ecosystems.
+
+
+#### 1.1.4 The Position of AI Painting Tools Like SD in Digital Painting
+
+Stable Diffusion is a significant advancement in the field of AI-generated art, offering a blend of artificial intelligence and deep learning techniques to create detailed and high-quality images. This technology, combining stable diffusion methods with Web UI technology, introduces a novel approach to AI painting generation, making it applicable across various domains such as digital art, concept design, and game development.
+
+The core of Stable Diffusion lies in its ability to simulate the gradual evolution of images through a process akin to diffusion, thereby enabling more precise control over the image's details and textures. This method stands out by offering a higher degree of stability and controllability compared to traditional techniques, such as Convolutional Neural Networks (CNNs). The Stable Diffusion Web UI further enhances the accessibility and usability of this technology, allowing users to easily generate AI paintings by setting parameters and controls through a web interface.
+
+The Stable Diffusion process involves two main phases: the forward phase, where noise is incrementally added to an image, and the backward phase, which gradually refines the image by removing noise and adding details. This process, inspired by the natural diffusion of ink in water, results in images that are both complex and rich in detail.
+
+Additionally, the adoption of a latent diffusion model, which operates in a lower-dimensional latent space, addresses the computational and memory challenges associated with high-resolution image generation. This innovative approach not only reduces the computational load but also maintains the quality of the generated images.
+
+Practical applications of Stable Diffusion span from text-to-image and image-to-image generation to more specialized functions like Control Net, which enhances the precision of generated poses. The technology supports the training of custom models to further improve image quality, demonstrating its versatility and potential for creative exploration.
+
+Moreover, Stable Diffusion encompasses various model types, including Checkpoint and LoRA models, each with distinct features and applications. Checkpoint models, known for their comprehensive nature, allow for uninterrupted image generation, making them suitable for tasks requiring high computational resources. On the other hand, LoRA models, optimized for specific styles or attributes, offer advantages in terms of training efficiency and resource utilization.
+
+In conclusion, Stable Diffusion represents a breakthrough in AI painting generation, providing a powerful tool for artists, designers, and creators to explore new horizons in digital art and beyond. Its ability to generate realistic, high-quality images through a controlled and efficient process opens up new possibilities in the realm of artificial intelligence and art creation.
+
+### 1.2 Research Objectives
+
+The objective of this thesis is to explore and analyze user preferences within the online painting market, specifically focusing on the comparison between human-created artwork and AI-generated artwork. This study aims to shed light on the prevailing dynamics within the digital art community, particularly on a platform as influential as pixiv.net. By examining a comprehensive dataset that spans a significant period and covers a wide array of both AI-generated and human-created artworks, this research endeavors to understand the underlying factors that influence the popularity and ranking of these artworks in the online community.
+
+The central purpose of this investigation is to discern whether there exist distinct preferences among users for AI-generated versus human-created artworks and to identify the topics or themes that significantly influence these preferences. Through a meticulous analysis employing ordered probit/logit models, this thesis will quantitatively assess the impact of various topics, as identified by a deep learning model, on the rankings of images within both categories of art. This approach not only aims to pinpoint which topics are pivotal in determining the rankings but also seeks to uncover any divergent trends in user preferences between the two types of artworks.
+
+By achieving a deeper understanding of user preferences, this study aspires to offer valuable insights for artists, digital content creators, and platform administrators alike. Should the analysis reveal marked preferences for certain types of artwork or specific topics, it could guide strategic decisions regarding content creation and promotion, potentially leading to enhanced engagement and satisfaction within the online art community. Conversely, if the findings indicate minimal differences in user preferences, it would suggest a direct competition between human-created and AI-generated artworks, highlighting the need for artists and AI developers to innovate continually to captivate and retain audience interest.
+
+Ultimately, this thesis is driven by the goal of not only advancing academic knowledge in the field of digital art and AI but also providing practical implications for the evolving landscape of online art markets. By unraveling the intricacies of user preferences in this unique intersection of art and technology, this research hopes to contribute to the broader discourse on the impact of AI on creative industries and the future of digital artistic expression.
+
+### 1.3 Research Innovation
+
+The innovative aspects of this thesis reside in its novel approach to analyzing user preferences for AI-generated versus human-created artwork within the online painting community, specifically leveraging a rich dataset from pixiv.net. This study distinguishes itself through several key innovations:
+
+1. **Integration of Deep Learning for Topic Modeling**: Utilizing BERT, a state-of-the-art deep learning model, to perform topic modeling on the tags of images represents a cutting-edge approach to understanding the thematic content of both human-created and AI-generated artworks. This method allows for the extraction of nuanced topics that reflect the diverse interests of the pixiv.net community, offering a sophisticated lens through which to examine user preferences.
+
+2. **Application of Ordered Choice Models**: By employing both ordered logit and ordered probit models, this research adopts a rigorous econometric method to analyze the ranking data of artworks. This approach is particularly suited to addressing the ordered nature of the data, providing a robust framework for understanding the factors that influence the popularity and ranking of artworks on pixiv.net. The inclusion of topics derived from deep learning as independent variables in these models is an innovative strategy that bridges AI and econometrics.
+
+3. **Comparative Analysis of AI-Generated and Human-Created Artwork**: This thesis ventures into relatively uncharted territory by conducting a comparative analysis of AI-generated and human-created artwork. By systematically investigating user preferences across these two categories, the study contributes to a deeper understanding of the impact of AI on artistic creation and reception in the digital age.
+
+4. **Focus on a Leading Online Art Community**: Focusing the research on pixiv.net, a platform at the forefront of digital art sharing and community engagement, provides a contextually rich and relevant setting for the study. This choice ensures that the findings are grounded in the practices and preferences of a vibrant and active online art community.
+
+5. **Exploration of Strategic Implications**: Beyond academic contributions, this thesis aims to offer practical insights for artists, content creators, and platform administrators by identifying strategic opportunities based on user preferences. Whether highlighting areas of potential collaboration between human and AI artists or underscoring competitive dynamics, the research seeks to inform strategies for content creation, promotion, and curation within the online art market.
+
+In summary, the innovative aspects of this thesis lie in its methodological rigor, its application of advanced AI techniques for topic modeling, its focus on an under-explored comparison between AI-generated and human-created artworks, and its potential to inform strategic decisions in the online art market. Through these innovations, the study aims to contribute significantly to the fields of digital art, AI in artistic creation, and online community engagement.
+
+### 1.4 Thesis Organization
+
+The organization of this thesis is meticulously designed to guide the reader through a comprehensive exploration of user preferences within the online painting market, with a focus on the comparative analysis of human-created and AI-generated artwork on pixiv.net. This structure not only facilitates a logical progression of research findings and analyses but also ensures a clear and coherent presentation of the study's objectives, methodologies, results, and implications. The thesis is organized into five chapters, each serving a specific purpose within the overall research framework:
+
+**Chapter 1: Introduction**:
+This chapter sets the stage for the entire thesis by outlining the research background, stating the objectives, and highlighting the innovative aspects of the study. It provides an overview of the transformative impact of generative AI models on the art market and introduces the research hypotheses. Furthermore, this chapter discusses the dataset gathered from pixiv.net and lays out the thesis's organizational structure, ensuring readers are well-prepared for the subsequent chapters.
+
+**Chapter 2: Literature Review**:
+In the second chapter, a comprehensive review of existing literature is presented, covering key studies and theories relevant to AI-generated artwork, user preferences within digital art markets, and the implications of AI technologies on artistic creation. This review not only contextualizes the current research within the broader academic discourse but also identifies gaps in the literature that the study aims to address.
+
+**Chapter 3: Methodology**:
+In the Methodology chapter, the research design and methods used to collect, process, and analyze the data are thoroughly described. This includes a detailed explanation of the use of BERT for topic modeling on image tags from pixiv.net, outlining how this deep learning model helps in identifying distinct topics between human-created and AI-generated artworks. Additionally, the chapter discusses the employed econometric models—specifically, ordered probit and logit models—for analyzing the influence of these topics on artwork rankings.
+
+**Chapter 4: Results**:
+The Results chapter presents the findings from the topic modeling and econometric analysis. It offers a quantitative exploration of the rankings of AI-generated versus human-created artworks on pixiv.net, interpreting these findings in light of the research hypotheses. This chapter aims to provide insights into user preferences and the significant topics that influence these preferences within the online painting community.
+
+**Chapter 5: Conclusion and Future Prospects**:
+The final chapter synthesizes the findings of the study, discussing the implications of the results for artists, content creators, and platform administrators within the online painting market. It evaluates the study's contribution to the understanding of digital art markets and AI's role in artistic creation. Additionally, this chapter outlines the limitations of the current research and proposes avenues for future investigations, offering a vision for continued exploration in the intersection of art, technology, and user preferences.
+
+Through this structured approach, the thesis aims to provide a holistic and nuanced understanding of the dynamics at play in the online painting market, contributing valuable insights into the evolving relationship between AI technologies and artistic creation.
+
+\newpage
+
+## 2 Lecture Review
+
+### 2.1 The impact of generative AI on markets
+
+#### 2.1.1 The ChatGPT Effect on AI-Themed Cryptocurrencies
 
 "The ChatGPT Effect on AI-Themed Cryptocurrencies”[@AIThemedCryptocurrencies] by Lennart Ante and Ender Demir investigates the impact of ChatGPT's launch on the returns of AI-themed cryptocurrency assets. ChatGPT, unveiled by OpenAI on November 30, 2022, quickly gained significant attention, surpassing one million users within a week. Despite OpenAI CEO Sam Altman's caution regarding its preliminary state, ChatGPT has been regarded as a breakthrough in AI, capable of stimulating digital transformation and potentially competing with Google.
 
@@ -20,7 +112,7 @@ Findings revealed significant abnormal returns of up to 41% over two weeks follo
 
 Moreover, the research contributes to the broader discourse on market efficiency and signaling theory, showing that cryptocurrency markets are responsive to developments in related fields like AI. The results indicate a fragmented cryptocurrency market where AI-themed tokens, despite their correlation with Bitcoin, experienced unique dynamics influenced by external factors such as technological innovations. As a tool for generative AI, ChatGPT has had a considerable impact on the cryptocurrency market. Whether this impact will spread to the art market is worthy of further study.
 
-### The Cyber Turn of the Contemporary Art Market
+#### 2.1.2 The Cyber Turn of the Contemporary Art Market
 
 In "The Cyber Turn of the Contemporary Art Market,”[@CyberTurnArt] Elena Sidorova delves into the transformative impact of digital technologies on the online art market. The third section, "Technologies Used to Expand the Online Art Market," discusses three pivotal innovations: cryptocurrency blockchain, and artificial intelligence (AI), that are redefining the landscape of art commerce on the internet.
 
@@ -30,16 +122,17 @@ In "The Cyber Turn of the Contemporary Art Market,”[@CyberTurnArt] Elena Sidor
 
 Sidorova's analysis portrays these technologies not merely as tools for market expansion but as catalysts for a conceptual shift in the art market. They represent the intersection of art, technology, and commerce, creating a new paradigm where digital innovation drives market evolution. This exploration into the integration of digital technologies within the art market provides valuable insights into the future trajectory of art commerce in the digital age, emphasizing the growing importance of technological fluency in navigating this evolving landscape. My research will narrow the focus of discussion from the art market to the digital painting market.
 
-### Artistic Reflection on Artificial Intelligence Digital Painting
+### 2.2 AI versus humans
+
+#### 2.2.1 Artistic Reflection on Artificial Intelligence Digital Painting
 
 The article "Artistic Reflection on Artificial Intelligence Digital Painting”[@ArtisticReflection]  by Xinlu Liu delves into the evolving intersection between artificial intelligence (AI) and traditional painting. The paper posits that while AI technology has revolutionized many fields, including art, it inherently lacks the diversity and humanization found in traditional painting techniques. This limitation arises from AI's mechanical nature, which restricts its choice of painting materials and the setting of brush parameters, thereby impacting the expressiveness and emotional depth of the resulting artworks.
 
 Liu argues that despite these limitations, the continuous advancement of technology will inevitably enrich the artistic content of AI-generated works over time, contributing to their eventual acceptance and appreciation within the art community. The paper underscores the importance of integrating AI with traditional painting to foster innovation in art creation and ensure the sustainable development of both technology and humanities.
 
 The article outlines several key points:
+
 - **Integration of AI in Art**: AI provides new possibilities for artistic creation, leading to innovations in form and diversification in the development of new media art.
-
-
 
 - **Comparison with Traditional Painting**: Traditional painting possesses a unique creative mode and artistic concept that AI has yet to fully replicate, particularly in terms of material media and expressive styles.
 
@@ -51,7 +144,7 @@ The article outlines several key points:
 
 Liu suggests that while AI technology can significantly enhance artistic creativity and introduce new forms of expression, the essence and depth of traditional art should not be overlooked. The fusion of AI with traditional painting practices offers a promising avenue for the evolution of art, provided it is navigated with a thoughtful appreciation of both mediums' unique strengths. However, Liu's research did not point out users' different attitudes toward AI-generated and human-created artwork, let alone analyze user preferences based on this.
 
-### From Pigments to Pixels: A Comparison of Human and AI Painting
+#### 2.2.2 From Pigments to Pixels: A Comparison of Human and AI Painting
 
 In the exploration of the intersection between art and artificial intelligence (AI), "From Pigments to Pixels: A Comparison of Human and AI Painting”[@Pigments2Pixels] embarks on a nuanced analysis of AI's role in the creative process of painting. The overarching purpose of this research is not merely to assess AI's ability to mimic human art indistinguishably but to understand its potential to generate art that is rich in cultural significance and capable of eliciting emotional responses from viewers.
 
@@ -68,27 +161,28 @@ A significant aspect shows AI's inability to draw upon real-life memories and em
 Moreover, the study explores the idea that, unlike human artists who can reflect on the overall composition, considering emotional impact, symbolic meaning, and aesthetic balance, AI lacks this reflective capacity. This is because AI approaches art creation from a purely technical standpoint, devoid of the emotional and cognitive processes that guide human creativity. Consequently, while AI can mimic specific styles and techniques, it falls short of capturing the essence and depth of human artistic expression, which is deeply rooted in personal experience, cultural context, and emotional intelligence.
 
 The study recommends two primary avenues for further exploration:
+
 - **Gallery-based Art Viewing for Comparative Studies**: Highlighting the difference in perception between viewing art in person versus online, the study suggests future research should incorporate live gallery viewings. Such settings can offer richer, more nuanced insights into the viewer's engagement with art, potentially unveiling aspects that digital viewings might obscure.
 
 - **Semantic Recognition to Augment AI Creativity**: To bridge the gap in AI's understanding of artistry's semantic layers, the study proposes integrating advanced semantic recognition technologies. This could enable AI to autonomously select and interpret artworks for style transfer, thereby enhancing its learning process and creative outputs.
 
 The juxtaposition of human and AI artistry in this study illuminates the profound gap between technical mimicry and genuine artistic expression. While AI can replicate styles and techniques, it lacks the intrinsic human capacity to imbue art with emotional depth and societal context. As AI continues to evolve, its potential to parallel human creativity remains an open question, inviting further exploration and technological advancements.
 
-
-### A(I)rtist or Counterfeiter? Artificial Intelligence as (D)Evaluating Factor on the Art Market
+#### 2.2.3 A(I)rtist or Counterfeiter? Artificial Intelligence as (D)Evaluating Factor on the Art Market
 
 This paper, A(I)rtist or Counterfeiter? Artificial Intelligence as (D)Evaluating Factor on the Art Market[@AirtistOrCounterfeiter], explores the impact of Artificial Intelligence AI on the perception and valuation of art by audiences. The central finding is that people value paintings less when they learn these were created by AI, regardless of the painting's style or actual market value. This indicates a heuristic difference in assessing AI-made art, viewing AI not as an equal to human artists. The study suggests significant implications for art management, highlighting potential challenges in selling AI-created paintings and the contextual influence on valuation when AI and human-made art are displayed together. The research hypothesizes that the lower perceived value of AI art is mediated by perceived artistry and overall impression and that AI-made art is excluded from the category of human art, affecting the valuation of figurative versus abstract paintings differently depending on the artist's identity (AI or human). The conclusion reinforces that authorship by AI negatively affects art's perceived value, suggesting human-made art is seen as superior, impacting both impression and pricing in the art market.
 
 The design of the research outlines a comprehensive experimental framework to investigate how the knowledge that a painting is created by Artificial Intelligence (AI) impacts its perceived value compared to those known to be created by humans. The experiment utilized a 2x2x2 factorial design to explore variations in perceived value based on the painting's authorship (AI vs. human), contextual information (value of similar artworks by AI vs. humans), and style (figurative vs. abstract). The study engaged 296 participants, randomly assigned to one of eight groups, to assess the value of paintings produced by AI algorithms. The paintings were either in the style of Paul Cezanne’s “Houses at the L’Estaque” re-interpreted by CloudPainter or an abstract still-life by Ai-Da. A unique aspect of the experimental design was the introduction of a fictional artist, "Iog Wasamaru," to uniformly represent authorship across conditions. Contextual cues were manipulated by informing participants of the price of similar artworks by either humans or AI, exploring the impact of these cues on valuation. The study measured perceived value through participants' price estimations, alongside assessments of the artwork's artistry and overall impression. This design aimed to elucidate not only the direct effect of authorship on perceived value but also the mediating role of perceived artistry and overall impression, thereby providing insights into the heuristic processes underlying the valuation of art in the context of AI authorship.
 
 Several results were from the experiments.
-**Authorship Effect**: The author of the painting (AI vs. human) had a notable impact on its perceived value. Paintings identified as created by humans were valued higher than those attributed to AI, supporting the hypothesis that AI authorship diminishes perceived value.
 
-**Contextual Influence**: The context in which a painting's value is considered (whether compared to AI or human-created art) also significantly affects its perceived worth. Paintings were valued more when the contextual cue was the price of similar images painted by AI than by humans. This finding suggests that the knowledge of AI authorship, when used as a contextual cue, influences the valuation process.
+- **Authorship Effect**: The author of the painting (AI vs. human) had a notable impact on its perceived value. Paintings identified as created by humans were valued higher than those attributed to AI, supporting the hypothesis that AI authorship diminishes perceived value.
 
-**Independency from Painting Style**: No significant differences were observed regarding the painting's style (figurative vs. abstract) on its perceived value, indicating that the style does not influence the valuation as authorship and contextual cues do.
+- **Contextual Influence**: The context in which a painting's value is considered (whether compared to AI or human-created art) also significantly affects its perceived worth. Paintings were valued more when the contextual cue was the price of similar images painted by AI than by humans. This finding suggests that the knowledge of AI authorship, when used as a contextual cue, influences the valuation process. **Independency from Painting Style
 
-**Mediation Analysis**: Further analysis, explored how the negative impact of AI authorship on a painting's perceived value is mediated by the author's perceived artistry and the overall impression the art piece makes on the viewers. Both factors partially mediated the relationship, but the direct effect of authorship on perceived value remained stronger.
+- *Independency from Painting Style*: No significant differences were observed regarding the painting's style (figurative vs. abstract) on its perceived value, indicating that the style does not influence the valuation as authorship and contextual cues do.
+
+- **Mediation Analysis**: Further analysis, explored how the negative impact of AI authorship on a painting's perceived value is mediated by the author's perceived artistry and the overall impression the art piece makes on the viewers. Both factors partially mediated the relationship, but the direct effect of authorship on perceived value remained stronger.
 
 These findings elucidate the significant role of authorship and contextual cues in the valuation of art, emphasizing that paintings by human artists are perceived as more valuable than those by AI, regardless of the art's style. The study highlights the nuanced ways in which information about a painting's origin and the contextual valuation cues influence public perception and valuation of art in the AI era.
 
@@ -98,7 +192,8 @@ The authors also touch on the concept of reactance, suggesting that the devaluat
 
 For recommendations for art management and marketing professionals, the paper advises them to be mindful of how art created by AI is presented alongside human-created art. The juxtaposition of these works could negatively influence the valuation of both, given the prevailing biases and perceptions. The paper emphasizes the need for strategic communication and presentation in the art market to navigate the complexities introduced by AI-created art. However, it focuses more on perception and valuation differences rather than user preferences and the detailed comparison between AI and human art on platforms like Pixiv.net, indicating a potential area for further exploration in my work.
 
-### Everyone is an Artist? A study on user experience of AI-based painting system
+### 2.3 How users feel about generative AI
+#### 2.3.1 Everyone is an Artist? A study on user experience of AI-based painting system
 
 The paper, Everyone is an artist? A study on user experience of AI-based painting system[@EveryoneArtist], explores the integration of AI in the realm of painting, highlighting recent advances in AI-based Painting Systems (AIBPS). It delves into the technology acceptance model (TAM) to understand and predict users' acceptance of AI technologies. It outlines a comprehensive model that includes external variables such as previous experience (PE), technical features (TF), hedonic motivation (HM), and perceived trust (PT), alongside core TAM variables like perceived usefulness (PU) and perceived ease of use (PEOU), to investigate their impact on users' attitudes towards using AIBPS and their behavioral intention.
 
@@ -122,17 +217,17 @@ The study provides insights for AIBPS developers and researchers by highlighting
 
 For future research, the paper acknowledges several limitations, including the regional focus on Chinese respondents, which may not capture global user perspectives. Future studies are encouraged to gather data from various countries to broaden the understanding of AIBPS acceptance. Additionally, the use of online questionnaires is noted as a potential constraint on understanding users' attitudes comprehensively, suggesting that interviews or focus groups could provide deeper insights.
 
-
-### Understanding the Impact of AI Generated Content on Social Media: The Pixiv Case
+#### 2.3.2 Understanding the Impact of AI Generated Content on Social Media: The Pixiv Case
 
 The paper, Understanding the Impact of AI Generated Content on Social Media: The Pixiv Case[@AIGC_pixiv], aims to explore the impact of AIGC on social media ecosystems by analyzing Pixiv, which uniquely hosts both humans and AIGC. Through an extensive dataset, the research investigates differences in content creation and consumption patterns between AIGC and human-generated content, aiming to understand AIGC's influence on user engagement, community dynamics, and content themes. This inquiry is framed around three research questions focusing on the ecosystem's temporal analysis, per-creator analysis, and per-content analysis, setting the stage for a comprehensive examination of AIGC's role in reshaping social media dynamics.
 
 In the ecosystem temporal analysis of this paper, we can draw several conclusions.
-**Impact on User Activity**: The introduction of AIGC led to a 50% increase in the number of new artworks, but this surge in content creation did not correspond with an increase in views or user comments. This suggests that while more content was being produced, it did not necessarily engage the community more than before.
 
-**Impact on Creators**: The arrival of AIGC coincided with a growth in the number of new creators on Pixiv. However, there was a 4.3% decrease in newly registered creators of human-generated content, indicating a potential shift in the creator base towards AI-generated works. Despite this shift, the engagement of existing creators remained stable.
+- **Impact on User Activity**: The introduction of AIGC led to a 50% increase in the number of new artworks, but this surge in content creation did not correspond with an increase in views or user comments. This suggests that while more content was being produced, it did not necessarily engage the community more than before.
 
-**Impact on Topics**: Topics and subjects of artworks saw significant changes, with a decrease in diversity and a higher concentration of adult content and female characters. This shift suggests that AIGC may be influencing the types of content being created and shared within the Pixiv community.
+- **Impact on Creators**: The arrival of AIGC coincided with a growth in the number of new creators on Pixiv. However, there was a 4.3% decrease in newly registered creators of human-generated content, indicating a potential shift in the creator base towards AI-generated works. Despite this shift, the engagement of existing creators remained stable.
+
+- **Impact on Topics**: Topics and subjects of artworks saw significant changes, with a decrease in diversity and a higher concentration of adult content and female characters. This shift suggests that AIGC may be influencing the types of content being created and shared within the Pixiv community.
 
 Overall, this analysis outlines how the integration of AIGC into Pixiv has led to notable shifts in content creation and consumption patterns, highlighting the complex interplay between technology and social media ecosystems.
 
@@ -144,9 +239,43 @@ The paper provides a groundbreaking large-scale empirical analysis of AIGC's imp
 
 Throughout the paper, an increase in the production and consumption of AI-generated artworks is documented, alongside changing creator profiles and engagement patterns. Interestingly, these shifts have not significantly affected user interaction patterns, hinting at the Pixiv community's preference for human-created content. However, the paper selectively addresses certain topics for analysis and stops short of exploring user preferences in detail, particularly in terms of how AI-generated artworks are received compared to those created by humans across varied themes. The study also expresses concerns about AIGC's potential to sideline human creators, especially those new to the field, and its tendency to focus on specific themes like game-related content, which could impact the diversity of the platform. This nuanced exploration presents a complex picture of AIGC's role in shaping online communities, emphasizing the need for careful consideration of its broader implications.
 
+\newpage
 
+## 3 Methodology
 
+### 3.1 Data Collection and Processing
 
+#### 3.1.1 Data Collection
+
+In this study, we developed a web spider to crawl the dataset from pixiv.net, a prominent online platform where artists share their artwork. The website pixiv.net is widely recognized and highly regarded within the online art community, making it an ideal source for collecting data related to AI-generated artwork and user preferences.
+
+The website pixiv.net provides a rich and diverse collection of artwork, including both AI-generated and hand-drawn creations. Artists from various backgrounds and genres contribute to the platform, producing a vast repository of artistic expressions.
+
+The dataset I collected from the top list of pixiv.net/ranking covers a specific period, starting from November of the previous year and spanning a continuous influx of AI-generated works. It comprises essential information related to the artwork, such as tags, views, likes, bookmarks, and comments. Specifically, we focused on the Top 50 artworks or pictures each day, ensuring a comprehensive representation of the most popular and engaging content within the online art community.
+
+By utilizing the data from pixiv.net, I’m able to examine the dynamic relationship between AI-generated artwork and user preferences over time. This allows us to gain valuable insights into the evolving landscape of the online art community and understand the factors that influence the rankings and preferences of AI-generated images compared to human-created artworks.
+#### 3.1.2 Data Description
+
+We collected the data spanning from October 31, 2022, to May 15, 2023, from the top list of AI-generated and man-made image pages. After de-duplicating the same image pages which may appear at the top with different ranks and different days, we gathered the samples:
+Number of all samples: 14576
+Number of samples of AI-generated Artworks: 8092
+Number of samples of Hand-drawn or man-made Artworks: 6484
+
+### 3.2 Topic Modeling
+### 3.3 Econometric Analysis
+
+\newpage
+
+## 4 Results
+
+\newpage
+
+## 5 Conclusion and Future Prospects
+### 5.1 Conclusion
+
+### 5.2 Future Prospects
+
+\newpage
 
 ## References
 
