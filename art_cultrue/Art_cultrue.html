@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yiqing Hu">
-<meta name="dcterms.date" content="2024-03-24">
+<meta name="dcterms.date" content="2024-03-28">
 
 <title>Exploring User Preferences in the Online Painting Community: A Comparative Analysis of Human-Created and AI-Generated Artwork on Pixiv.net</title>
 <style>
@@ -89,7 +89,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 24, 2024</p>
+        <p class="date">March 28, 2024</p>
       </div>
     </div>
     
@@ -104,7 +104,7 @@ div.csl-indent {
    
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1 Introduction</a></li>
-  <li><a href="#lecture-review" id="toc-lecture-review" class="nav-link" data-scroll-target="#lecture-review">2 Lecture Review</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">2 Literature Review</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">3 Methodology</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">4 Results</a></li>
   <li><a href="#conclusion-and-future-prospects" id="toc-conclusion-and-future-prospects" class="nav-link" data-scroll-target="#conclusion-and-future-prospects">5 Conclusion and Future Prospects</a></li>
@@ -182,8 +182,8 @@ div.csl-indent {
 <p>Through this structured approach, the thesis aims to provide a holistic and nuanced understanding of the dynamics at play in the online painting market, contributing valuable insights into the evolving relationship between AI technologies and artistic creation.</p>
 </section>
 </section>
-<section id="lecture-review" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-review">2 Lecture Review</h2>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review">2 Literature Review</h2>
 <section id="the-impact-of-generative-ai-on-markets" class="level3">
 <h3 class="anchored" data-anchor-id="the-impact-of-generative-ai-on-markets">2.1 The impact of generative AI on markets</h3>
 <section id="the-chatgpt-effect-on-ai-themed-cryptocurrencies" class="level4">
@@ -298,12 +298,126 @@ div.csl-indent {
 <p>We collected the data spanning from October 31, 2022, to May 15, 2023, from the top list of AI-generated and man-made image pages. After de-duplicating the same image pages which may appear at the top with different ranks and different days, we gathered the samples: Number of all samples: 14576 Number of samples of AI-generated Artworks: 8092 Number of samples of Hand-drawn or man-made Artworks: 6484</p>
 </section>
 </section>
-<section id="topic-modeling" class="level3">
-<h3 class="anchored" data-anchor-id="topic-modeling">3.2 Topic Modeling</h3>
+<section id="topic-modeling-with-bertopic" class="level3">
+<h3 class="anchored" data-anchor-id="topic-modeling-with-bertopic">3.2 Topic Modeling with BERTopic</h3>
+<section id="introduction-1" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-1">3.2.1 Introduction</h4>
+<p><strong>1. Topic Modeling in Understanding Online Art Preferences</strong></p>
+<p>In the vast expanse of academic literature and digital content, the challenge of navigating and understanding thematic structures and trends has become increasingly complex. The discipline of natural language processing (NLP) offers a solution through topic modeling, a machine learning technique designed to identify and categorize thematic information from large datasets of text. Topic modeling leverages unsupervised learning algorithms to cluster documents into topics based on their content, facilitating a deeper understanding of the underlying themes without the need for predefined categories or labels <span class="citation" data-cites="BERTopicModeling"><a href="#ref-BERTopicModeling" role="doc-biblioref">[8]</a></span>.</p>
+<p>The significance of topic modeling extends beyond academic research into practical applications within various industries, including the art market. As digital platforms like pixiv.net become central hubs for the exchange and appreciation of artwork, the ability to analyze and understand user preferences through the thematic analysis of art becomes crucial. This research focuses on employing topic modeling to explore the thematic landscape of AI-generated and human-created artwork shared online, aiming to uncover patterns and preferences within the user community.</p>
+<p>Our dataset, drawn from pixiv.net is to apply topic modeling to the tags associated with these images to identify distinct topics and explore how these topics influence user preferences and rankings within the online painting community.</p>
+<p>The study’s methodology is twofold. Initially, a deep learning model is utilized to perform topic modeling on the tags of images, aiming to derive distinct topics that characterize the difference between human-created and AI-generated artwork. This step is crucial for understanding the thematic structure that governs user preferences and rankings on the platform. Subsequent analysis will employ ordered choice models, specifically ordered logit and ordered probit methods, to examine the relationship between the categorized rankings of images and the topics derived from the initial phase. This approach allows for a quantitative analysis of how topics significantly influence the rankings and, by extension, user preferences for AI-generated versus human-created artwork.</p>
+<p>By revealing the thematic preferences within the online art community, this research contributes to the broader understanding of how AI influences art consumption and appreciation. The findings are expected to offer valuable insights into the dynamics of user preferences in the digital painting market, shedding light on the potential for AI-generated artwork to complement or compete with human creativity.</p>
+<p><strong>2. BERTopic for tag detecting</strong></p>
+<p>BERTopic is an advanced unsupervised machine learning technique for clustering documents into topics. Unlike traditional clustering algorithms that rely solely on word frequency or pre-defined keyword matching, BERTopic utilizes the state-of-the-art BERT (Bidirectional Encoder Representations from Transformers) embeddings, coupled with c-TF-IDF (class-based Term Frequency-Inverse Document Frequency), to generate dense, easily interpretable topic clusters while preserving significant words within topic descriptions. This method facilitates the extraction of meaningful thematic structures from vast amounts of text data, providing a deeper understanding of content without the limitations of human-curated classifications <span class="citation" data-cites="BERTopicModeling"><a href="#ref-BERTopicModeling" role="doc-biblioref">[8]</a></span>.</p>
+<p>The application of BERTopic is particularly advantageous in fields undergoing rapid expansion, such as natural language processing (NLP), where the volume of research outpaces the ability of traditional keyword-based searches to capture the full scope of developments. BERTopic’s use of the MiniLM-L6-v2 embedding model, known for its balance between performance and speed, allows for the efficient processing of large datasets, making it an ideal tool for parsing and understanding complex sentence structures within academic literature. This capability is critical for identifying emerging trends, research gaps, and connections between studies that might otherwise remain obscured in the deluge of published work.</p>
+<p>In the context of this thesis, BERTopic offers a unique methodological advantage by allowing an in-depth analysis of user preferences in the online art market, specifically on platforms like pixiv.net. By applying BERTopic to the dataset collected from pixiv.net, encompassing both AI-generated and human-created artworks, this research can uncover the thematic distinctions that influence user rankings and preferences. This approach not only aids in validating the hypothesis that AI-generated artwork varies across different topics but also assists in exploring whether users exhibit distinct preferences for AI-generated versus human-created artworks.</p>
+<p>The versatility and efficiency of BERTopic enable a nuanced exploration of these themes, offering insights into how the digital transformation of art affects user engagement and appreciation. The algorithm’s data-driven, unsupervised nature ensures an objective analysis, free from the biases inherent in manual topic classification, thus providing a robust foundation for investigating the dynamics of the online painting market. By leveraging BERTopic, this study aims to contribute significantly to the understanding of digital art trends and user preferences, informing strategies for content creation and curation within the burgeoning online art community.</p>
 </section>
-<section id="econometric-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="econometric-analysis">3.3 Econometric Analysis</h3>
-
+<section id="data-preparation-and-preprocessing" class="level4">
+<h4 class="anchored" data-anchor-id="data-preparation-and-preprocessing">3.2.2 Data Preparation and Preprocessing</h4>
+<p>The integrity and quality of data are paramount for the successful application of the BERTopic algorithm. The preprocessing phase aimed to refine the dataset to ensure the extracted topics are meaningful and representative of the underlying themes within the corpus of text documents derived from pixiv.net tags. The following steps were meticulously undertaken:</p>
+<ol type="1">
+<li><p><strong>Merging Tags</strong>: Each artwork’s associated tags were amalgamated into a single text document. This process converted the multi-tag structure of each artwork into a coherent text block, facilitating its analysis as a unified entity.</p></li>
+<li><p><strong>Text Length Analysis</strong>: Given the varied length of text documents resulting from merged tags, an analysis and visualization of text length distribution were conducted. This step was crucial to identify outliers, particularly the shortest texts that might lack sufficient thematic depth for meaningful analysis. Subsequently, the shortest 1% of texts were removed from the dataset, justified by the visualization that highlighted their deviation from the typical text length, ensuring a more homogenous data set for analysis.</p></li>
+<li><p><strong>Generation of N-grams</strong>: The creation of 2/3grams tokens played a significant role in capturing the context and enhancing the thematic structure identified by BERTopic. This process involved concatenating adjacent words into bi- and tri-gram tokens, thereby preserving phrase-level information that could be lost in single-word analysis. The rationale behind this step was to enrich the dataset with compound tokens that more accurately represent complex concepts or specific attributes of the artwork.</p></li>
+<li><p><strong>Document Frequency Adjustment</strong>: To further refine the dataset, the document frequency of terms was analyzed and adjusted. This step involved the removal of extremely rare and overly common terms, which either appear in a negligible number of documents or nearly all documents, respectively. By adjusting the thresholds for term frequency, the dataset was optimized to exclude terms that contribute little to the uniqueness of topics or might otherwise dominate the topic modeling process due to their ubiquity.</p></li>
+</ol>
+<p>These preprocessing steps collectively aimed to balance the richness of the dataset with the pragmatic needs of computational analysis, setting a solid foundation for the subsequent application of the BERTopic algorithm. The careful consideration of text length, the strategic formation of n-grams, and the meticulous adjustment of document frequency underscored the methodology’s attentiveness to data quality, ensuring that the topics derived from the analysis are both robust and illuminating.</p>
+</section>
+<section id="bertopic-implementation" class="level4">
+<h4 class="anchored" data-anchor-id="bertopic-implementation">3.2.3 BERTopic Implementation</h4>
+<p>BERTopic Implementation outlines the rigorous process of applying the BERTopic algorithm to analyze and interpret the thematic structure of textual data. This process encompasses parameter tuning, data preprocessing, modeling, and evaluation of topic coherence. Below is a detailed description of each step, as implemented in the study:</p>
+<p><strong>1. Parameter Tuning</strong></p>
+<p>The first crucial step involved tuning various parameters to optimize the BERTopic model’s performance. Parameters such as n-gram range, document frequency thresholds (<code>max_df</code> and <code>min_df</code>), and UMAP’s <code>n_neighbors</code>, <code>n_components</code>, and <code>min_dist</code> were systematically varied in a grid search to identify the combination that yields the most coherent and meaningful topics. Specifically, the study explored:</p>
+<ul>
+<li><strong>N-gram range</strong>: The extent of n-gram tokens considered, set to 3, to capture more nuanced semantic relationships.</li>
+<li><strong>Document Frequency (<code>max_df</code>, <code>min_df</code>)</strong>: Thresholds for filtering out terms that appear too frequently or infrequently across the dataset, thus refining the textual input for topic modeling.</li>
+<li><strong>UMAP Parameters (<code>n_neighbors</code>, <code>n_components</code>, <code>min_dist</code>)</strong>: Settings for the dimensionality reduction step, crucial for managing the complexity and interpretability of the topic space.</li>
+</ul>
+<p>This exhaustive search was conducted while tracking computational performance and coherence scores, ensuring the selection of parameters that balance interpretability and computational efficiency.</p>
+<p><strong>2. Modeling and Coherence Scoring</strong></p>
+<p>With the optimized parameters, the BERTopic model was instantiated, incorporating UMAP for dimensionality reduction and HDBSCAN for clustering. The model’s ability to generate and categorize topics was then evaluated using coherence scores — UMass, UCI, and UCI-NPMI — calculated from the document-term matrix. These scores provide a quantitative measure of the topics’ semantic consistency, with higher values indicating more coherent and interpretable topics.</p>
+<p><strong>3. Results and Visualization</strong></p>
+<p>The implementation yielded a diverse range of topics, each characterized by a set of representative words. Coherence scores across different parameter settings were analyzed, and the top-performing configurations were identified. Visualization of coherence scores against <code>min_cluster_size</code> facilitated the selection of the optimal minimal topic size, further refining the model’s output.</p>
+<p>The BERTopic model’s training was computationally intensive but resulted in a comprehensive topic structure that captures the thematic intricacies of the dataset. The <code>fit_transform</code> method, applied to the preprocessed texts, generated topics and their associated probabilities, signifying the model’s success in distilling complex textual data into distinct thematic clusters.</p>
+<p><strong>4. Evaluation and Adjustment</strong></p>
+<p>The final phase involved a detailed evaluation of the model’s output, with specific attention to the number of topics generated and their coherence scores. Adjustments were made iteratively to refine the topic quality, informed by the coherence scoring mechanisms and the qualitative assessment of topic relevance and separation.</p>
+<p>This rigorous BERTopic implementation process underscores the methodological depth of the study, ensuring that the thematic analysis is both robust and insightful. The chosen parameters and modeling strategies were instrumental in uncovering the thematic landscape of the dataset, providing a solid foundation for subsequent analyses and interpretations.</p>
+</section>
+</section>
+<section id="econometric-analysis-of-categorized-rankings" class="level3">
+<h3 class="anchored" data-anchor-id="econometric-analysis-of-categorized-rankings">3.3 Econometric Analysis of Categorized Rankings</h3>
+<section id="introduction-to-econometric-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-to-econometric-analysis">3.3.1 Introduction to Econometric Analysis</h4>
+<p><strong>1. Ordered Choice Models and Their Application to Artwork Rankings</strong></p>
+<p>Ordered choice models, encompassing both logit and probit models, have become indispensable tools in econometric analysis, especially for investigating outcomes that are naturally ordered but not necessarily linearly related to predictor variables <span class="citation" data-cites="UseLogitProbitModels"><a href="#ref-UseLogitProbitModels" role="doc-biblioref">[9]</a></span>. These models are particularly relevant for analyzing categorized ranks of artworks, where the ranking represents an ordered, continuous, and discrete variable. The nuanced nature of these rankings, reflecting preferences or qualities that cannot be precisely quantified on a linear scale, necessitates the use of models that can capture the ordinal essence of the data. In this context, ordered choice models allow for a sophisticated examination of how various independent variables influence the hierarchical positioning of artworks, offering insights into patterns and trends that underlie art valuation and appreciation.</p>
+<p><strong>2. The Choice Between Ordered Logit and Ordered Probit Models</strong></p>
+<p>The decision to utilize both ordered logit and ordered probit models stems from their suitability in handling ordinal data, which is characteristic of the categorized rankings of artworks. While these models are similar in their ability to manage ordered outcomes, they differ in the distributional assumptions they make about the error terms—logit models assume a logistic distribution, whereas probit models assume a normal distribution. This distinction is crucial as it affects the interpretation of the model’s coefficients and its fit to the data. As such, employing both models provides a robust framework for analyzing the relationships between independent variables and categorized rankings, ensuring that the conclusions drawn are not unduly influenced by the choice of distributional assumption. Furthermore, the use of the R programming language to implement these models offers a flexible and powerful environment for statistical analysis, enabling the exploration of model fit through various goodness-of-fit tests and the potential for model optimization based on test results <span class="citation" data-cites="UseLogitProbitModels"><a href="#ref-UseLogitProbitModels" role="doc-biblioref">[9]</a></span>.</p>
+<p>By carefully selecting and employing these models, the analysis aims to uncover the intricate dynamics that govern the rankings of artworks, contributing valuable insights to the broader field of econometric research within the arts sector.</p>
+</section>
+<section id="model-implementation" class="level4">
+<h4 class="anchored" data-anchor-id="model-implementation">3.3.2 Model Implementation</h4>
+<p><strong>1. Use of the R Programming Language for Model Fitting</strong></p>
+<p>In the pursuit of a rigorous analysis of categorized ranks within the art domain, we have leveraged the capabilities of the R programming language for model fitting. The choice of R is predicated on its extensive library of statistical tools and its adaptability to various types of econometric models, making it an ideal environment for our ordered choice model analysis. Specifically, we employed the logit function as the baseline model in our analysis. This function is particularly suited for estimating the probability of occurrence between ordered categorical outcomes, allowing us to effectively examine the relationships between independent variables and the categorized rankings of artworks. The utilization of the logit function within the R framework enables a nuanced exploration of the data, where the inherent properties of the categorized rank—being ordered, continuous, and discrete—are accounted for in the model estimation process.</p>
+<p><strong>2. Introduction to Goodness-of-Fit Tests</strong></p>
+<p>To assess the initial fit of our baseline ordered choice models, we conducted several Goodness-of-Fit tests, namely, the Hosmer-Lemeshow test, the Lipsitz test, and the Pulkstenis-Robinson test. These tests are instrumental in evaluating the concordance between observed outcomes and the predictions made by logistic regression models and, by extension, ordered choice models.</p>
+<ul>
+<li><p>The <strong>Hosmer-Lemeshow test</strong> assesses the model’s calibration by dividing the data into deciles based on predicted probabilities and then comparing the observed frequencies with the expected frequencies within these groups. A non-significant p-value from this test suggests that there is no significant difference between observed and model-predicted values, indicating a good model fit.</p></li>
+<li><p>The <strong>Lipsitz test</strong> is tailored to the ordered nature of our data, providing a more nuanced evaluation by also dividing the data based on predicted probabilities and examining the alignment between observed and expected frequencies within these divisions. The calculation of a chi-square statistic helps to identify significant discrepancies, if any.</p></li>
+<li><p>Similarly, the <strong>Pulkstenis-Robinson test</strong> utilizes a chi-square statistic to pinpoint areas where the model might not adequately capture the observed data patterns, offering another layer of scrutiny towards ensuring model adequacy.</p></li>
+</ul>
+<p>These Goodness-of-Fit tests serve as critical tools in our methodological toolkit, providing the initial validation needed to proceed with confidence in our model’s explanatory power. Based on the outcomes of these tests, further model optimization techniques are considered to refine the models and ensure they meet the stringent criteria for a robust analysis. By meticulously applying these tests, we aim to underpin our analysis with a solid foundation of statistical validity, thereby enhancing the reliability and interpretability of our findings in understanding the dynamics influencing the rankings of artworks.</p>
+</section>
+<section id="model-optimization-and-selection" class="level4">
+<h4 class="anchored" data-anchor-id="model-optimization-and-selection">3.3.3 Model Optimization and Selection</h4>
+<p><strong>1. Model Optimization Techniques</strong></p>
+<ul>
+<li><p><strong>Iterative Refinement for Model Accuracy</strong>: Discuss the iterative process of refining the model to enhance its fit with the dataset. This subsection should cover the initial steps taken after identifying unsatisfactory results from the Goodness-of-Fit tests, highlighting how these findings guide the optimization process.</p></li>
+<li><p><strong>Enhancing Model Fit with Optimization Strategies</strong>: Explain various strategies for model optimization, such as adjusting model parameters, exploring alternative model specifications, and incorporating additional variables that may influence the outcome. Emphasize the importance of these techniques in improving the predictive accuracy and reliability of the model.</p></li>
+</ul>
+<p><strong>2. Brant Test for Model Type Selection</strong></p>
+<ul>
+<li><p><strong>Assessing Proportional Odds Assumption with the Brant Test</strong>: Elaborate on the Brant test’s methodology and its critical role in evaluating the proportional odds assumption underlying the ordered logit and probit models. This will involve a discussion on how the test compares coefficients across models to ensure the assumption holds.</p></li>
+<li><p><strong>Impact of Model Selection on Interpretation and Performance</strong>: Discuss the implications of selecting either a logit or probit model based on the Brant test outcomes. This includes how the choice between these models affects the interpretation of the coefficients, model predictability, and overall performance in the context of the study’s objectives.</p></li>
+</ul>
+<p><strong>3. Significance of Model Selection</strong></p>
+<ul>
+<li><p><strong>Aligning Model Choice with Research Objectives</strong>: Address the importance of choosing the most appropriate model (logit vs.&nbsp;probit) in achieving the research objectives. This subsection should connect the methodological choices to the study’s overarching goals, such as uncovering the determinants of categorized rankings in the context of your dataset.</p></li>
+<li><p><strong>Dataset Characteristics and Model Suitability</strong>: Explore how the unique characteristics of your dataset influence the selection of the ordered choice model. Discuss factors such as the distribution of the categorized rank, the nature of independent variables, and the dataset’s size and quality in guiding the choice between logit and probit models.</p></li>
+</ul>
+<p>These subsections will collectively provide a comprehensive overview of the methods and considerations involved in optimizing and selecting the most suitable ordered choice model for analyzing the relationships between independent variables and categorized rankings. The detailed examination of each aspect, from optimization techniques to the critical role of the Brant test and the importance of a deliberate model selection process, ensures a methodologically sound approach to achieving the study’s objectives.</p>
+</section>
+<section id="advanced-analysis-and-model-refinement" class="level4">
+<h4 class="anchored" data-anchor-id="advanced-analysis-and-model-refinement">3.3.4 Advanced Analysis and Model Refinement</h4>
+<p><strong>1. McFadden R2 Statistic</strong></p>
+<ul>
+<li><p><strong>Evaluating Explanatory Power</strong>: Detail the application of the McFadden R2 statistic in the context of ordered choice models, focusing on how this metric quantifies the models’ explanatory power. This subsection should explain how the McFadden R2 is calculated and why it is particularly suited for models where traditional R2 may not provide meaningful insights.</p></li>
+<li><p><strong>Guiding Model Refinement</strong>: Discuss how the McFadden R2 statistic informs the refinement process, including the identification of models that adequately capture the underlying data structure. Highlight how improvements in the McFadden R2 statistic reflect on the model’s enhanced explanatory power and its implications for the research findings.</p></li>
+</ul>
+<p><strong>2. Likelihood Ratio Test and Nonlinear Relationships</strong></p>
+<ul>
+<li><p><strong>Model Comparison through Likelihood Ratio Test</strong>: Explain the use of the likelihood ratio test in comparing the fit of unrestricted and restricted models. This section should provide insights into how the test helps in determining the necessity of additional variables and the overall model complexity.</p></li>
+<li><p><strong>Addressing Nonlinear Relationships</strong>: Discuss the exploration of nonlinear relationships within the dataset by incorporating power terms and other nonlinear transformations into the model. Illustrate how these adjustments can unveil more intricate dynamics between the independent variables and the ordered outcomes, enhancing the model’s accuracy and predictive capabilities.</p></li>
+</ul>
+<p><strong>3. General-to-Specific Method</strong></p>
+<ul>
+<li><p><strong>Iterative Variable Selection for Model Optimization</strong>: Describe the general-to-specific (GETS) method as an iterative process of variable selection aimed at refining the model’s accuracy and interpretability. This subsection should outline the steps taken to gradually reduce the model complexity by systematically eliminating statistically insignificant variables while preserving those with significant explanatory power.</p></li>
+<li><p><strong>Uncovering Influential Factors</strong>: Focus on the ultimate goal of the GETS method in identifying the most influential variables determining the rankings. Emphasize how this process not only improves the model’s performance but also provides deeper insights into the factors that significantly impact the categorized rankings. This meticulous approach contributes valuable knowledge to the field of study, as documented by Campos, N. R. Ericsson, &amp; D. F. H. J. (2005) <span class="citation" data-cites="General-to-specific"><a href="#ref-General-to-specific" role="doc-biblioref">[10]</a></span> in their comprehensive overview and selected bibliography on general-to-specific modeling.</p></li>
+</ul>
+<p>These subsections collectively provide a framework for conducting advanced analyses and refining the ordered choice models used in the study. They illustrate the comprehensive approach taken to ensure the models’ robustness, from evaluating their explanatory power to exploring nonlinear relationships and optimizing variable selection. This meticulous process underscores the research’s commitment to producing accurate, reliable, and insightful results.</p>
+</section>
+</section>
+<section id="conclusion-and-implications" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-and-implications">3.4 Conclusion and Implications</h3>
+<p>This chapter has delineated a comprehensive framework, encompassing data collection, topic modeling, and econometric analysis, to examine the intricate dynamics between AI-generated artwork and user preferences on the pixiv.net platform. This multifaceted approach has not only facilitated a deep dive into the thematic landscape of digital art but has also enabled a rigorous examination of the factors influencing artwork rankings, bridging the gap between qualitative thematic understanding and quantitative analysis.</p>
+<p>The methodology began with a meticulous process of data collection and processing, capturing a wide array of AI-generated and human-created artworks. This foundation was pivotal in ensuring the study’s analyses were grounded in a rich and relevant dataset, reflective of the current state and diversity of digital art on a leading online platform.</p>
+<p>The adoption of BERTopic for topic modeling marked a significant stride in uncovering thematic patterns and preferences within the online art community. This advanced NLP technique, through its unsupervised learning algorithm, offered nuanced insights into the thematic distinctions between AI-generated and human-created artworks. The analysis revealed not only the breadth of themes present in digital art but also highlighted the unique thematic signatures associated with AI-generated content.</p>
+<p>The econometric analysis, leveraging ordered choice models, provided a quantitative lens through which to view the impact of thematic elements on artwork rankings. The use of both ordered logit and ordered probit models allowed for a nuanced understanding of the ordinal nature of artwork rankings, underscoring the complexity of user preferences and their implications for digital art valuation.</p>
+<p>The rigorous process of model optimization and advanced analysis, including the implementation of McFadden R2 Statistic, likelihood ratio tests, and the general-to-specific (GETS) method, underscored the study’s commitment to methodological rigor. This approach not only enhanced the accuracy and interpretability of the models but also contributed to the literature on econometric analysis in the arts, as highlighted by the reference to Campos, N. R. Ericsson, &amp; D. F. H. J. (2005) <span class="citation" data-cites="General-to-specific"><a href="#ref-General-to-specific" role="doc-biblioref">[10]</a></span> on general-to-specific modeling.</p>
+<p>This methodology chapter lays a solid foundation for the results that follow in the subsequent chapter, promising to enrich our understanding of the digital art landscape and the factors driving user engagement and preferences. By integrating topic modeling with econometric analysis, this study offers a holistic view of the digital art ecosystem, contributing valuable insights to both the academic field and practitioners within the digital art market.</p>
+<p>Moreover, the methodological innovations and refinements introduced in this chapter have broader implications for econometric research, particularly in studies involving complex, ordinal datasets. The application of advanced NLP techniques like BERTopic, coupled with sophisticated econometric models, sets a precedent for future research at the intersection of digital humanities and quantitative analysis.</p>
+<p>The chapter methodology employed in this thesis represents a significant leap forward in the study of digital art, offering a robust framework for understanding the interplay between thematic content, technological innovation, and user preferences. The insights gleaned from this approach not only illuminate the current landscape of digital art but also pave the way for future investigations into the evolving relationship between art, technology, and society.</p>
 </section>
 </section>
 <section id="results" class="level2">
@@ -343,6 +457,15 @@ div.csl-indent {
 </div>
 <div id="ref-AIGC_pixiv" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[7] </div><div class="csl-right-inline">Y. Wei and G. Tyson, <span>“Understanding the impact of AI generated content on social media: The pixiv case,”</span> <em>arXiv</em>, Feb. 2024, Available: <a href="https://doi.org/10.48550/arXiv.2402.18463">doi.org/10.48550/arXiv.2402.18463</a></div>
+</div>
+<div id="ref-BERTopicModeling" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Samsir, R. S. Saragih, S. Subagio, R. Aditya, and R. Watrianthos, <span>“BERTopic modeling of natural language processing abstracts: Thematic structure and trajectory,”</span> <em>JURNAL MEDIA INFORMATIKA BUDIDARMA</em>, vol. 7, pp. 1514–1520, Jul. 2023, Available: <a href="https://ejurnal.stmik-budidarma.ac.id/index.php/mib">https://ejurnal.stmik-budidarma.ac.id/index.php/mib</a></div>
+</div>
+<div id="ref-UseLogitProbitModels" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">G. Hoetker, <span>“The use of logit and probit models in strategic management research: Critical issues,”</span> <em>Strategic Management Journal</em>, vol. 28, pp. 331–343, Jul. 2007, Available: <a href="https://doi.org/10.1002/smj.582">https://doi.org/10.1002/smj.582</a></div>
+</div>
+<div id="ref-General-to-specific" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">J. Campos, N. R. Ericsson, and D. F. Hendry, <span>“General-to-specific modeling: An overview and selected bibliography, board of governors of the federal reserve system,”</span> <em>International Finance Discussion Papers</em>, no. 838, Aug. 2005.</div>
 </div>
 </div>
 </section>
